@@ -14,7 +14,7 @@ export default function Button({ target }: ButtonParams) {
   return (
     <Fragment>
       <button onClick={() => setOpen(!open)}>
-        b
+        i
       </button>
       {open ?
       createPortal(

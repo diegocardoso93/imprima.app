@@ -10,6 +10,7 @@ window.onload = function () {
 
   imgs.forEach(function (img, idx) {
     const span = document.createElement("span");
+    span.classList.add("imprimapp");
     span.classList.add("imprimapp"+idx);
     span.style.position = "relative";
     span.style.right = "0";
@@ -19,6 +20,10 @@ window.onload = function () {
       event.stopPropagation();
     };
     img.after(span);
+
+    if (!img.style.maxWidth) {
+      img.style.maxWidth = '100%';
+    }
 
     _button.render({
       selector: '.imprimapp'+idx,

@@ -1,0 +1,54 @@
+
+.imprimapp-modal .page-detail {
+	> .title {
+		display: flex;
+		align-items: center;
+		font-size: 25px;
+    margin-bottom: 16px;
+	
+		> div:first-child {
+			background: #ededed;
+			border-radius: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 38px;
+			height: 35px;
+			padding-bottom: 3px;
+			font-weight: bold;
+			margin-right: 12px;
+			cursor: pointer;
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	.stores {
+
+		.title {
+			font-size: 22px;
+			margin-top: 10px;
+			margin-bottom: 6px;
+		}
+
+		.find {
+			display: flex;
+
+			button {
+				margin-left: 6px;
+				height: 48px;
+				width: 46px;
+				border: 1px solid #ccc;
+				font-size: 20px;
+				border-radius: 4px;
+			}
+		}
+
+		.list {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
