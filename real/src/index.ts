@@ -15,6 +15,8 @@ window.onload = function () {
     span.style.position = "relative";
     span.style.right = "0";
     span.style.top = "-8px";
+    span.style.marginLeft = "-30px";
+
     span.onclick = function (event) {
       event.stopImmediatePropagation();
       event.stopPropagation();

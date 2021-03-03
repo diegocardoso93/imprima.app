@@ -2,7 +2,7 @@ import { h, createRef, Fragment } from "preact";
 import { useEffect } from "preact/hooks";
 
 import "./style.scss";
-import { Item, items } from '../items';
+import { Item, items } from '../../constants/items';
 
 const svgMore = (
   <svg width="23" height="39" viewBox="0 0 23 39" style="transform:scale(1);fill:#444;">

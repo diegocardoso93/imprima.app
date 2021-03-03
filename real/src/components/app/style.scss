@@ -25,7 +25,11 @@
 			margin-left: 30px;
 			line-height: 30px;
 			font-size: 26px;
-			max-width: 210px;
+			max-width: 270px;
+
+			@media (max-width: 600px) {
+				max-width: 210px;
+			}
 		}
 
 		.close {

@@ -20,9 +20,11 @@
 				.left {
 					display: flex;
 					align-items: center;
-	
+					padding-left: 20px;
+
 					@media (max-width: 600px) {
 						margin-left: 10px;
+						padding-left: 0;
 					}
 
 					.image {
