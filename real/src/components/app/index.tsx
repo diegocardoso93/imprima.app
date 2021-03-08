@@ -40,14 +40,8 @@ interface AppState {
   data: any;
 }
 
-export default function App({ target, onDispose }: AppParams) {
-  console.log('App', target);
+function App() {
   const elRef = createRef();
-
-  function dispose() {
-    elRef.current.parentElement.removeChild(elRef.current);
-    onDispose();
-  }
 
   const [appState, setAppState] = useState({page: Page.Items, data: null} as AppState);
 
@@ -83,7 +77,7 @@ export default function App({ target, onDispose }: AppParams) {
             Comprar personalizado
           </h1>
         </div>
-        <div class="close" onClick={dispose}>×</div>
+        {/* <div class="close" onClick={dispose}>×</div> */}
       </div>
 
       <div class="body">
@@ -92,3 +86,7 @@ export default function App({ target, onDispose }: AppParams) {
     </div>
   );
 }
+
+const MyApp = <App />
+
+export default MyApp;

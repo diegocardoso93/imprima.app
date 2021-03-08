@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CepController;
+use App\Http\Controllers\Api\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('cep/{id}', [CepController::class, 'index']);
+Route::get('produto', [ProductController::class, 'index']);
+Route::get('cep/{productId}/{cep}', [CepController::class, 'index']);
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();

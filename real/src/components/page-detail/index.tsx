@@ -1,9 +1,10 @@
 import { h, createRef, Fragment } from "preact";
-import { useEffect, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 
 import "./style.scss";
-import { Merchant, merchants as lojas } from '../../constants/merchants';
+import { Merchant } from '../../constants/merchants';
 import Loader from "../loader";
+import { GET_MERCHANT } from '../../constants/endpoints';
 
 interface PageParams {
   appState: any,
@@ -29,18 +30,27 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
   const { item } = appState.data;
   const [loading, setLoading] = useState(false);
   const [merchants, setMerchants] = useState([] as Merchant[]);
+  const cepRef = createRef();
 
   function checkCEP(e: any) {
     console.log(e.target.value);
+    if (e.key === 'Enter') {
+      findMerchant();
+    }
   }
 
   function findMerchant() {
     console.log('find');
     setLoading(true);
-    // fetch('https://google.com.br')
-      // .then(res => res.json())
-      // .then(res => setLoading(false));
-    setMerchants(lojas);
+    const cep = cepRef.current.value;
+    fetch(GET_MERCHANT.replace('{id}', item.id).replace('{cep}', cep), { mode: 'cors' })
+      .then(res => res.json())
+      .then(val => {
+        console.log('red',val);
+        setLoading(false);
+        setMerchants(val);
+      })
+      .catch(e => setLoading(false));
   }
 
   function select(l: Merchant) {
@@ -56,7 +66,7 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
       <img src={item.image} alt={item.name} />
       <div class="stores">
         <div class="find">
-          <input onKeyUp={checkCEP} placeholder="Digite seu CEP" />
+          <input ref={cepRef} onKeyUp={checkCEP} placeholder="Digite seu CEP" />
           <button onClick={() => findMerchant()}>
             {loading && <Loader /> || '🔍'}
           </button>
@@ -72,11 +82,11 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
           ) || ''}
           {merchants.map(l => (
             <div class="item">
-              <div class="i1">{l.nome}<br/>
-                <span class="small">{l.cidade}</span>
+              <div class="i1">{l.name}<br/>
+                <span class="small">{l.city}</span>
               </div>
-              <div class="i2">R${l.preco}</div>
-              <div class="i3">{l.frete}</div>
+              {/* <div class="i2">R${l.preco}</div> */}
+              <div class="i3">{l.delivery}</div>
               <span class="i5" onClick={() => select(l)}>{svgMore}</span>
             </div>
           ))}

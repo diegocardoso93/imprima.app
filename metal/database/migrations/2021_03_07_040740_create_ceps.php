@@ -15,7 +15,7 @@ class CreateCeps extends Migration
     {
         Schema::create('ceps', function (Blueprint $table) {
             $table->id();
-            $table->string('cep')->unique()->index();
+            $table->string('zip')->unique()->index();
             $table->string('city');
             $table->string('uf');
             $table->string('neighborhood')->nullable();
@@ -34,6 +34,6 @@ class CreateCeps extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cep_address');
+        Schema::dropIfExists('ceps');
     }
 }

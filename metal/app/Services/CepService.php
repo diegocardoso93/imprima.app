@@ -12,17 +12,17 @@ class CepService
         return DB::selectOne(DB::raw("
             SELECT * FROM
             (
-                (SELECT * FROM ceps WHERE cep::int >= :cep::int ORDER BY cep LIMIT 1)
+                (SELECT * FROM ceps WHERE zip::int >= :cep::int ORDER BY zip LIMIT 1)
                     UNION ALL
-                (SELECT * FROM ceps WHERE cep::int < :cep::int  ORDER BY cep DESC LIMIT 1)
+                (SELECT * FROM ceps WHERE zip::int < :cep::int  ORDER BY zip DESC LIMIT 1)
             ) as foo
-            ORDER BY abs(:cep::int - cep::int) LIMIT 1
+            ORDER BY abs(:cep::int - zip::int) LIMIT 1
         "), [
             'cep' => $cep
         ]);
     }
 
-    public function getLatLng($address)
+    public function getLatLon($address)
     {
         $res = (new Client(['verify' => base_path() . '/cacert.pem']))
             ->get(
@@ -30,7 +30,8 @@ class CepService
             );
         if ($res->getStatusCode() == 200) {
             $osm = json_decode($res->getBody());
+            $osm = $osm[0] ?? null;
         }
-        dd($osm);
+        return [$osm->lat, $osm->lon];
     }
 }

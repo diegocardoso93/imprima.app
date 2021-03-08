@@ -6,25 +6,27 @@ use Illuminate\Support\Facades\DB;
 
 class MerchantService
 {
-    public function getMerchants($lat, $lon, $product = null, $maxDistance = 100)
+    public function getMerchantsProduct($lat, $lon, $productId)
     {
         return DB::select(DB::raw("
             SELECT
-                m.id,
-                m.name,
-                trim(to_char(point(:lon, :lat) <@> point(longitude, latitude)::point, '990D00')) || 'km' as distance,
-            FROM merchants m
-            INNER JOIN merchants_products mp on mp.merchant_id = m.id
-            INNER JOIN product p on p.id = mp.product_id
-            WHERE m.status = :status
-            AND (point(:lon, :lat) <@> point(longitude, latitude)) < :maxDistance
+            m.id,
+            m.name,
+            trim(to_char(point(:lon, :lat) <@> point(lon, lat)::point, '990D00')) || 'km' as distance,
+            (case m.delivery when true then 'grátis' else 'retirar' end) delivery,
+            m.city
+            FROM products p
+            INNER JOIN merchants_products mp on mp.product_id = p.id
+            INNER JOIN merchants m on m.id = mp.merchant_id
+            WHERE p.id = :productId
+              AND (point(:lon, :lat) <@> point(lon, lat)) < m.max_distance
+              AND m.status = :status
             GROUP BY 1
             ORDER BY distance;
         "), [
             'lat' => $lat,
             'lon' => $lon,
-            'product' => $product,
-            'maxDistance' => $maxDistance,
+            'productId' => $productId,
             'status' => 1
         ]);
     }

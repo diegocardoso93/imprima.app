@@ -20,9 +20,9 @@ class CepsSeeder extends Seeder
             $line = trim(fgets($file));
             $parts = explode("\t", $line);
             $cityUf = explode('/', $parts[1] ?? '');
-            if ($cityUf ?? false) {
+            if ($cityUf[0] ?? false) {
                 DB::table('ceps')->insert([
-                    'cep' => $parts[0],
+                    'zip' => $parts[0],
                     'city' => $cityUf[0],
                     'uf' => $cityUf[1],
                     'neighborhood' => $parts[2] ?? null,

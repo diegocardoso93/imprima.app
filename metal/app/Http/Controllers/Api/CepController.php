@@ -4,14 +4,16 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Services\CepService;
+use App\Services\MerchantService;
 use Illuminate\Http\Response;
 
 class CepController extends Controller
 {
-    public function index($number, CepService $cepService)
+    public function index($productId, $cep, CepService $cepService, MerchantService $merchantService)
     {
-        $address = $cepService->getClosestAddress($number);
-        dd($cepService->getLatLng($address));
-//        return new Response(['address' => ]);
+        $address = $cepService->getClosestAddress($cep);
+        [$lat, $lon] = $cepService->getLatLon($address);
+
+        return new Response($merchantService->getMerchantsProduct($lat, $lon, $productId));
     }
 }

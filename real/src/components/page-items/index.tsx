@@ -1,8 +1,9 @@
 import { h, createRef, Fragment } from "preact";
-import { useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 import "./style.scss";
-import { Item, items } from '../../constants/items';
+import { Item } from '../../constants/items';
+import { GET_PRODUCT } from "../../constants/endpoints";
 
 const svgMore = (
   <svg width="23" height="39" viewBox="0 0 23 39" style="transform:scale(1);fill:#444;">
@@ -16,10 +17,17 @@ interface PageParams {
 }
 
 export default function PageItems({ appState, setAppState }: PageParams) {
+  const [items, setItems] = useState([]);
 
   function select(item: Item) {
     setAppState({page: 1, data: { item }});
   }
+
+  useEffect(() => {
+    fetch(GET_PRODUCT)
+      .then(res => res.json())
+      .then(val => setItems(val));
+  }, []);
 
   return (
     <div class="page-items">
