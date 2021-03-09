@@ -19,34 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/almofada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/camiseta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/caneca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/quadro.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CepController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CepController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CepService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CepService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/MerchantService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/MerchantService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_040740_create_ceps.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_07_040740_create_ceps.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/CepsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CepsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../real/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/size-plugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/../real/size-plugin.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/components/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/components/button/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/components/button/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/components/page-detail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-detail/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/constants/items.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/constants/items.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/constants/merchants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/constants/merchants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/index.ts" afterDir="false" />
-    </list>
+    <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,7 +188,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615089093139</updated>
-      <workItem from="1615089094486" duration="33760000" />
+      <workItem from="1615089094486" duration="34100000" />
     </task>
     <servers />
   </component>

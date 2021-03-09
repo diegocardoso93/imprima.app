@@ -66,7 +66,7 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
       <img src={item.image} alt={item.name} />
       <div class="stores">
         <div class="find">
-          <input ref={cepRef} onKeyUp={checkCEP} placeholder="Digite seu CEP" />
+          <input ref={cepRef} onKeyUp={checkCEP} placeholder="Digite seu CEP" autofocus />
           <button onClick={() => findMerchant()}>
             {loading && <Loader /> || '🔍'}
           </button>
