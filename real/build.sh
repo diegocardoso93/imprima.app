@@ -1,7 +1,7 @@
 #!/bin/sh
 
 yarn build
-
-mv build ../metal/public/app
+rm -rf ../metal/public/app
+mv -f build ../metal/public/app
 
 
