@@ -86,6 +86,7 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
                 <span class="small">{l.city}</span>
               </div>
               {/* <div class="i2">R${l.preco}</div> */}
+              <div class="i2">a partir de R$10,00</div>
               <div class="i3">{l.delivery}</div>
               <span class="i5" onClick={() => select(l)}>{svgMore}</span>
             </div>

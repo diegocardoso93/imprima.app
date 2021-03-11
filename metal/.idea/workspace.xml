@@ -19,13 +19,43 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="" />
+    <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../composer.phar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/imprima.1zvOcg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/imprima.1zvOcg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/imprima.1zvOcg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/imprima.1zvOcg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/metal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/metal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/build/200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/build/bundle.348d6.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/build/bundle.348d6.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/build/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/build/bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/build/preact_prerender_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/build/push-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/bundle.6498c.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/bundle.6498c.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/push-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/push-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/size-plugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/../real/size-plugin.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -38,6 +68,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -68,7 +106,6 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
@@ -140,13 +177,14 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pPeL3lIGdjxaYin1fs7aaigLRL" />
@@ -158,20 +196,22 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="oracle&#10;postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/app/Services" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/database/migrations" />
-      <recent name="$PROJECT_DIR$/database/seeders" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,6 +229,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615089093139</updated>
       <workItem from="1615089094486" duration="34100000" />
+      <workItem from="1615420557096" duration="2636000" />
     </task>
     <servers />
   </component>
@@ -205,39 +246,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615091674174">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1615091674174" />
-    <state width="1412" height="275" key="GridCell.Tab.0.bottom" timestamp="1615174034533">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state width="1412" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1615174034533" />
-    <state width="1412" height="275" key="GridCell.Tab.0.center" timestamp="1615174034533">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state width="1412" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1615174034533" />
-    <state width="1412" height="275" key="GridCell.Tab.0.left" timestamp="1615174034531">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state width="1412" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1615174034531" />
-    <state width="1412" height="275" key="GridCell.Tab.0.right" timestamp="1615174034533">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state width="1412" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1615174034533" />
-    <state x="892" y="485" width="207" height="143" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1615152943247">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="892" y="485" width="207" height="143" key="com.intellij.database.run.ParametersPanel.Standalone/72.27.1848.1053@72.27.1848.1053" timestamp="1615152943247" />
-    <state x="687" y="292" width="667" height="522" key="find.popup" timestamp="1615175552105">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="687" y="292" width="667" height="522" key="find.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1615175552105" />
-    <state x="660" y="196" width="672" height="676" key="search.everywhere.popup" timestamp="1615176126207">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="660" y="196" width="672" height="676" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1615176126207" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

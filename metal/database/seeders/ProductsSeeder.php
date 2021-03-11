@@ -43,7 +43,7 @@ class ProductsSeeder extends Seeder
             'order' => 50,
             'created_at' => now(),
         ]);
-99
+
         DB::table('products')->insert([
             'name' => 'almofada',
             'order' => 60,
