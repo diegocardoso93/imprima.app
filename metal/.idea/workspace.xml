@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,35 +23,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../composer.phar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/imprima.1zvOcg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/imprima.1zvOcg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/imprima.1zvOcg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/imprima.1zvOcg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/metal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/metal.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/build/200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/build/bundle.348d6.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/build/bundle.348d6.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/build/bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/build/bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/build/preact_prerender_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/build/push-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/bundle.6498c.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/bundle.6498c.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/200.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/200.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/bundle.c61fb.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/bundle.c61fb.esm.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/push-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/push-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/almofada.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/camiseta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/caneca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/quadro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../real/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../real/size-plugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/../real/size-plugin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/almofada.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/bone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/bone1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/camiseta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/camiseta1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/caneca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/caneca1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/chapeu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/chapeu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/app/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/app/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/page-detail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-detail/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/page-detail/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-detail/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/quadro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../real/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,17 +205,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\views" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/app/Services" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
-      <recent name="$PROJECT_DIR$/database/migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
@@ -229,7 +236,8 @@
       <option name="presentableId" value="Default" />
       <updated>1615089093139</updated>
       <workItem from="1615089094486" duration="34100000" />
-      <workItem from="1615420557096" duration="2636000" />
+      <workItem from="1615420557096" duration="2637000" />
+      <workItem from="1615508981188" duration="3076000" />
     </task>
     <servers />
   </component>

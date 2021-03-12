@@ -65,11 +65,12 @@ function App() {
         <div class="logo">
           <a href="https://imprima.app" target="_blank" class="logo-link">
             <div class="inner">
-              <button>i</button>
+              <img src="/alo/img/logo_100.png" alt="" />
+              {/* <button>i</button>
               <div class="name-container">
                 <span class="high">imprima</span>
                 <span><b>.</b>app</span>
-              </div>
+              </div> */}
             </div>
           </a>
 

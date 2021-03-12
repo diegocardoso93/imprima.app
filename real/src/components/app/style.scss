@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
 .imprimapp-modal {
 	position: fixed;
@@ -8,7 +8,7 @@
 	z-index: 999999999;
 	top: 0;
 	left: 0;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 
 
 	.header {
@@ -16,9 +16,9 @@
 		width: 100%;
 		justify-content: space-between;
 		height: 60px;
-    align-items: center;
+    	align-items: center;
 		max-width: 600px;
-    margin: auto;
+    	margin: auto;
 
 		.logo {
 			display: flex;
@@ -75,7 +75,7 @@
 			font-weight: 600;
 			margin-left: 12px;
 			line-height: 22px;
-			font-size: 20px;
+			font-size: 18px;
 			max-width: 270px;
 
 			@media (max-width: 600px) {
@@ -112,9 +112,9 @@
 
 	.body {
 		max-width: 562px;
-    margin: auto;
-    max-height: calc(100vh - 60px);
-    overflow: auto;
+    	margin: auto;
+    	max-height: calc(100vh - 60px);
+    	overflow: auto;
 		padding: 0 16px;
 	}
 
@@ -134,7 +134,7 @@
 		font: 400 13.3333px Arial;
 		padding: 1px 2px;
 		padding: 12px 14px;
-    font-size: 18px;
+    	font-size: 18px;
 		border-radius: 4px;
 		border: 1px solid #ccc;
 	}

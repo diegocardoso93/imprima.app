@@ -13,8 +13,7 @@
     "lint": "eslint src/**/*.{ts,tsx}"
   },
   "keywords": [],
-  "author": "Kirill Shatskiy <kshatskiy.freelance@gmail.com>",
-  "license": "MIT",
+  "author": "Diego Cardoso <dieg0card0s0@hotmail.com>",
   "devDependencies": {
     "eslint": "^6.8.0",
     "identity-obj-proxy": "^3.0.0",

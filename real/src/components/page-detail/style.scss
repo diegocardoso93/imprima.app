@@ -74,6 +74,11 @@
 				.i2 {
 					width: 20%;
 					text-align: center;
+					padding: 0 10px;
+					.small {
+						font-size: 12px;
+						white-space: nowrap;
+					}
 				}
 				.i3 {
 					width: 20%;
