@@ -864,7 +864,7 @@
     "@babel/helper-validator-option" "^7.12.17"
     "@babel/plugin-transform-typescript" "^7.13.0"
 
-"@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
   version "7.13.10"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
   integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
@@ -4889,6 +4889,13 @@ hex-color-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
+history@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/history/-/history-5.0.0.tgz#0cabbb6c4bbf835addb874f8259f6d25101efd08"
+  integrity sha512-3NyRMKIiFSJmIPdq7FxkNMJkQ7ZEtVblOQ38VtKaA0zZMW1Eo6Q6W8oDKEflr1kNNTItSnk4JMCO1deeSgbLLg==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+
 hmac-drbg@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -8225,10 +8232,10 @@ preact-render-to-string@^4.1.0:
   dependencies:
     pretty-format "^3.8.0"
 
-preact-router@^2.5.7:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/preact-router/-/preact-router-2.6.1.tgz#eec60a9f2c07a1ae4fbc6604d8a0415742fbbd89"
-  integrity sha512-Ql3fptQ8hiioIw5zUcWUq5NShl7yFR4e6KBUzLbGI7+HKMIgBnH+aOITN5IrY1rbr2vhKXBdHdd9nLbbjcJTOQ==
+preact-router@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/preact-router/-/preact-router-3.2.1.tgz#c7d12d8fc7a60bfbe5cadf23a234551bec783468"
+  integrity sha512-KEN2VN1DxUlTwzW5IFkF13YIA2OdQ2OvgJTkQREF+AA2NrHRLaGbB68EjS4IeZOa1shvQ1FvEm3bSLta4sXBhg==
 
 preact-transition-group@^1.1.1:
   version "1.1.1"

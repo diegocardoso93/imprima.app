@@ -22,7 +22,7 @@ class CepService
         ]);
     }
 
-    public function getLatLon($address)
+    public function getOsm($address)
     {
         $res = (new Client(['verify' => base_path() . '/cacert.pem']))
             ->get(
@@ -32,6 +32,6 @@ class CepService
             $osm = json_decode($res->getBody());
             $osm = $osm[0] ?? null;
         }
-        return [$osm->lat, $osm->lon];
+        return $osm ?? (object)['lat' => null, 'lon' => null];
     }
 }

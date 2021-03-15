@@ -43,15 +43,5 @@ class MerchantsProductsSeeder extends Seeder
             'merchant_id' => 2,
             'product_id' => 4,
         ]);
-
-        DB::table('merchants_products')->insert([
-            'merchant_id' => 2,
-            'product_id' => 5,
-        ]);
-
-        DB::table('merchants_products')->insert([
-            'merchant_id' => 2,
-            'product_id' => 6,
-        ]);
     }
 }

@@ -1,11 +1,11 @@
-import { h, createRef, Fragment } from "preact";
+import { h, createRef } from "preact";
 import { useEffect, useState } from "preact/hooks";
+import Router from 'preact-router';
 
 import "./style.scss";
 import {Item, items} from '../../constants/items';
 import PageItems from "../page-items";
 import PageDetail from "../page-detail";
-import Loader from "../loader";
 import { Merchant } from "../../constants/merchants";
 import PageCheckout from "../page-checkout";
 
@@ -45,45 +45,31 @@ function App() {
 
   const [appState, setAppState] = useState({page: Page.Items, data: null} as AppState);
 
-  function renderPage(page: Page) {
-    switch (page) {
-      case Page.Items:
-        return <PageItems appState={appState} setAppState={setAppState} />
-      case Page.Detail:
-        return <PageDetail appState={appState} setAppState={setAppState} />
-      case Page.Checkout:
-        return <PageCheckout appState={appState} setAppState={setAppState} />
+  useEffect(() => {
+    // window.history.pushState(null, 'modalimprima', '');
+    let x = 0;
+    window.onbeforeunload = (e: any) => {
+      if (x == 0) {
+        dispose();
+        x = 1;
+      }
+    };
+    window.onpopstate = (e: any) => {
+      dispose();
     }
-  }
+  }, []);
 
-  // window.history.pushState
-  // window.onpopstate = (e) => console.log(e.state);
+  const dispose = () => {
+    parent.postMessage({ active: false }, '*');
+  };
 
   return (
     <div ref={elRef} class="imprimapp-modal">
-      <div class="header">
-        <div class="logo">
-          <a href="https://imprima.app" target="_blank" class="logo-link">
-            <div class="inner">
-              <img src="/alo/img/logo_100.png" alt="" />
-              {/* <button>i</button>
-              <div class="name-container">
-                <span class="high">imprima</span>
-                <span><b>.</b>app</span>
-              </div> */}
-            </div>
-          </a>
-
-          <h1>
-            Comprar personalizado
-          </h1>
-        </div>
-        {/* <div class="close" onClick={dispose}>×</div> */}
-      </div>
-
-      <div class="body">
-        {renderPage(appState.page)}
-      </div>
+      <Router>
+        <PageItems path="/alo" appState={appState} setAppState={setAppState} />
+        <PageDetail path="/alo/detalhes" appState={appState} setAppState={setAppState} />
+        <PageCheckout path="/alo/checkout" appState={appState} setAppState={setAppState} />
+      </Router>
     </div>
   );
 }

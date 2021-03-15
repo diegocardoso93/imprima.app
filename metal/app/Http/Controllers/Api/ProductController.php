@@ -12,7 +12,7 @@ class ProductController extends Controller
     {
         $products = $productService->getProducts()
             ->map(function ($product) {
-                $product->image = '/alo/img/' . $product->name . '.png';
+                $product->image = '/img/' . $product->name . '.png';
                 return $product;
             });
 

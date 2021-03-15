@@ -14,7 +14,8 @@ class MerchantService
             m.name,
             trim(to_char(point(:lon, :lat) <@> point(lon, lat)::point, '990D00')) || 'km' as distance,
             (case m.delivery when true then 'grátis' else 'retirar' end) delivery,
-            m.city
+            m.city,
+            m.uf
             FROM products p
             INNER JOIN merchants_products mp on mp.product_id = p.id
             INNER JOIN merchants m on m.id = mp.merchant_id

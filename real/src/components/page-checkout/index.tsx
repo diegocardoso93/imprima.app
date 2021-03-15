@@ -15,6 +15,7 @@ const svgBack = (
 );
 
 interface PageParams {
+  path: string,
   appState: any,
   setAppState: any
 }

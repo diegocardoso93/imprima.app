@@ -12,8 +12,22 @@ class CepController extends Controller
     public function index($productId, $cep, CepService $cepService, MerchantService $merchantService)
     {
         $address = $cepService->getClosestAddress($cep);
-        [$lat, $lon] = $cepService->getLatLon($address);
 
-        return new Response($merchantService->getMerchantsProduct($lat, $lon, $productId));
+        if (!$address) {
+            return new Response([]);
+        }
+
+        $osm = $cepService->getOsm($address);
+        return new Response([
+            'merchants' => $merchantService->getMerchantsProduct($osm->lat, $osm->lon, $productId),
+            'address' => [
+                'lat' => $osm->lat,
+                'lon' => $osm->lon,
+                'uf' => $address->uf,
+                'city' => $address->city,
+                'zip' => $cep,
+                'neighborhood' => $address->neighborhood
+            ]
+        ]);
     }
 }

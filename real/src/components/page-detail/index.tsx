@@ -1,12 +1,16 @@
 import { h, createRef, Fragment } from "preact";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 import "./style.scss";
 import { Merchant } from '../../constants/merchants';
 import Loader from "../loader";
 import { GET_MERCHANT } from '../../constants/endpoints';
+import Header from "../header";
+import Body from "../body";
+import { route } from "preact-router";
 
 interface PageParams {
+  path: string,
   appState: any,
   setAppState: any
 }
@@ -29,7 +33,7 @@ const svgBack = (
 export default function PageDetail({ appState, setAppState }: PageParams) {
   const { item } = appState.data;
   const [loading, setLoading] = useState(false);
-  const [merchants, setMerchants] = useState([] as Merchant[]);
+  const [merchants, setMerchants] = useState<any>(null);
   const cepRef = createRef();
 
   function checkCEP(e: any) {
@@ -39,62 +43,82 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
     }
   }
 
+  useEffect(() => {
+    // window.history.pushState(null, 'modalimprima', '/alo/detalhes');
+    const address = JSON.parse(localStorage.getItem('address') || '');
+    if (address) {
+      cepRef.current.value = address.zip;
+      findMerchant();
+    }
+  }, []);
+
   function findMerchant() {
-    console.log('find');
     setLoading(true);
     const cep = cepRef.current.value;
     fetch(GET_MERCHANT.replace('{id}', item.id).replace('{cep}', cep), { mode: 'cors' })
       .then(res => res.json())
-      .then(val => {
-        console.log('red',val);
+      .then(res => {
         setLoading(false);
-        setMerchants(val);
+        setMerchants(res.merchants);
+        localStorage.setItem('address', JSON.stringify(res.address));
       })
       .catch(e => setLoading(false));
   }
 
   function select(l: Merchant) {
     setAppState({ page: 2, data: { item, merchant: l } });
+    route('/alo/checkout', true);
   }
 
   return (
-    <div class="page-detail">
+  <Fragment>
+    <Header>
       <div class="title">
-        <div onClick={() => setAppState({page: 0})}>{svgBack}</div>
+        <div onClick={() => {
+          setAppState({page: 0});
+          route('/alo', true);
+        }}>{svgBack}</div>
         <div>{item.name}</div>
       </div>
-      <img src={item.image} alt={item.name} />
-      <div class="stores">
-        <div class="find">
-          <input ref={cepRef} onKeyUp={checkCEP} placeholder="Digite seu CEP" autofocus />
-          <button onClick={() => findMerchant()}>
-            {loading && <Loader /> || '🔍'}
-          </button>
-        </div>
-        <div class="list">
-          {merchants.length && (
-            <div class="item">
-              <div class="i1 b">Fornecedor</div>
-              <div class="i2 b">Preço</div>
-              <div class="i3 b">Frete</div>
-              <span class="i5">&nbsp;</span>
-            </div>
-          ) || ''}
-          {merchants.map(l => (
-            <div class="item">
-              <div class="i1">{l.name}<br/>
-                <span class="small">{l.city}</span>
-              </div>
-              {/* <div class="i2">R${l.preco}</div> */}
-              <div class="i2">
-                <div class="small">a partir de</div>R$10,00
-              </div>
-              <div class="i3">{l.delivery}</div>
-              <span class="i5" onClick={() => select(l)}>{svgMore}</span>
-            </div>
-          ))}
+    </Header>
+    <Body>
+      <div class="page-detail">
+        <img src={item.image} alt={item.name} />
+        <div class="stores">
+          <div class="find">
+            <input ref={cepRef} onKeyUp={checkCEP} placeholder="Digite seu CEP" autofocus />
+            <button onClick={() => findMerchant()}>
+              {loading && <Loader /> || '🔍'}
+            </button>
+          </div>
+          <div class="list">
+            {(merchants && (merchants.length && (
+              <Fragment>
+                <div class="item">
+                  <div class="i1 b">Fornecedor</div>
+                  <div class="i2 b">Preço</div>
+                  <div class="i3 b">Frete</div>
+                  <span class="i5">&nbsp;</span>
+                </div>
+                {merchants.map((l: Merchant) => (
+                  <div class="item">
+                    <div class="i1">{l.name}<br/>
+                      <span class="small">{l.city} - {l.uf}</span>
+                    </div>
+                    {/* <div class="i2">R${l.preco}</div> */}
+                    <div class="i2">
+                      <div class="small">a partir de</div>R$10,00
+                    </div>
+                    <div class="i3">{l.delivery}</div>
+                    <span class="i5" onClick={() => select(l)}>{svgMore}</span>
+                  </div>
+                ))}
+              </Fragment>
+            ) || <h3>Nenhum fornecedor na sua localidade.</h3>))}
+          </div>
         </div>
       </div>
-    </div>
+    </Body>
+  </Fragment>
   );
 }

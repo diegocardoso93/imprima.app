@@ -25,7 +25,7 @@
             <div style="margin: 0 auto">
                 <img src="/img/logo-imprima.png" alt="" style="width: 100%;padding: 0 40px;max-width: 400px;margin-top: -100px" />
             </div>
-            <h2 style="padding: 20px;text-align: center;">Somos o marketplace de impressão de personalizados do Brasil 🙂</h2>
+            <h2 style="padding: 20px;text-align: center;">Somos o marketplace de impressão de personalizados do Brasil! 🙂</h2>
 
 {{--            @if (Route::has('login'))--}}
 {{--                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">--}}

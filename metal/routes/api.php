@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CepController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\BannerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('produto', [ProductController::class, 'index']);
 Route::get('cep/{productId}/{cep}', [CepController::class, 'index']);
+Route::options('banner', [BannerController::class, 'index']);
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();

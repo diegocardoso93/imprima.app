@@ -1,0 +1,38 @@
+
+.header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	height: 60px;
+	align-items: center;
+	max-width: 600px;
+	margin: auto;
+}
+
+.close {
+	border-radius: 50px;
+	width: 30px;
+    height: 32px;
+	background: #ededed;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 31px;
+	font-weight: bold;
+	color: #444;
+	cursor: pointer;
+	margin-right: 10px;
+	transition: background .25s;
+	display: inline-table;
+	text-align: center;
+	position: absolute;
+    right: calc(50vw - 261px);
+    padding: 0 4px;
+	transition: background .25s;
+
+	&:hover {
+		background: #444;
+		color: #fff;
+	}
+}

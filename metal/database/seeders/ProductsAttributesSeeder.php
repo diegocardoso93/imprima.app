@@ -15,18 +15,6 @@ class ProductsAttributesSeeder extends Seeder
     public function run()
     {
         DB::table('products_attributes')->insert([
-            'type' => 'Cor',
-            'value' => 'Branca',
-            'product_id' => 2
-        ]);
-
-        DB::table('products_attributes')->insert([
-            'type' => 'Cor',
-            'value' => 'Preta',
-            'product_id' => 2
-        ]);
-
-        DB::table('products_attributes')->insert([
             'type' => 'Tamanho',
             'value' => 'P',
             'product_id' => 2

@@ -15,38 +15,26 @@ class ProductsSeeder extends Seeder
     public function run()
     {
         DB::table('products')->insert([
-            'name' => 'quadro',
+            'name' => 'camiseta',
             'order' => 10,
             'created_at' => now(),
         ]);
 
         DB::table('products')->insert([
-            'name' => 'camiseta',
+            'name' => 'caneca',
             'order' => 20,
             'created_at' => now(),
         ]);
 
         DB::table('products')->insert([
-            'name' => 'caneca',
+            'name' => 'quadro',
             'order' => 30,
             'created_at' => now(),
         ]);
 
         DB::table('products')->insert([
-            'name' => 'garrafa squeezy',
-            'order' => 40,
-            'created_at' => now(),
-        ]);
-
-        DB::table('products')->insert([
-            'name' => 'boné',
-            'order' => 50,
-            'created_at' => now(),
-        ]);
-
-        DB::table('products')->insert([
             'name' => 'almofada',
-            'order' => 60,
+            'order' => 40,
             'created_at' => now(),
         ]);
     }
