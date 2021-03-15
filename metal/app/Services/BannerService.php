@@ -13,6 +13,24 @@ class BannerService
 
         // -- futuramente analisar automatização unsplash/pixabay + background remover
 
-        return ['image' => 'https://imprima.app/img/camiseta_banner01.png'];
+//        return [
+//            'type' => 1,
+//            'image' => 'https://imprima.app/img/camiseta_banner01.png'
+//        ];
+
+//        return [
+//            'type' => 2,
+//            'image' => 'https://imprima.app/img/caneca_banner01.png'
+//        ];
+
+        return [
+            'type' => 3,
+            'image' => 'https://imprima.app/img/quadro_banner01.png'
+        ];
+
+//        return [
+//            'type' => 4,
+//            'image' => 'https://imprima.app/img/almofada_banner01.png'
+//        ];
     }
 }

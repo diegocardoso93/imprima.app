@@ -25,56 +25,19 @@
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_logo.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_logo.cdr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../assets/logo.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/logo.cdr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/jest.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../door/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/preact.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/size-plugin.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/src/components/app/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/src/components/app/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/src/components/button/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/src/components/button/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/src/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/src/sw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/src/template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../door/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../door/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../build.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CepController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CepController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CepService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CepService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/MerchantService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/MerchantService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/MerchantsProductsAttributesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MerchantsProductsAttributesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/MerchantsProductsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MerchantsProductsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsAttributesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsAttributesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/camiseta_banner01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/camiseta_banner01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/testar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/BannerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BannerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/bundle.545bf.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/bundle.545bf.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/push-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/push-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/camiseta.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/camiseta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/caneca.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/caneca.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/banner.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../real/size-plugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/../real/size-plugin.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/almofada.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/bone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/bone1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/camiseta.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/camiseta1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/caneca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/caneca1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/chapeu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/chapeu2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/logo_100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/alo/img/quadro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/components/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/components/page-detail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-detail/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/components/page-items/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-items/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real/src/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/page-items/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-items/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +222,7 @@
       <workItem from="1615420557096" duration="2637000" />
       <workItem from="1615508981188" duration="9069000" />
       <workItem from="1615592744601" duration="15819000" />
-      <workItem from="1615692824019" duration="14745000" />
+      <workItem from="1615692824019" duration="16677000" />
     </task>
     <servers />
   </component>

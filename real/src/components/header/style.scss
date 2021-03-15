@@ -31,8 +31,7 @@
     padding: 0 4px;
 	transition: background .25s;
 
-	&:hover {
-		background: #444;
-		color: #fff;
+	@media (max-width: 525px) {
+		right: 0px;
 	}
 }

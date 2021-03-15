@@ -9,4 +9,4 @@ cd ../real
 yarn build
 rm -rf ../metal/public/alo
 mv -f build ../metal/public/alo
-cp src/img/** ../metal/public/img
+#cp src/img/** ../metal/public/img

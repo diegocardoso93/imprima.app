@@ -43,16 +43,59 @@
                 text-align: center;
                 font-weight: bold;
             }
-            .banner {
-                user-drag: none;
+            .tleft.t-2 {
+                color: black;
+                top: 108px;
+                width: 65px;
+            }
+            .tright.t-2 {
+                color: black;
+                top: 114px;
+                right: 5px;
+                width: 50px;
+            }
+            .tcenter.t-2 {
+                color: black;
+                bottom: 16px;
+            }
+            .tleft.t-3 {
+                color: black;
+                top: 108px;
+                width: 65px;
+                left: -2px;
+            }
+            .tright.t-3 {
+                color: black;
+                top: 114px;
+                right: 4px;
+                width: 50px;
+            }
+            .tcenter.t-3 {
+                color: black;
+                bottom: 10px;
+            }
+            .tleft.t-4 {
+                color: black;
+                top: 108px;
+                width: 65px;
+            }
+            .tright.t-4 {
+                color: black;
+                top: 114px;
+                right: 10px;
+                width: 50px;
+            }
+            .tcenter.t-4 {
+                color: black;
+                bottom: 8px;
             }
         </style>
     </head>
     <body>
         <img class="banner" src="{{ $image }}" alt="" />
-        <div class="tleft">entrega até no mesmo dia*</div>
-        <div class="tright">frete até grátis*</div>
-        <div class="tcenter">conheça já!</div>
+        <div class="tleft t-{{ $type }}">entrega até no mesmo dia*</div>
+        <div class="tright t-{{ $type }}">frete até grátis*</div>
+        <div class="tcenter t-{{ $type }}">conheça já!</div>
 
         <script>
             document.querySelector('body').onclick = function() {
