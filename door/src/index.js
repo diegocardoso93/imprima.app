@@ -1,3 +1,4 @@
+(function () {
 
 var styleEl = document.createElement('style')
 styleEl.innerText = `
@@ -102,7 +103,10 @@ window.onload = () => {
 
     const setBanner = (init) => {
       clicked = false;
-      iframeEl.src = "https://imprima.app/banner?id=" + imprimaAd.getAttribute('data-imprima-id') + "&url=" + window.location.href;
+      iframeEl.src = "https://imprima.app/banner?imprimaId=" +
+        imprimaAd.getAttribute('data-imprima-id') +
+        "&url=" + window.location.href +
+        "&query=" + btoa(document.title);
       iframeEl.classList.remove('iframe-app');
 
       if (!init) {
@@ -117,10 +121,9 @@ window.onload = () => {
       bodyEl.style.overflow = defaultOverflow;
     }
 
-    const setApp = () => {
-      console.log(clicked);
+    const setApp = (kindId, imprimaId) => {
       if (!clicked) {
-        iframeEl.src = 'https://imprima.app/alo';
+        iframeEl.src = `https://imprima.app/alo?kindId=${kindId}&imprimaId=${imprimaId}`;
         iframeEl.classList.add('iframe-app');
 
         imprimaAd.classList.add('full');
@@ -128,6 +131,7 @@ window.onload = () => {
         loadingEl.style.display = 'block';
         iframeEl.onload = function () {
           loadingEl.style.display = 'none';
+          iframeEl.contentWindow.history.back = window.history.back;
         }
         bodyEl.style.overflow = 'hidden';
         clicked = true;
@@ -135,9 +139,9 @@ window.onload = () => {
     }
 
     window.addEventListener('message', (e) => {
-      const { active } = e.data; 
+      const { active, kindId, imprimaId } = e.data; 
       if (active) {
-        setApp();
+        setApp(kindId, imprimaId);
         return;
       }
       setBanner();
@@ -149,3 +153,5 @@ window.onload = () => {
   IframeControl();
 
 }
+
+})();

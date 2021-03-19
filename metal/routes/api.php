@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\Api\CepController;
-use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\BannerController;
+use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\CepController;
+use App\Http\Controllers\Api\KindController;
+use App\Http\Controllers\Api\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('produto', [ProductController::class, 'index']);
+Route::get('kind/{id}', [KindController::class, 'index']);
+Route::get('category', [CategoryController::class, 'index']);
+Route::get('category/{categoryId}/type/{typeId}', [CategoryController::class, 'products']);
 Route::get('cep/{productId}/{cep}', [CepController::class, 'index']);
 Route::options('banner', [BannerController::class, 'index']);
 

@@ -3,8 +3,7 @@ import { useEffect, useState } from "preact/hooks";
 
 import "./style.scss";
 import { Item } from '../../constants/items';
-import { GET_PRODUCT } from "../../constants/endpoints";
-import { route } from "preact-router";
+import { GET_KIND } from "../../constants/endpoints";
 import Header from "../header";
 import Body from "../body";
 import Loader from "../loader";
@@ -16,7 +15,6 @@ const svgMore = (
 );
 
 interface PageParams {
-  path: string,
   appState: any,
   setAppState: any
 }
@@ -27,12 +25,11 @@ export default function PageItems({ appState, setAppState }: PageParams) {
 
   function select(item: Item) {
     setAppState({page: 1, data: { item }});
-    route('/alo/detalhes', true);
   }
 
   useEffect(() => {
     setLoading(true);
-    fetch(GET_PRODUCT)
+    fetch(GET_KIND.replace('{id}', localStorage.getItem('kindId') || ''))
       .then(res => res.json())
       .then(val => {
         setItems(val);
@@ -63,7 +60,7 @@ export default function PageItems({ appState, setAppState }: PageParams) {
               {items.map((item: Item) => (
                 <div class="option" onClick={() => select(item)}>
                   <div class="left">
-                    <img src={item.image} alt="" class="image" />
+                    <img src={item.thumb_url} alt="" class="image" />
                     <span>{item.name}</span>
                   </div>
                   <span class="select">{svgMore}</span>

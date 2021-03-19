@@ -92,14 +92,18 @@
         </style>
     </head>
     <body>
-        <img class="banner" src="{{ $image }}" alt="" />
+        <img class="banner" src="{{ $kind->url }}" alt="" />
         <div class="tleft t-{{ $type }}">entrega até no mesmo dia*</div>
         <div class="tright t-{{ $type }}">frete até grátis*</div>
         <div class="tcenter t-{{ $type }}">conheça já!</div>
 
         <script>
             document.querySelector('body').onclick = function() {
-                parent.postMessage({active: true}, '*');
+                parent.postMessage({
+                    active: true,
+                    kindId: "{{ $kind->id }}",
+                    imprimaId: "{{ $imprimaId }}"
+                }, '*');
             }
             function animate() {
                 document.querySelector('.tleft').style.display = 'none';

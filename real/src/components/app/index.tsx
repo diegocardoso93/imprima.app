@@ -3,7 +3,7 @@ import { useEffect, useState } from "preact/hooks";
 import Router from 'preact-router';
 
 import "./style.scss";
-import {Item, items} from '../../constants/items';
+import {Item} from '../../constants/items';
 import PageItems from "../page-items";
 import PageDetail from "../page-detail";
 import { Merchant } from "../../constants/merchants";
@@ -63,13 +63,20 @@ function App() {
     parent.postMessage({ active: false }, '*');
   };
 
+  function renderPage(page: Page) {
+    switch (page) {
+      case Page.Items:
+        return <PageItems appState={appState} setAppState={setAppState} />
+      case Page.Detail:
+        return <PageDetail appState={appState} setAppState={setAppState} />
+      case Page.Checkout:
+        return <PageCheckout appState={appState} setAppState={setAppState} />
+    }
+  }
+
   return (
     <div ref={elRef} class="imprimapp-modal">
-      <Router>
-        <PageItems path="/alo" appState={appState} setAppState={setAppState} />
-        <PageDetail path="/alo/detalhes" appState={appState} setAppState={setAppState} />
-        <PageCheckout path="/alo/checkout" appState={appState} setAppState={setAppState} />
-      </Router>
+      {renderPage(appState.page)}
     </div>
   );
 }

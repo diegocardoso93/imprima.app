@@ -14,8 +14,13 @@ class SiteController extends Controller
 
     public function banner(Request $request, BannerService $bannerService)
     {
-//        $request->get('id');
-        return view('banner', $bannerService->get($request->get('url')));
+        return view(
+            'banner',
+            $bannerService->get(
+                $request->get('query'),
+                $request->get('imprimaId')
+            )
+        );
     }
 
     public function testar()

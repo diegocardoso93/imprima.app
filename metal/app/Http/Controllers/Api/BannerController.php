@@ -11,6 +11,6 @@ class BannerController extends Controller
 {
     public function index(Request $request, BannerService $bannerService)
     {
-        return new Response($bannerService->get($request->get('url')));
+        return new Response($bannerService->get($request->get('query')));
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMerchantsProductsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateMerchantsProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('merchants_products', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('merchant_id')->constrained('merchants');
-            $table->foreignId('product_id')->constrained('products');
+            $table->string('name');
         });
     }
 
@@ -27,6 +26,6 @@ class CreateMerchantsProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('merchants_products');
+        Schema::dropIfExists('categories');
     }
 }

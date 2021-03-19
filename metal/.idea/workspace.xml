@@ -25,19 +25,54 @@
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_logo.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_logo.cdr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../assets/logo.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/logo.cdr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../door/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../door/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/BannerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/BannerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CepController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CepController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/BannerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BannerService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/bundle.545bf.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/bundle.545bf.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/MerchantService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/MerchantService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ProductService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_040740_create_ceps.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_07_040740_create_ceps.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_105611_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_07_095611_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_110822_create_merchants_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_07_110822_create_merchants_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_110833_create_products_attributes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_07_110633_create_types_attributes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_110854_create_merchants_products_attributes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_07_110754_create_merchants_types_attributes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_195104_create_partners_urls_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_212201_create_indexes_urls_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_212223_create_indexes_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_213721_create_indexes_generated_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MerchantsProductsAttributesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MerchantsTypesAttributesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MerchantsProductsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MerchantsTypesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsAttributesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TypesAttributesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TypesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/bundle.cde8c.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/bundle.cde8c.esm.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/alo/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/alo/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/bundle.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/alo/push-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/push-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/door.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/door.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/almofada.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/almofada.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/img/camiseta.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/camiseta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/img/caneca.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/caneca.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/quadro.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/quadro.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/banner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/testar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../real/size-plugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/../real/size-plugin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/app/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/app/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/page-checkout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-checkout/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/page-detail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-detail/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/page-detail/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-detail/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/components/page-items/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-items/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../real/src/components/page-items/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/components/page-items/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/constants/endpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/constants/endpoints.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/constants/items.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/constants/items.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../real/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,18 +222,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\views" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\app\Services" />
-      <recent name="C:\Users\dieg0\pj\imprima.app\metal" />
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/app/Services" />
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\app\Http\Controllers\Api" />
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\database\seeders" />
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\database\migrations" />
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
@@ -222,7 +257,7 @@
       <workItem from="1615420557096" duration="2637000" />
       <workItem from="1615508981188" duration="9069000" />
       <workItem from="1615592744601" duration="15819000" />
-      <workItem from="1615692824019" duration="16677000" />
+      <workItem from="1615692824019" duration="51906000" />
     </task>
     <servers />
   </component>

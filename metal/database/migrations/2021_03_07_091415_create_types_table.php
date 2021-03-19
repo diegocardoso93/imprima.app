@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIndexesGeneratedImagesTable extends Migration
+class CreateTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateIndexesGeneratedImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('indexes_generated_images', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->id();
-            $table->string('url')->unique()->index();
-            $table->foreignId('index_image_id')->constrained('indexes_images');
-            $table->foreignId('product_id')->constrained('products');
+            $table->string('name');
+            $table->integer('status')->default(1); // 1 ativo, 0 desativo
+            $table->integer('order');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateIndexesGeneratedImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('indexes_generated_images');
+        Schema::dropIfExists('types');
     }
 }

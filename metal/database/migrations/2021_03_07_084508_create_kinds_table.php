@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePartnersUrlsTable extends Migration
+class CreateKindsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreatePartnersUrlsTable extends Migration
      */
     public function up()
     {
-        Schema::create('partners_urls', function (Blueprint $table) {
+        Schema::create('kinds', function (Blueprint $table) {
             $table->id();
-            $table->string('url');
-            $table->foreignId('partner_id')->constrained('partners');
+            $table->string('name');
+            $table->string('url')->nullable();
+            $table->integer('status')->default(1); // 1 ativo, 0 desativo
+            $table->foreignId('category_id')->constrained('categories');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreatePartnersUrlsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('partners_urls');
+        Schema::dropIfExists('kinds');
     }
 }

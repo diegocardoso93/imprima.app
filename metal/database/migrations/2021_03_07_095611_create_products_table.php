@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateProductsTable extends Migration
@@ -16,9 +15,12 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('status')->default(1); // 1 ativo, 0 desativo
-            $table->integer('order');
+            $table->string('name')->nullable();
+            $table->string('url')->nullable();
+            $table->string('thumb_url')->nullable();
+            $table->foreignId('type_id')->constrained('types');
+            $table->foreignId('category_id')->constrained('categories');
+            $table->foreignId('kind_id')->constrained('kinds');
             $table->timestamps();
         });
     }

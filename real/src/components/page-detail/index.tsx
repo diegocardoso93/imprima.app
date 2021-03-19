@@ -4,13 +4,11 @@ import { useEffect, useState } from "preact/hooks";
 import "./style.scss";
 import { Merchant } from '../../constants/merchants';
 import Loader from "../loader";
-import { GET_MERCHANT } from '../../constants/endpoints';
+import { GET_MERCHANT, GET_CATEGORY, GET_CATEGORY_TYPE } from '../../constants/endpoints';
 import Header from "../header";
 import Body from "../body";
-import { route } from "preact-router";
 
 interface PageParams {
-  path: string,
   appState: any,
   setAppState: any
 }
@@ -34,7 +32,12 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
   const { item } = appState.data;
   const [loading, setLoading] = useState(false);
   const [merchants, setMerchants] = useState<any>(null);
+  const [categories, setCategories] = useState<any>(null);
+  const [images, setImages] = useState<any>(null);
+  const [swap, setSwap] = useState({loading: false, show: false});
   const cepRef = createRef();
+  const [selected, setSelected] = useState<any>({});
+  const [loadingImage, setLoadingImage] = useState(false);
 
   function checkCEP(e: any) {
     console.log(e.target.value);
@@ -44,9 +47,11 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
   }
 
   useEffect(() => {
+    setSelected(item);
     // window.history.pushState(null, 'modalimprima', '/alo/detalhes');
-    const address = JSON.parse(localStorage.getItem('address') || '');
-    if (address) {
+    const taddress = localStorage.getItem('address');
+    const address = JSON.parse(taddress === 'undefined' ? '{}' : taddress as string);
+    if (address.zip) {
       cepRef.current.value = address.zip;
       findMerchant();
     }
@@ -67,23 +72,79 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
 
   function select(l: Merchant) {
     setAppState({ page: 2, data: { item, merchant: l } });
-    route('/alo/checkout', true);
+  }
+
+  function toggleSwap() {
+    if (!swap.show) {
+      setSwap({loading: true, show: true});
+      fetch(GET_CATEGORY, { mode: 'cors' })
+        .then(res => res.json())
+        .then(res => {
+          setSwap({loading: false, show: true});
+          setCategories(res);
+        })
+        .catch(e => setSwap({loading: false, show: false}));
+    } else {
+      setSwap({loading: false, show: false});
+    }
+  }
+
+  function onSelectCategory(event: any) {
+    const category = event.target.value;
+    setLoadingImage(true);
+    fetch(
+      GET_CATEGORY_TYPE
+      .replace('{categoryId}', category)
+      .replace('{typeId}', item.type_id),
+      { mode: 'cors' }
+    )
+    .then(res => res.json())
+    .then(res => {
+      setImages(res);
+      setLoadingImage(false);
+    })
+    .catch(e => setLoadingImage(false));
+  }
+
+  function selectImage(image: any) {
+    console.log(image);
+    setSelected({...selected, id: image.id, url: image.url});
   }
 
   return (
   <Fragment>
     <Header>
       <div class="title">
-        <div onClick={() => {
-          setAppState({page: 0});
-          route('/alo', true);
-        }}>{svgBack}</div>
-        <div>{item.name}</div>
+        <div onClick={() => setAppState({page: 0})}>{svgBack}</div>
+        <div>{selected.name}</div>
       </div>
     </Header>
     <Body>
       <div class="page-detail">
-        <img src={item.image} alt={item.name} />
+        <div class="hcategory">
+          <div class="switch-container">
+            trocar estampa 
+            <label class="switch">
+              <input type="checkbox" onChange={toggleSwap}/>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="category-container">
+            {swap.show && (swap.loading && <Loader /> || (
+              <select onChange={onSelectCategory}>
+                <option>selecione</option>
+                {categories.map((c: any) => <option value={c.id}>{c.name}</option>)}
+              </select>
+            ))}
+          </div>
+        </div>
+        <div class="image-list">
+          {swap.show && (loadingImage && <Loader /> || (
+            images && images.map((i: any) => <img src={i.thumb_url} onClick={() => selectImage(i)}/>)
+          ))}
+        </div>
+
+        <img src={selected.url} alt={selected.name} />
         <div class="stores">
           <div class="find">
             <input ref={cepRef} onKeyUp={checkCEP} placeholder="Digite seu CEP" autofocus />
@@ -107,7 +168,7 @@ export default function PageDetail({ appState, setAppState }: PageParams) {
                     </div>
                     {/* <div class="i2">R${l.preco}</div> */}
                     <div class="i2">
-                      <div class="small">a partir de</div>R$10,00
+                      <div class="small">a partir de</div>R${l.price}
                     </div>
                     <div class="i3">{l.delivery}</div>
                     <span class="i5" onClick={() => select(l)}>{svgMore}</span>

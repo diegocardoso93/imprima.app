@@ -13,16 +13,18 @@ class CreateCeps extends Migration
      */
     public function up()
     {
-        Schema::create('ceps', function (Blueprint $table) {
-            $table->id();
-            $table->string('zip')->unique()->index();
-            $table->string('city');
-            $table->string('uf');
-            $table->string('neighborhood')->nullable();
-            $table->string('address')->nullable();
-            $table->string('address_extra')->nullable();
-            $table->timestamps();
-        });
+        try {
+            Schema::create('ceps', function (Blueprint $table) {
+                $table->id();
+                $table->string('zip')->unique()->index();
+                $table->string('city');
+                $table->string('uf');
+                $table->string('neighborhood')->nullable();
+                $table->string('address')->nullable();
+                $table->string('address_extra')->nullable();
+                $table->timestamps();
+            });
+        } catch (Exception $e) {}
     }
 
     //01002900	São Paulo/SP	Centro	Viaduto do Chá, 15 	 Prefeitura do Município de São Paulo
@@ -34,6 +36,6 @@ class CreateCeps extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ceps');
+//        Schema::dropIfExists('ceps');
     }
 }

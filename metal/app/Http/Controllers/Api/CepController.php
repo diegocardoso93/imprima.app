@@ -14,7 +14,7 @@ class CepController extends Controller
         $address = $cepService->getClosestAddress($cep);
 
         if (!$address) {
-            return new Response([]);
+            return new Response(['merchants' => [], 'address' => []]);
         }
 
         $osm = $cepService->getOsm($address);

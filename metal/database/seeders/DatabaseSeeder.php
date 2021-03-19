@@ -14,13 +14,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            CepsSeeder::class,
-            ProductsSeeder::class,
-            ProductsAttributesSeeder::class,
+//            CepsSeeder::class,
+            CategoriesSeeder::class,
+            TypesSeeder::class,
+            KindsSeeder::class,
+            TypesAttributesSeeder::class,
             MerchantsSeeder::class,
-            MerchantsProductsSeeder::class,
-            MerchantsProductsSeeder::class,
-            MerchantsProductsAttributesSeeder::class,
+            MerchantsTypesSeeder::class,
+            MerchantsTypesAttributesSeeder::class,
+            ProductsSeeder::class,
         ]);
 
         // php artisan config:cache

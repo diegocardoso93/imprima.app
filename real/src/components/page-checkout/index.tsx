@@ -2,8 +2,9 @@ import { h, createRef, Fragment } from "preact";
 import { useEffect, useState } from "preact/hooks";
 
 import "./style.scss";
-import { Item, items } from '../../constants/items';
 import Loader from "../loader";
+import Header from "../header";
+import Body from "../body";
 
 const svgBack = (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -15,22 +16,34 @@ const svgBack = (
 );
 
 interface PageParams {
-  path: string,
   appState: any,
   setAppState: any
 }
 
 export default function PageCheckout({ appState, setAppState }: PageParams) {
   const { item, merchant } = appState.data;
-console.log(appState);
+  console.log(appState);
+
+  function buy() {
+    
+  }
 
   return (
-    <div class="page-checkout">
-      <div class="title">
-        <div onClick={() => setAppState({page: 1, data: { item }})}>{svgBack}</div>
-        <div>{item.name} - {merchant.nome}</div>
-      </div>
-      <img src={item.image} alt={item.name} />
-    </div>
+    <Fragment>
+      <Header>
+        <div class="title">
+          <div onClick={() => setAppState({ page: 1, ...appState })}>{svgBack}</div>
+          <div>{item.name} - {merchant.nome}</div>
+        </div>
+      </Header>
+      <Body>
+        <div class="page-checkout">
+          <img src={item.image} alt={item.name} />
+        </div>
+        {/* <div>{attribute.name}</div> */}
+        <div>Preço final</div>
+        <button onClick={() => buy()}>Pagar</button>
+      </Body>
+    </Fragment>
   );
 }

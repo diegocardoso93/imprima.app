@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIndexesUrlsTable extends Migration
+class CreateMerchantsTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateIndexesUrlsTable extends Migration
      */
     public function up()
     {
-        Schema::create('indexes_urls', function (Blueprint $table) {
+        Schema::create('merchants_types', function (Blueprint $table) {
             $table->id();
-            $table->string('url')->unique()->index();
-            $table->foreignId('partner_id')->constrained('partners');
-            $table->timestamps();
+            $table->foreignId('merchant_id')->constrained('merchants');
+            $table->foreignId('type_id')->constrained('types');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateIndexesUrlsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('indexes_urls');
+        Schema::dropIfExists('merchants_types');
     }
 }
