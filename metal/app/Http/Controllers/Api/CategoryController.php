@@ -15,6 +15,15 @@ class CategoryController extends Controller
 
     public function products($categoryId, $typeId, CategoryService $categoryService)
     {
-        return new Response($categoryService->getProducts($categoryId, $typeId));
+        $products = $categoryService->getProducts($categoryId, $typeId);
+        $arr = [];
+        foreach ($products as $product) {
+            $arr[] = $product;
+            $arr[] = $product;
+            $arr[] = $product;
+            $arr[] = $product;
+            $arr[] = $product;
+        }
+        return new Response($arr);
     }
 }

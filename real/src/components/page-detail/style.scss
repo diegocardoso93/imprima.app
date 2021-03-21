@@ -19,6 +19,20 @@
 	}
 }
 
+::-webkit-scrollbar {
+	width: 11px;
+	height: 11px;
+}
+::-webkit-scrollbar-track {
+	background: #CFD8DC;
+	border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #90A4AE;
+	border-radius: 6px;
+	border: 3px solid #CFD8DC;
+}
+
 .imprimapp-modal .page-detail {
 
 	.hcategory {
@@ -42,8 +56,13 @@
 	}
 
 	.image-list {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-y: auto;
+		margin-bottom: 10px;
+
 		img {
-			width: calc(20% - 10px);
+			width: calc(24% - 10px);
 			margin: 5px;
 			cursor: pointer;
 		}

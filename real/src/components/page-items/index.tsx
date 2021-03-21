@@ -18,11 +18,11 @@ interface PageParams {
   appState: any,
   setAppState: any
 }
-
+var x = 0;
 export default function PageItems({ appState, setAppState }: PageParams) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
-
+x++;
   function select(item: Item) {
     setAppState({page: 1, data: { item }});
   }
@@ -35,7 +35,7 @@ export default function PageItems({ appState, setAppState }: PageParams) {
         setItems(val);
         setLoading(false);
       });
-  }, []);
+  }, [appState]);
 
   return (
     <Fragment>

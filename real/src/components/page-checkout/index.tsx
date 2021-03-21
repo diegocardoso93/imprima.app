@@ -22,7 +22,24 @@ interface PageParams {
 
 export default function PageCheckout({ appState, setAppState }: PageParams) {
   const { item, merchant } = appState.data;
-  console.log(appState);
+  // console.log(appState);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    // fetch(
+    //   GET_ATTRIBUTES
+    //   .replace('{categoryId}', category)
+    //   .replace('{typeId}', item.type_id),
+    //   { mode: 'cors' }
+    // )
+    // .then(res => res.json())
+    // .then(res => {
+    //   setImages(res);
+    //   setLoading(false);
+    // })
+    // .catch(e => setLoading(false));
+  }, []);
 
   function buy() {
     
@@ -32,15 +49,25 @@ export default function PageCheckout({ appState, setAppState }: PageParams) {
     <Fragment>
       <Header>
         <div class="title">
-          <div onClick={() => setAppState({ page: 1, ...appState })}>{svgBack}</div>
-          <div>{item.name} - {merchant.nome}</div>
+          <div onClick={() => setAppState({ ...appState, page: 1 })}>{svgBack}</div>
+          <div>{item.name}</div>
         </div>
       </Header>
       <Body>
+        <h5>{merchant.name}</h5>
         <div class="page-checkout">
-          <img src={item.image} alt={item.name} />
+          <img src={item.url} alt={item.name} />
         </div>
         {/* <div>{attribute.name}</div> */}
+        <div>
+          Quantidade <input type="number" value="1" />
+          {/* // tamanho P M G */}
+        </div>
+        <div>Endereço de entrega</div>
+        {/* width: calc(100% - 30px); */}
+        <input placeholder="Rua, bairro, número, complemento" />
+        <input placeholder="Cidade" />
+        <input placeholder="Celular" />
         <div>Preço final</div>
         <button onClick={() => buy()}>Pagar</button>
       </Body>
