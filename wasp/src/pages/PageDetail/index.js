@@ -108,7 +108,7 @@ export default function PageDetail() {
 
   return (
     <>
-      <Header>
+      <Header stackclose={-2}>
         <div className="title">
           <div onClick={() => history.goBack()}>
             <SvgBack />

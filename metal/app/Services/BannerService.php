@@ -30,7 +30,8 @@ class BannerService
         return [
             'type' => 2,
             'kind' => $kind,
-            'imprimaId' => $imprimaId
+            'imprimaId' => $imprimaId,
+            'logourl' => 'https://imprima.app/img/_logobanner/2.png'
         ];
 
 //        return [

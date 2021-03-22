@@ -59,7 +59,7 @@ export default function PageItems() {
 
   return (
     <>
-      <Header>
+      <Header stackclose={-1}>
         <div className="logo">
           <a
             href="https://imprima.app"

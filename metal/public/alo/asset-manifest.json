@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/alo/static/css/main.84cea096.chunk.css",
-    "main.js": "/alo/static/js/main.e782690f.chunk.js",
-    "main.js.map": "/alo/static/js/main.e782690f.chunk.js.map",
+    "main.css": "/alo/static/css/main.3de00c9a.chunk.css",
+    "main.js": "/alo/static/js/main.caf094ef.chunk.js",
+    "main.js.map": "/alo/static/js/main.caf094ef.chunk.js.map",
     "runtime-main.js": "/alo/static/js/runtime-main.d03d784a.js",
     "runtime-main.js.map": "/alo/static/js/runtime-main.d03d784a.js.map",
     "static/js/2.aed6c663.chunk.js": "/alo/static/js/2.aed6c663.chunk.js",
     "static/js/2.aed6c663.chunk.js.map": "/alo/static/js/2.aed6c663.chunk.js.map",
     "index.html": "/alo/index.html",
-    "static/css/main.84cea096.chunk.css.map": "/alo/static/css/main.84cea096.chunk.css.map",
+    "static/css/main.3de00c9a.chunk.css.map": "/alo/static/css/main.3de00c9a.chunk.css.map",
     "static/js/2.aed6c663.chunk.js.LICENSE.txt": "/alo/static/js/2.aed6c663.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d03d784a.js",
     "static/js/2.aed6c663.chunk.js",
-    "static/css/main.84cea096.chunk.css",
-    "static/js/main.e782690f.chunk.js"
+    "static/css/main.3de00c9a.chunk.css",
+    "static/js/main.caf094ef.chunk.js"
   ]
 }

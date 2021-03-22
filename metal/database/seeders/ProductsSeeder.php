@@ -47,7 +47,7 @@ class ProductsSeeder extends Seeder
         DB::table('products')->insert([
             'kind_id' => 1,
             'category_id' => 2,
-            'type_id' => 3,
+            'type_id' => 4,
             'name' => 'Almofada Grêmio',
             'url' => 'https://imprima.app/img/times/00gremio4.png',
             'thumb_url' => 'https://imprima.app/img/times/thumb/00gremio4.png',

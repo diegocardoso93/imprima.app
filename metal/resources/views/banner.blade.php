@@ -8,6 +8,19 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" />
         <style>
+
+            @keyframes App-logo-float {
+                0% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(8px)
+                }
+                100% {
+                    transform: translateY(0px)
+                }
+            }
+
             body {
                 font-family: 'Montserrat', serif;
                 margin: 0;
@@ -42,6 +55,14 @@
                 width: 100%;
                 text-align: center;
                 font-weight: bold;
+            }
+            .tlogo {
+                position: absolute;
+                animation: App-logo-float infinite 3s ease-in-out;
+            }
+            .tlogo.t-2 {
+                top: 14px;
+                left: 14px;
             }
             .tleft.t-2 {
                 color: black;
@@ -93,6 +114,7 @@
     </head>
     <body>
         <img class="banner" src="{{ $kind->url }}" alt="" />
+        <img class="tlogo t-{{ $type }}" src="{{ $logourl }}" alt="" />
         <div class="tleft t-{{ $type }}">entrega até no mesmo dia*</div>
         <div class="tright t-{{ $type }}">frete até grátis*</div>
         <div class="tcenter t-{{ $type }}">conheça já!</div>

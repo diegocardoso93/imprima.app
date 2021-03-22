@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-export default function Header({ children }) {
+export default function Header({ children, stackclose }) {
   const dispose = () => {
-    history.go(-1);
+    history.go(stackclose);
     parent.postMessage({ active: false }, '*');
   };
 
@@ -20,4 +20,5 @@ export default function Header({ children }) {
 
 Header.propTypes = {
   children: PropTypes.any,
+  stackclose: PropTypes.any,
 };

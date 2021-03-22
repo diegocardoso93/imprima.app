@@ -14,7 +14,7 @@ export default function PageCheckoutInfo() {
 
   return (
     <>
-      <Header>
+      <Header stackclose={-4}>
         <div className="title">
           <div onClick={() => history.goBack()}>
             <SvgBack />
