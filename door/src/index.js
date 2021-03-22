@@ -103,10 +103,13 @@ window.onload = () => {
 
     const setBanner = (init) => {
       clicked = false;
-      iframeEl.src = "https://imprima.app/banner?imprimaId=" +
-        imprimaAd.getAttribute('data-imprima-id') +
-        "&url=" + window.location.href +
-        "&query=" + btoa(document.title);
+      const url = "https://imprima.app/banner?imprimaId=" +
+      imprimaAd.getAttribute('data-imprima-id') +
+      "&url=" + window.location.href +
+      "&query=" + btoa(document.title);
+      if (init) {
+        iframeEl.src = url;
+      }
       iframeEl.classList.remove('iframe-app');
 
       if (!init) {
@@ -131,7 +134,6 @@ window.onload = () => {
         loadingEl.style.display = 'block';
         iframeEl.onload = function () {
           loadingEl.style.display = 'none';
-          iframeEl.contentWindow.history.back = window.history.back;
         }
         bodyEl.style.overflow = 'hidden';
         clicked = true;

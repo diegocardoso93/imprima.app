@@ -18,12 +18,36 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+
+            .logo {
+                margin: 0 auto;
+                animation: App-logo-float infinite 3s ease-in-out;
+            }
+
+            .logo-img {
+                width: 100%;
+                padding: 0 40px;
+                max-width: 400px;
+                margin-top: -100px
+            }
+
+            @keyframes App-logo-float {
+                0% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(10px)
+                }
+                100% {
+                    transform: translateY(0px)
+                }
+            }
         </style>
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0" style="flex-direction: column;">
-            <div style="margin: 0 auto">
-                <img src="/img/logo-imprima.png" alt="" style="width: 100%;padding: 0 40px;max-width: 400px;margin-top: -100px" />
+            <div class="logo">
+                <img src="/img/logo-imprima.png" alt="" class="logo-img" />
             </div>
             <h2 style="padding: 20px;text-align: center;">Somos o marketplace de impressão de personalizados do Brasil! 🙂</h2>
 

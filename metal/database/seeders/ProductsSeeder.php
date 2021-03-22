@@ -35,6 +35,26 @@ class ProductsSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
+            'kind_id' => 1,
+            'category_id' => 2,
+            'type_id' => 3,
+            'name' => 'Quadro Grêmio',
+            'url' => 'https://imprima.app/img/times/00gremio3.png',
+            'thumb_url' => 'https://imprima.app/img/times/thumb/00gremio3.png',
+            'created_at' => now()
+        ]);
+
+        DB::table('products')->insert([
+            'kind_id' => 1,
+            'category_id' => 2,
+            'type_id' => 3,
+            'name' => 'Almofada Grêmio',
+            'url' => 'https://imprima.app/img/times/00gremio4.png',
+            'thumb_url' => 'https://imprima.app/img/times/thumb/00gremio4.png',
+            'created_at' => now()
+        ]);
+
+        DB::table('products')->insert([
             'kind_id' => 2,
             'category_id' => 2,
             'type_id' => 1,
@@ -58,7 +78,7 @@ class ProductsSeeder extends Seeder
             'kind_id' => 2,
             'category_id' => 2,
             'type_id' => 3,
-            'name' => 'Quadro Inter',
+            'name' => 'Almofada Inter',
             'url' => 'https://imprima.app/img/times/00inter3.png',
             'thumb_url' => 'https://imprima.app/img/times/thumb/00inter3.png',
             'created_at' => now()
@@ -68,7 +88,7 @@ class ProductsSeeder extends Seeder
             'kind_id' => 2,
             'category_id' => 2,
             'type_id' => 4,
-            'name' => 'Almofada Inter',
+            'name' => 'Quadro Inter',
             'url' => 'https://imprima.app/img/times/00inter4.png',
             'thumb_url' => 'https://imprima.app/img/times/thumb/00inter4.png',
             'created_at' => now()
@@ -98,7 +118,7 @@ class ProductsSeeder extends Seeder
             'kind_id' => 3,
             'category_id' => 1,
             'type_id' => 3,
-            'name' => 'Quadro Gatinho',
+            'name' => 'Almofada Gatinho',
             'url' => 'https://imprima.app/img/animais/00gato3.png',
             'thumb_url' => 'https://imprima.app/img/animais/thumb/00gato3.png',
             'created_at' => now()
@@ -108,7 +128,7 @@ class ProductsSeeder extends Seeder
             'kind_id' => 3,
             'category_id' => 1,
             'type_id' => 4,
-            'name' => 'Almofada Gatinho',
+            'name' => 'Quadro Gatinho',
             'url' => 'https://imprima.app/img/animais/00gato4.png',
             'thumb_url' => 'https://imprima.app/img/animais/thumb/00gato4.png',
             'created_at' => now()

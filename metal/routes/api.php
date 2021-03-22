@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AttributesController;
 use App\Http\Controllers\Api\BannerController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CepController;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('produto', [ProductController::class, 'index']);
+Route::get('produto/{id}', [ProductController::class, 'get']);
+Route::get('attributes/{productId}/{merchantId}', [AttributesController::class, 'index']);
 Route::get('kind/{id}', [KindController::class, 'index']);
 Route::get('category', [CategoryController::class, 'index']);
 Route::get('category/{categoryId}/type/{typeId}', [CategoryController::class, 'products']);

@@ -1,0 +1,24 @@
+
+.page-checkout-info {
+	.buyer {
+    font-size: 14px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-top: 6px;
+      padding: 9px 11px;
+    }
+
+    button {
+      padding: 10px;
+      background: black;
+      color: white;
+      border: 0;
+      border-radius: 7px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+	}
+}

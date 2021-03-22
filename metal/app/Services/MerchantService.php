@@ -34,4 +34,10 @@ class MerchantService
             'status' => 1
         ]);
     }
+
+    public function getMerchant($id)
+    {
+        return DB::table('merchants')
+            ->find($id);
+    }
 }

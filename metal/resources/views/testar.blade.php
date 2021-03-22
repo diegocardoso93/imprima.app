@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Inter marca dois no final e vence o Ypiranga pelo Gauchão</title>
+        <title>o gato é um animal maneiro</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>Inter marca dois no final e vence o Ypiranga pelo Gauchão</h1>
+        <h1>o gato é um animal maneiro</h1>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0" style="flex-direction: column;">
             <p>
                 Quase acabou em empate, mas o Internacional levou a melhor na disputa pelo Campeonato Gaúcho na noite deste domingo (14). Jogando em casa, no Beira-Rio, o Colorado marcou de pênalti no final e logo depois fez mais um, encerrando a partida contra o Ypiranga em 4 a 2.

@@ -18,4 +18,10 @@ class ProductController extends Controller
 
         return new Response($products);
     }
+
+    public function get($id, ProductService $productService)
+    {
+//        dd($productService->getProduct($id));
+        return response()->json($productService->getProduct($id));
+    }
 }
