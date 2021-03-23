@@ -38,5 +38,14 @@ class ProductService
             ->where('ta.type_id', '=', $typeId)
             ->get();
     }
-}
 
+    public function get($id)
+    {
+        return DB::table('products')->find($id);
+    }
+
+    public function getPriceByMerchantTypeAttribute($merchantTypeAttributeId)
+    {
+        return DB::table('merchants_types_attributes')->find($merchantTypeAttributeId)->price ?? null;
+    }
+}

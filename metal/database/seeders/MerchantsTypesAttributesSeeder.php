@@ -35,7 +35,7 @@ class MerchantsTypesAttributesSeeder extends Seeder
         DB::table('merchants_types_attributes')->insert([
             'merchant_id' => 2,
             'type_attribute_id' => 1,
-            'price' => 20.00
+            'price' => 25.00
         ]);
 
         DB::table('merchants_types_attributes')->insert([
@@ -47,7 +47,7 @@ class MerchantsTypesAttributesSeeder extends Seeder
         DB::table('merchants_types_attributes')->insert([
             'merchant_id' => 2,
             'type_attribute_id' => 3,
-            'price' => 10.00
+            'price' => 35.00
         ]);
 
         DB::table('merchants_types_attributes')->insert([

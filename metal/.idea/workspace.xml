@@ -23,20 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../assets/00animais.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/00animais.cdr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00animais.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00animais.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/metal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/metal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/BannerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BannerService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.e782690f.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.e782690f.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/animais/00gato.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ProductService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MerchantsTypesAttributesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MerchantsTypesAttributesSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/banner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageItems/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageItems/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +170,14 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/mercadopago/dx-php" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pPeL3lIGdjxaYin1fs7aaigLRL" />
@@ -186,20 +191,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/css" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\css" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\app\Http\Controllers\Api" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\app\Services" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\database\seeders" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\database\migrations" />
-      <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\public\css" />
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\public" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
     </key>
   </component>
@@ -221,7 +228,9 @@
       <workItem from="1615420557096" duration="2637000" />
       <workItem from="1615508981188" duration="9069000" />
       <workItem from="1615592744601" duration="15819000" />
-      <workItem from="1615692824019" duration="65207000" />
+      <workItem from="1615692824019" duration="65804000" />
+      <workItem from="1616458634224" duration="2077000" />
+      <workItem from="1616463637576" duration="6099000" />
     </task>
     <servers />
   </component>

@@ -171,6 +171,7 @@ export default function PageDetail() {
                   ref={cepRef}
                   onKeyUp={checkCEP}
                   placeholder="Digite seu CEP"
+                  onFocus={() => window.innerWidth < 600 && setExpand(false)}
                 />
                 <button onClick={() => findMerchant()}>
                   {(loadingMerchants && <Loader />) || '🔍'}

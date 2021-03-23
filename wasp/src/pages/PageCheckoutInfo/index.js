@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
 import Body from '../../components/Body';
@@ -6,11 +6,45 @@ import { useHistory } from 'react-router';
 import SvgBack from '../../components/SvgBack';
 
 import './style.scss';
+import { GET_CHECKOUT_PREFERENCE } from '../../constants/endpoints';
 
 export default function PageCheckoutInfo() {
   const history = useHistory();
+  const [preference, setPreference] = useState();
+  const [loading, setLoading] = useState();
 
-  function buy() {}
+  useEffect(() => {
+    setLoading(true);
+    fetch(GET_CHECKOUT_PREFERENCE)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setPreference(res);
+        setLoading(false);
+      })
+      .catch((e) => setLoading(false));
+  }, []);
+
+  function buy() {
+    location.href = preference.sandbox_init_point;
+  }
+
+  // useEffect(() => {
+  //   if (preference) {
+  //     const script = document.createElement('script');
+
+  //     script.src =
+  //       'https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js';
+  //     script.async = true;
+  //     script.setAttribute('data-preference-id', preference.id);
+
+  //     document.body.appendChild(script);
+
+  //     return () => {
+  //       document.body.removeChild(script);
+  //     };
+  //   }
+  // }, [preference]);
 
   return (
     <>
@@ -27,12 +61,12 @@ export default function PageCheckoutInfo() {
           <div className="page-checkout-info">
             {/* <h5>{merchant?.name}</h5> */}
             <div className="buyer">
-              <div>Endereço de entrega</div>
-              <input placeholder="Nome" />
+              <div>Complete seus dados</div>
+              <input placeholder="Nome completo" />
               <input placeholder="Rua, bairro, número, complemento" />
               <input placeholder="Cidade" />
               <input placeholder="Celular" />
-              <button onClick={() => buy()}>Pagar</button>
+              {preference && <button onClick={() => buy()}>Pagar</button>}
             </div>
           </div>
         </>
