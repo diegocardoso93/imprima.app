@@ -28,7 +28,7 @@ Route::get('category', [CategoryController::class, 'index']);
 Route::get('category/{categoryId}/type/{typeId}', [CategoryController::class, 'products']);
 Route::get('cep/{productId}/{cep}', [CepController::class, 'index']);
 Route::options('banner', [BannerController::class, 'index']);
-Route::get('checkout/preference', [CheckoutController::class, 'preference']);
+Route::post('checkout/preference', [CheckoutController::class, 'preference']);
 
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {

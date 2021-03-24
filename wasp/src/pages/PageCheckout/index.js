@@ -6,12 +6,14 @@ import Body from '../../components/Body';
 import { useHistory, useParams } from 'react-router';
 import SvgBack from '../../components/SvgBack';
 import { GET_ATTRIBUTES } from '../../constants/endpoints';
+import usePersist from '../../hooks/usePersist';
 
 import './style.scss';
 
 export default function PageCheckout() {
   const { productId, merchantId } = useParams();
   const history = useHistory();
+  const [_, setCheckout] = usePersist('checkout');
 
   const [loading, setLoading] = useState(false);
   const [product, setProduct] = useState();
@@ -46,8 +48,14 @@ export default function PageCheckout() {
       return;
     }
 
+    setCheckout({
+      attribute,
+      product,
+      merchant,
+      quantity,
+    });
+
     history.push(`/alo/checkout-info${location.search}`);
-    // store preço quantidade, tamanho
   }
 
   function updatePrice(q, p) {
@@ -116,7 +124,7 @@ export default function PageCheckout() {
                 </div>
               </div>
               <div className="next">
-                <button onClick={() => next()}>Prosseguir</button>
+                <button onClick={() => next()}>Continuar</button>
               </div>
             </div>
           </>

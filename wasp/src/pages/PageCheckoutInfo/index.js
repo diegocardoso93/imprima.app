@@ -7,44 +7,40 @@ import SvgBack from '../../components/SvgBack';
 
 import './style.scss';
 import { GET_CHECKOUT_PREFERENCE } from '../../constants/endpoints';
+import Loader from '../../components/Loader';
+import usePersist from '../../hooks/usePersist';
 
 export default function PageCheckoutInfo() {
+  const [checkout, _] = usePersist('checkout');
   const history = useHistory();
-  const [preference, setPreference] = useState();
   const [loading, setLoading] = useState();
+  const { attribute, merchant, product, quantity } = checkout;
 
-  useEffect(() => {
+  function buy() {
     setLoading(true);
-    fetch(GET_CHECKOUT_PREFERENCE)
+    fetch(GET_CHECKOUT_PREFERENCE, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        product_id: product?.id,
+        merchant_type_attribute_id: attribute?.id,
+        quantity: quantity,
+        merchant: merchant?.id,
+      }),
+    })
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        setPreference(res);
+        if (res.sandbox_init_point) {
+          parent.location.href = res.sandbox_init_point;
+        }
         setLoading(false);
       })
       .catch((e) => setLoading(false));
-  }, []);
-
-  function buy() {
-    location.href = preference.sandbox_init_point;
   }
-
-  // useEffect(() => {
-  //   if (preference) {
-  //     const script = document.createElement('script');
-
-  //     script.src =
-  //       'https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js';
-  //     script.async = true;
-  //     script.setAttribute('data-preference-id', preference.id);
-
-  //     document.body.appendChild(script);
-
-  //     return () => {
-  //       document.body.removeChild(script);
-  //     };
-  //   }
-  // }, [preference]);
 
   return (
     <>
@@ -53,20 +49,36 @@ export default function PageCheckoutInfo() {
           <div onClick={() => history.goBack()}>
             <SvgBack />
           </div>
-          {/* <div>{product?.name}</div> */}
+          <div>Resumo do pedido</div>
         </div>
       </Header>
       <Body>
         <>
           <div className="page-checkout-info">
-            {/* <h5>{merchant?.name}</h5> */}
+            <div className="product-details">
+              {quantity} {product?.name}
+              <br />
+              {attribute?.type}: {attribute?.value}
+              <br />
+              Valor a pagar: R${quantity * attribute?.price}
+            </div>
+            <h5>
+              Vendedor: <br />
+              {merchant?.name} - {merchant?.phone}
+              <div>
+                {merchant?.address}, {merchant?.address_extra} -{' '}
+                {merchant?.neighborhood}, {merchant?.city}, {merchant?.uf}
+              </div>
+            </h5>
             <div className="buyer">
               <div>Complete seus dados</div>
               <input placeholder="Nome completo" />
               <input placeholder="Rua, bairro, número, complemento" />
               <input placeholder="Cidade" />
               <input placeholder="Celular" />
-              {preference && <button onClick={() => buy()}>Pagar</button>}
+              {(loading && <Loader />) || (
+                <button onClick={() => buy()}>Pagar</button>
+              )}
             </div>
           </div>
         </>

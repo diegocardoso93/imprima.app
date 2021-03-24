@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CheckoutController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [SiteController::class, 'index']);
 Route::get('/banner', [SiteController::class, 'banner']);
 Route::get('/testar', [SiteController::class, 'testar']);
+Route::get('/pagamento/sucesso', [CheckoutController::class, 'paymentSuccess']);
+Route::get('/pagamento/pendente', [CheckoutController::class, 'paymentPending']);
+Route::get('/pagamento/falha', [CheckoutController::class, 'paymentFailure']);

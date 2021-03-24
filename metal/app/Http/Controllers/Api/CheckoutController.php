@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Services\ProductService;
-use Illuminate\Http\Client\Request;
 use MercadoPago\Item;
 use MercadoPago\Preference;
 use MercadoPago\SDK;
+use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
 {
@@ -22,8 +22,16 @@ class CheckoutController extends Controller
         $item = new Item();
         $item->title = $product->name;
         $item->quantity = $request->get('quantity') ?? 1;
+        $item->picture_url = $product->thumb_url;
         $item->unit_price = $price;
+        $item->currency_id = 'BRL';
         $preference->items = [$item];
+        $preference->auto_return = 'approved';
+        $preference->back_urls = (object) [
+            'success' => 'https://imprima.app/pagamento/sucesso',
+            'pending' => 'https://imprima.app/pagamento/pendente',
+            'failure' => 'https://imprima.app/pagamento/falha'
+        ];
         $preference->save();
 
 //dd($preference->getAttributes());
@@ -33,5 +41,20 @@ class CheckoutController extends Controller
             'init_point' => $preference->init_point,
             'sandbox_init_point' => $preference->sandbox_init_point
         ]);
+    }
+
+    public function paymentSuccess(Request $request)
+    {
+        return view('payment_return', ['status' => $request->get('status')]);
+    }
+
+    public function paymentPending(Request $request)
+    {
+        return view('payment_return', ['status' => $request->get('status')]);
+    }
+
+    public function paymentFailure(Request $request)
+    {
+        return view('payment_return', ['status' => 'failure']);
     }
 }

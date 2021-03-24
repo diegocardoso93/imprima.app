@@ -23,17 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/metal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/metal.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ProductService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/MerchantsTypesAttributesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MerchantsTypesAttributesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/banner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckoutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.3de00c9a.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.3de00c9a.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.aed6c663.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.aed6c663.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.aed6c663.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.caf094ef.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.caf094ef.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,18 +196,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\views" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\css" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\app\Http\Controllers\Api" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\app\Services" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\database\seeders" />
-      <recent name="C:\Users\dieg0\pj\imprima.app\metal\database\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\public\css" />
@@ -230,7 +235,7 @@
       <workItem from="1615592744601" duration="15819000" />
       <workItem from="1615692824019" duration="65804000" />
       <workItem from="1616458634224" duration="2077000" />
-      <workItem from="1616463637576" duration="6099000" />
+      <workItem from="1616463637576" duration="12544000" />
     </task>
     <servers />
   </component>
