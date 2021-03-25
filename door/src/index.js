@@ -126,7 +126,7 @@ window.onload = () => {
 
     const setApp = (kindId, imprimaId) => {
       if (!clicked) {
-        iframeEl.src = `https://imprima.app/alo?kindId=${kindId}&imprimaId=${imprimaId}`;
+        iframeEl.src = `https://imprima.app/alo?kindId=${kindId}&imprimaId=${imprimaId}&origin=${window.location.href}`;
         iframeEl.classList.add('iframe-app');
 
         imprimaAd.classList.add('full');

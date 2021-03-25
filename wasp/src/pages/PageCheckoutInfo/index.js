@@ -1,14 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Header from '../../components/Header';
 import Body from '../../components/Body';
 import { useHistory } from 'react-router';
 import SvgBack from '../../components/SvgBack';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 
 import './style.scss';
 import { GET_CHECKOUT_PREFERENCE } from '../../constants/endpoints';
 import Loader from '../../components/Loader';
 import usePersist from '../../hooks/usePersist';
+import * as yup from 'yup';
+
+const schema = yup.object().shape({
+  name: yup.string().required('Campo obrigatório'),
+  address: yup.string().required('Campo obrigatório'),
+  city: yup.string().required('Campo obrigatório'),
+  cellphone: yup.string().required('Campo obrigatório'),
+});
 
 export default function PageCheckoutInfo() {
   const [checkout, _] = usePersist('checkout');
@@ -16,30 +25,55 @@ export default function PageCheckoutInfo() {
   const [loading, setLoading] = useState();
   const { attribute, merchant, product, quantity } = checkout;
 
-  function buy() {
+  function buy(values) {
+    const { name, address, city, cellphone } = values;
     setLoading(true);
     fetch(GET_CHECKOUT_PREFERENCE, {
       method: 'POST',
       headers: {
-        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        product_id: product?.id,
-        merchant_type_attribute_id: attribute?.id,
-        quantity: quantity,
-        merchant: merchant?.id,
+        order: {
+          merchant_id: merchant?.id,
+
+          name,
+          address,
+          city,
+          cellphone,
+          origin: localStorage.getItem('origin'),
+        },
+        orderItem: {
+          product_id: product?.id,
+          merchant_type_attribute_id: attribute?.id,
+          name: getProductTitle(),
+          description: getProductDetails(),
+          quantity: quantity,
+        },
       }),
     })
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        if (res.sandbox_init_point) {
-          parent.location.href = res.sandbox_init_point;
+        if (res.init_point) {
+          parent.location.href = res.init_point;
         }
         setLoading(false);
       })
-      .catch((e) => setLoading(false));
+      .catch((e) => {
+        alert('erro');
+        setLoading(false);
+      });
+  }
+
+  function getProductTitle() {
+    return `${quantity}x ${product?.name}`;
+  }
+
+  function getProductDetails() {
+    return `${attribute?.type} ${attribute?.value} - R$${
+      quantity * attribute?.price
+    }`;
   }
 
   return (
@@ -53,35 +87,46 @@ export default function PageCheckoutInfo() {
         </div>
       </Header>
       <Body>
-        <>
-          <div className="page-checkout-info">
-            <div className="product-details">
-              {quantity} {product?.name}
-              <br />
-              {attribute?.type}: {attribute?.value}
-              <br />
-              Valor a pagar: R${quantity * attribute?.price}
-            </div>
-            <h5>
-              Vendedor: <br />
-              {merchant?.name} - {merchant?.phone}
-              <div>
-                {merchant?.address}, {merchant?.address_extra} -{' '}
-                {merchant?.neighborhood}, {merchant?.city}, {merchant?.uf}
-              </div>
-            </h5>
-            <div className="buyer">
-              <div>Complete seus dados</div>
-              <input placeholder="Nome completo" />
-              <input placeholder="Rua, bairro, número, complemento" />
-              <input placeholder="Cidade" />
-              <input placeholder="Celular" />
-              {(loading && <Loader />) || (
-                <button onClick={() => buy()}>Pagar</button>
-              )}
-            </div>
+        <div className="page-checkout-info">
+          <div className="product-details">
+            {getProductTitle()}
+            <br />
+            {getProductDetails()}
           </div>
-        </>
+          <h5>Vendedor:</h5>
+          <div className="seller">
+            {merchant?.name} - {merchant?.phone}
+            <br />
+            {merchant?.address}, {merchant?.address_extra} -{' '}
+            {merchant?.neighborhood}, {merchant?.city}, {merchant?.uf}
+          </div>
+
+          <Formik
+            initialValues={{ name: '', address: '', city: '', cellphone: '' }}
+            onSubmit={async (values) => {
+              await new Promise((resolve) => setTimeout(resolve, 500));
+              buy(values);
+            }}
+            validationSchema={schema}
+          >
+            <Form className="buyer">
+              <div>Complete seus dados</div>
+              <Field name="name" placeholder="Nome completo" type="text" />
+              <ErrorMessage component="span" name="name" />
+              <Field
+                name="address"
+                placeholder="Rua, bairro, número, complemento"
+                type="text"
+              />
+              <ErrorMessage component="span" name="address" />
+              <Field name="city" placeholder="Cidade" type="text" />
+              <ErrorMessage component="span" name="city" />
+              <Field name="cellphone" placeholder="Celular" type="text" />
+              <ErrorMessage component="span" name="cellphone" />
+              {(loading && <Loader />) || <button type="submit">Pagar</button>}
+            </Form>
+          </Formik>
+        </div>
       </Body>
     </>
   );

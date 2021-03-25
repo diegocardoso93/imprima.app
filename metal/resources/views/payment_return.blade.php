@@ -42,6 +42,24 @@
                     transform: translateY(0px)
                 }
             }
+
+            .marginal {
+                margin: 6px 26px;
+            }
+            .superbutao {
+                padding: 17px;
+                color: white;
+                background: #1799d5;
+                margin-top: 30px;
+                border-radius: 10px;
+                width: 100%;
+            }
+            .success {
+                color: green;
+            }
+            .error {
+                color: red;
+            }
         </style>
     </head>
     <body class="antialiased">
@@ -51,33 +69,49 @@
             </div>
 
             @if ($status == 'approved')
-                <div class="ml-12">
+                <div class="marginal">
                     <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                        Sucesso! Agora é só aguardar.
-                        Após a produção do seu produto, o fornecedor entrará em contato.
+                        <h1 class="success">Sucesso!</h1>
+                        <div>
+                            Agora é só aguardar.<br />
+                            Após a produção do seu produto, o fornecedor entrará em contato.
+                        <div>
+                        <br />
+                        <b>Dados do fornecedor</b>
+                        <div>
+                            {{ $merchant->name }} - {{ $merchant->phone }} <br/>
+                            {{ $merchant->address }} - {{ $merchant->address_extra }}
+                            {{ $merchant->neighborhood }}, {{ $merchant->city }}, {{ $merchant->uf }}
+                        </div>
                     </div>
                 </div>
             @endif
 
             @if ($status == 'pending')
-                <div class="ml-12">
+                <div class="marginal">
                     <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                        Sucesso! Agora é só aguardar.
-                        Após a produção do seu produto, o fornecedor entrará em contato.
+                        <h1 class="success">Sucesso!</h1>
+                        <div>
+                            Agora é só aguardar.
+                            Após a produção do seu produto, o fornecedor entrará em contato.
+                        <div>
                     </div>
                 </div>
             @endif
 
             @if ($status == 'failure')
-                <div class="ml-12">
+                <div class="marginal">
                     <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                        Uoopz! Algo deu errado com seu pedido.
-                        Tente novamente mais tarde.
+                        <h1 class="error">Uoopz!!</h1>
+                        <div>
+                            Algo deu errado com seu pedido.
+                            Tente novamente mais tarde.
+                        <div>
                     </div>
                 </div>
             @endif
 
-            <button>Voltar para o portal</button>
+            <button class="superbutao" onclick="location.href={{ $status->origin }}">Voltar para o portal</button>
 
         </div>
     </body>

@@ -26,13 +26,6 @@ export default function PageItems() {
       dispose();
     };
 
-    // console.log('history', history);
-    // history.listen((location) => {
-    //   console.log('location', location);
-    //   if (location.action === 'POP') {
-    //     // Do your stuff
-    //   }
-    // });
     return () => {
       window.onbeforeunload = () => {};
       window.onpopstate = () => {};
