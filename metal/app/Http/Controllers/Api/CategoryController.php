@@ -19,10 +19,6 @@ class CategoryController extends Controller
         $arr = [];
         foreach ($products as $product) {
             $arr[] = $product;
-            $arr[] = $product;
-            $arr[] = $product;
-            $arr[] = $product;
-            $arr[] = $product;
         }
         return new Response($arr);
     }

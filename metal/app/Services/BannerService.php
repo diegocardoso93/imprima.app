@@ -12,7 +12,37 @@ class BannerService
     }
 
     private $validKeywords = [
-        'inter', 'gremio', 'gato', 'cachorro'
+        // animais_doceis
+        'Gatinho' => ['gato', 'gatinho'],
+
+        // times
+        'Grêmio' => ['gremio'],
+        'Inter' => ['inter', 'internacional'],
+        'Santa Cruz' => ['santa cruz', 'galo'],
+        'Sport Recife' => ['sport recife', 'recife'],
+        'São Paulo' => ['sao paulo'],
+        'Santos' => ['santos'],
+        'Red Bull Bragantino' => ['red bull bragantino', 'red bull'],
+        'Palmeiras' => ['palmeiras'],
+        'Goiás' => ['goias'],
+        'Fortaleza' => ['fortaleza'],
+        'Fluminense' => ['fluminense'],
+        'Flamengo' => ['flamengo'],
+        'Corinthians' => ['corinthians'],
+        'Coritiba' => ['coritiba'],
+        'Ceará' => ['ceara'],
+        'Botafogo' => ['botafogo'],
+        'Bahia' => ['bahia'],
+        'Atlético Paranaense' => ['atletico paranaense', 'paranaense'],
+        'Atlético Mineiro' => ['atletico mineiro', 'mineiro'],
+        'Atlético Goianiense' => ['atletico goianiense', 'goianiense'],
+        'Vasco da Gama' => ['vasco da gama', 'vasco'],
+
+        // bandeiras
+        'Brasil' => ['brasil'],
+        'EUA' => ['eua', 'estados unidos'],
+        'Alemanha' => ['alemanha', 'alema', 'germanica'],
+        'Reino Unido' => ['reino unido', 'gra bretanha', 'europa'],
     ];
 
     public function get($query, $imprimaId)
@@ -24,45 +54,25 @@ class BannerService
         // -- futuramente analisar automatização unsplash/pixabay + background remover
 
         // find kind name = $this->getKeyword(base64_decode($query))
+        $title = base64_decode($query);
+        $kind = $this->kindService->getKindByName($this->getKeyword($title), 2);
 
-        $kind = $this->kindService->getKindByName($this->getKeyword(base64_decode($query)), 2);
-//dd($kind);
         return [
             'type' => 2,
             'kind' => $kind,
             'imprimaId' => $imprimaId,
             'logourl' => 'https://imprima.app/img/_logobanner/2.png'
         ];
-
-//        return [
-//            'type' => 1,
-//            'image' => 'https://imprima.app/img/camiseta_banner01.png'
-//        ];
-
-        return [
-            'type' => 2,
-            'image' => 'https://imprima.app/img/caneca_banner01.png'
-        ];
-
-//        return [
-//            'type' => 3,
-//            'image' => 'https://imprima.app/img/quadro_banner01.png'
-//        ];
-
-//        return [
-//            'type' => 4,
-//            'image' => 'https://imprima.app/img/almofada_banner01.png'
-//        ];
     }
 
     public function getKeyword($text)
     {
-        $words = explode(' ', $text);
-
-        foreach ($words as $word) {
-            $word = strtolower($word);
-            if (in_array($word, $this->validKeywords)) {
-                return $word;
+        $lowerText = strtolower($text);
+        foreach ($this->validKeywords as $found => $variations) {
+            foreach ($variations as $variation) {
+                if (strpos($lowerText, $variation) > -1) {
+                    return $found;
+                }
             }
         }
 

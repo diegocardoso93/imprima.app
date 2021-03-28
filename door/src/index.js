@@ -85,6 +85,7 @@ styleEl.innerText = `
 
 window.onload = () => {
   const imprimaAd = document.querySelector('.pg-imprima-ad');
+  let elements = []; // {el:,padding,margin}
 
   function IframeControl() {
     const iframeEl = document.createElement('iframe');
@@ -102,11 +103,12 @@ window.onload = () => {
     imprimaAd.appendChild(loadingEl);
 
     const setBanner = (init) => {
+      returnParentMarginPadding();
       clicked = false;
       const url = "https://imprima.app/banner?imprimaId=" +
       imprimaAd.getAttribute('data-imprima-id') +
       "&url=" + window.location.href +
-      "&query=" + btoa(document.title);
+      "&query=" + btoa(document.title.normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
       if (init) {
         iframeEl.src = url;
       }
@@ -125,6 +127,7 @@ window.onload = () => {
     }
 
     const setApp = (kindId, imprimaId) => {
+      removeParentMarginPadding();
       if (!clicked) {
         iframeEl.src = `https://imprima.app/alo?kindId=${kindId}&imprimaId=${imprimaId}&origin=${window.location.href}`;
         iframeEl.classList.add('iframe-app');
@@ -140,6 +143,29 @@ window.onload = () => {
       }
     }
 
+    const removeParentMarginPadding = () => {
+      let element = document.querySelector('.pg-imprima-ad');
+      let tagName;
+      do {
+        element = element.parentElement;
+        elements.push({
+          el: element,
+          margin: element.style.margin,
+          padding: element.style.padding
+        });
+        element.style.margin = 0;
+        element.style.padding = 0;
+        tagName = element.tagName;
+      } while (tagName !== 'BODY');
+    }
+
+    const returnParentMarginPadding = () => {
+      elements.forEach(e => {
+        e.el.style.margin = e.margin;
+        e.el.style.padding = e.padding;
+      })
+    }
+
     window.addEventListener('message', (e) => {
       const { active, kindId, imprimaId } = e.data; 
       if (active) {
@@ -150,6 +176,7 @@ window.onload = () => {
     }, false);
 
     setBanner(true);
+
   }
 
   IframeControl();

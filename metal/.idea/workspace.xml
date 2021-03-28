@@ -23,22 +23,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../assets/00animais.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/00animais.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/00times.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/00times.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00animais.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00animais.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00times.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00times.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_logo.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_logo.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/logo.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/logo.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../door/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../door/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckoutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/BannerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BannerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/KindService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/KindService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CategoriesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CategoriesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/KindsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/KindsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/alo/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/alo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.a6286f3a.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.a6286f3a.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.0ad9abb9.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.0ad9abb9.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.0ad9abb9.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.23ae6b31.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.23ae6b31.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.f563c4f5.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.f563c4f5.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.0b34d02c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.0b34d02c.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/door.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/door.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payment_return.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payment_return.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/constants/endpoints.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/constants/endpoints.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/thumb/00gato1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/thumb/00gato2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/thumb/00gato3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/animais/thumb/00gato4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00inter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00inter1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00inter2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00inter3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/00inter4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00gremio1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00gremio2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00gremio3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00gremio4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00inter1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00inter2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00inter3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00inter4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/testar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/components/Loader/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/components/Loader/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,18 +234,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeders" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dieg0\pj\imprima.app\metal\database\seeders" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\app\Services" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\views" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\resources\css" />
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\app\Http\Controllers\Api" />
-      <recent name="C:\Users\dieg0\pj\imprima.app\metal\database\seeders" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dieg0\pj\imprima.app\metal\public\css" />
@@ -236,7 +274,8 @@
       <workItem from="1615692824019" duration="65804000" />
       <workItem from="1616458634224" duration="2077000" />
       <workItem from="1616463637576" duration="17410000" />
-      <workItem from="1616630037834" duration="12645000" />
+      <workItem from="1616630037834" duration="15663000" />
+      <workItem from="1616813164005" duration="28817000" />
     </task>
     <servers />
   </component>

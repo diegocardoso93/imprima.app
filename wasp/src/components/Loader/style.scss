@@ -29,8 +29,10 @@
   }
 
   &.large {
-    width: 80px;
-    height: 80px;
+    width: 46px;
+    height: 320px;
+    display: flex;
+    align-items: center;
 
     div {
       width: 40px;

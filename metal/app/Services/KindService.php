@@ -14,7 +14,7 @@ class KindService
         if ($name) {
             $statement->where('kinds.name', '=', $name);
         } else {
-            $statement->orderByRaw('rand()');
+            $statement->inRandomOrder();
         }
 
         return $statement->first();

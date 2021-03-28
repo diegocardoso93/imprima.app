@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>o gato é um animal maneiro</title>
+        <title>Este é o título da notícia sobre {{ $palavra }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,12 +21,12 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>o gato é um animal maneiro</h1>
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0" style="flex-direction: column;">
+            <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0" style="flex-direction: column;padding: 0 20px;">
+            <h1>Este é o título da notícia sobre {{ $palavra }}</h1>
             <p>
-                Quase acabou em empate, mas o Internacional levou a melhor na disputa pelo Campeonato Gaúcho na noite deste domingo (14). Jogando em casa, no Beira-Rio, o Colorado marcou de pênalti no final e logo depois fez mais um, encerrando a partida contra o Ypiranga em 4 a 2.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 <br/>
-                Válida pela quarta rodada do Gauchão, os gols do Inter foram marcados por Yuri Alberto, Zé Gabriel, Edenílson e Patrick. O próximo confronto do Colorado ocorre no próximo domingo, às 16h, contra o Novo Hamburgo.
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
             </p>
             <div class="pg-imprima-ad" data-imprima-id="CLChyf3Vqe8CFbEAuQYdg4cEAg">
                 <script async src="https://imprima.app/door.js" charset="utf-8"></script>

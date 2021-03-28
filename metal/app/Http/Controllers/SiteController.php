@@ -23,8 +23,8 @@ class SiteController extends Controller
         );
     }
 
-    public function testar()
+    public function testar(Request $request)
     {
-        return view('testar');
+        return view('testar', ['palavra' => $request->get('palavra') ?? '']);
     }
 }

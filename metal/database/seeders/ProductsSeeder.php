@@ -4,9 +4,17 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class ProductsSeeder extends Seeder
 {
+    static $types = [
+        '1' => 'Camiseta',
+        '2' => 'Caneca',
+        '3' => 'Quadro',
+        '4' => 'Caneca'
+    ];
+
     /**
      * Run the database seeds.
      *
@@ -14,124 +22,27 @@ class ProductsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('products')->insert([
-            'kind_id' => 1,
-            'category_id' => 2,
-            'type_id' => 1,
-            'name' => 'Camiseta Grêmio',
-            'url' => 'https://imprima.app/img/times/00gremio1.png',
-            'thumb_url' => 'https://imprima.app/img/times/thumb/00gremio1.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 1,
-            'category_id' => 2,
-            'type_id' => 2,
-            'name' => 'Caneca Grêmio',
-            'url' => 'https://imprima.app/img/times/00gremio2.png',
-            'thumb_url' => 'https://imprima.app/img/times/thumb/00gremio2.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 1,
-            'category_id' => 2,
-            'type_id' => 3,
-            'name' => 'Quadro Grêmio',
-            'url' => 'https://imprima.app/img/times/00gremio3.png',
-            'thumb_url' => 'https://imprima.app/img/times/thumb/00gremio3.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 1,
-            'category_id' => 2,
-            'type_id' => 4,
-            'name' => 'Almofada Grêmio',
-            'url' => 'https://imprima.app/img/times/00gremio4.png',
-            'thumb_url' => 'https://imprima.app/img/times/thumb/00gremio4.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 2,
-            'category_id' => 2,
-            'type_id' => 1,
-            'name' => 'Camiseta Inter',
-            'url' => 'https://imprima.app/img/times/00inter1.png',
-            'thumb_url' => 'https://imprima.app/img/times/thumb/00inter1.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 2,
-            'category_id' => 2,
-            'type_id' => 2,
-            'name' => 'Caneca Inter',
-            'url' => 'https://imprima.app/img/times/00inter2.png',
-            'thumb_url' => 'https://imprima.app/img/times/thumb/00inter2.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 2,
-            'category_id' => 2,
-            'type_id' => 3,
-            'name' => 'Almofada Inter',
-            'url' => 'https://imprima.app/img/times/00inter3.png',
-            'thumb_url' => 'https://imprima.app/img/times/thumb/00inter3.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 2,
-            'category_id' => 2,
-            'type_id' => 4,
-            'name' => 'Quadro Inter',
-            'url' => 'https://imprima.app/img/times/00inter4.png',
-            'thumb_url' => 'https://imprima.app/img/times/thumb/00inter4.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 3,
-            'category_id' => 1,
-            'type_id' => 1,
-            'name' => 'Camiseta Gatinho',
-            'url' => 'https://imprima.app/img/animais/00gato1.png',
-            'thumb_url' => 'https://imprima.app/img/animais/thumb/00gato1.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 3,
-            'category_id' => 1,
-            'type_id' => 2,
-            'name' => 'Caneca Gatinho',
-            'url' => 'https://imprima.app/img/animais/00gato2.png',
-            'thumb_url' => 'https://imprima.app/img/animais/thumb/00gato2.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 3,
-            'category_id' => 1,
-            'type_id' => 3,
-            'name' => 'Almofada Gatinho',
-            'url' => 'https://imprima.app/img/animais/00gato3.png',
-            'thumb_url' => 'https://imprima.app/img/animais/thumb/00gato3.png',
-            'created_at' => now()
-        ]);
-
-        DB::table('products')->insert([
-            'kind_id' => 3,
-            'category_id' => 1,
-            'type_id' => 4,
-            'name' => 'Quadro Gatinho',
-            'url' => 'https://imprima.app/img/animais/00gato4.png',
-            'thumb_url' => 'https://imprima.app/img/animais/thumb/00gato4.png',
-            'created_at' => now()
-        ]);
+        foreach (CategoriesSeeder::$keys as $cIdx => $category) {
+            $path = public_path('img/produto/'.$category);
+            $files = File::files($path);
+            foreach ($files as $file) {
+                $matches = [];
+                $filename = $file->getFilename();
+                preg_match('/(\d+)([^\d+].*)(\d+)/', $filename, $matches);
+                if (count($matches) === 4) {
+                    [, , $name, $type] = $matches;
+                    $vName = str_replace('_', ' ', $name);
+                    DB::table('products')->insert([
+                        'kind_id' => DB::table('kinds')->select('id')
+                            ->where('name', '=', $vName)->pluck('id')->first(),
+                        'category_id' => $cIdx+1,
+                        'type_id' => $type,
+                        'name' => self::$types[$type] . ' ' . $vName,
+                        'url' => 'https://imprima.app/img/produto/'.$category.'/' . $filename,
+                        'thumb_url' => 'https://imprima.app/img/produto/'.$category.'/thumb/' . $filename
+                    ]);
+                }
+            }
+        }
     }
 }
