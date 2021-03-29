@@ -47,9 +47,9 @@ class CheckoutService
     {
         $sorder = new Order();
         $sorder->name = $order['name'];
-        $sorder->address = $order['address'];
-        $sorder->city = $order['city'];
         $sorder->cellphone = $order['cellphone'];
+        $sorder->address = $order['address'];
+        $sorder->note = $order['note'];
         $sorder->total = $orderItem['quantity'] * $price;
         $sorder->merchant_id = $order['merchant_id'];
         $sorder->origin = $order['origin'];

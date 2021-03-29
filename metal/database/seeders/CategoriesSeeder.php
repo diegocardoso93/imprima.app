@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class CategoriesSeeder extends Seeder
 {
     public static $keys = [
-        'times',
+//        'times',
         'bandeiras',
         'animais_doceis',
     ];
@@ -20,24 +20,26 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->insert([
-            'name' => 'Times',
-        ]);
+//        DB::table('categories')->insert([
+//            'name' => 'Times',
+//        ]);
+
         DB::table('categories')->insert([
             'name' => 'Bandeiras',
         ]);
         DB::table('categories')->insert([
             'name' => 'Animais Dóceis',
         ]);
-        DB::table('categories')->insert([
-            'name' => 'Filmes',
-        ]);
-        DB::table('categories')->insert([
-            'name' => 'Animes',
-        ]);
-        DB::table('categories')->insert([
-            'name' => 'Desenhos Animados',
-        ]);
+
+//        DB::table('categories')->insert([
+//            'name' => 'Filmes',
+//        ]);
+//        DB::table('categories')->insert([
+//            'name' => 'Animes',
+//        ]);
+//        DB::table('categories')->insert([
+//            'name' => 'Desenhos Animados',
+//        ]);
 
 //        DB::table('categories')->insert([
 //            'name' => 'Animais Selvagens',

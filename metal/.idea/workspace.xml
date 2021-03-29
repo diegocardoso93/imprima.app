@@ -23,60 +23,375 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_Cópia_de_segurança_de_02bandeiras.cdr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/alo/static/js/2.88e401a8.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/01Cãozinho.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/01Cãozinho1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/01Cãozinho2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/01Cãozinho3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/01Cãozinho4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/02Cães_Desconfiados.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/02Cães_Desconfiados1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/02Cães_Desconfiados2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/02Cães_Desconfiados3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/02Cães_Desconfiados4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/01Cãozinho.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/01Cãozinho1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/01Cãozinho2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/01Cãozinho3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/01Cãozinho4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/02Cães_Desconfiados.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/02Cães_Desconfiados1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/02Cães_Desconfiados2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/02Cães_Desconfiados3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/02Cães_Desconfiados4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/04Canadá.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/04Canadá1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/04Canadá2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/04Canadá3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/04Canadá4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/thumb/04Canadá.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/thumb/04Canadá1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/thumb/04Canadá2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/thumb/04Canadá3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/thumb/04Canadá4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../assets/00animais.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/00animais.cdr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/00times.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/00times.cdr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00animais.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00animais.cdr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00times.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00times.cdr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_logo.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_logo.cdr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/logo.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/logo.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_02bandeiras.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_02bandeiras.cdr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../door/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../door/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d749732-c97f-4798-a261-a4b9ed3448e6/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/BannerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BannerService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/KindService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/KindService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/CheckoutService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CheckoutService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/MerchantService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/MerchantService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ProductService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_110633_create_types_attributes_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_110754_create_merchants_types_attributes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_07_110754_create_merchants_types_attributes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_07_110822_create_merchants_types_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/CategoriesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CategoriesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/KindsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/KindsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MerchantsTypesAttributesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MerchantsTypesAttributesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MerchantsTypesSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/TypesAttributesSeeder.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/alo/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/alo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.f563c4f5.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.f563c4f5.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.0b34d02c.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.0b34d02c.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.164b8990.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/css/main.164b8990.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.7c392ece.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/static/js/2.88e401a8.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.7c392ece.chunk.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/alo/static/js/2.88e401a8.chunk.js.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/2.7c392ece.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.3fe4041c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/alo/static/js/main.3fe4041c.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/banner.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/door.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/door.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/00gato4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/thumb/00gato1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/thumb/00gato2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/thumb/00gato3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/animais/thumb/00gato4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00gremio4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00inter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00inter1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00inter2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00inter3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/00inter4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00gremio1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00gremio2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00gremio3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00gremio4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00inter1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00inter2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00inter3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/times/thumb/00inter4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/animais_doceis/00Gatinho.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/00Gatinho.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/00Gatinho.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/produto/animais_doceis/thumb/00Gatinho.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/bandeiras/00Brasil.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/00Brasil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/bandeiras/thumb/00Brasil.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/produto/bandeiras/thumb/00Brasil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/00Grêmio.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/00Grêmio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/00Grêmio1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/00Grêmio1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/00Grêmio2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/00Grêmio2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/00Grêmio3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/00Grêmio3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/00Grêmio4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/00Grêmio4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/01Inter.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/01Inter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/01Inter1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/01Inter1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/01Inter2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/01Inter2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/01Inter3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/01Inter3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/01Inter4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/01Inter4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/02Santa_Cruz.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/02Santa_Cruz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/02Santa_Cruz1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/02Santa_Cruz1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/02Santa_Cruz2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/02Santa_Cruz2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/02Santa_Cruz3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/02Santa_Cruz3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/02Santa_Cruz4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/02Santa_Cruz4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/03Sport_Recife.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/03Sport_Recife.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/03Sport_Recife1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/03Sport_Recife1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/03Sport_Recife2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/03Sport_Recife2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/03Sport_Recife3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/03Sport_Recife3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/03Sport_Recife4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/03Sport_Recife4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/04São_Paulo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/04São_Paulo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/04São_Paulo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/04São_Paulo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/04São_Paulo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/04São_Paulo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/04São_Paulo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/04São_Paulo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/04São_Paulo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/04São_Paulo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/05Santos.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/05Santos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/05Santos1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/05Santos1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/05Santos2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/05Santos2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/05Santos3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/05Santos3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/05Santos4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/05Santos4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/06Red_Bull_Bragantino.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/06Red_Bull_Bragantino.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/06Red_Bull_Bragantino1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/06Red_Bull_Bragantino1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/06Red_Bull_Bragantino2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/06Red_Bull_Bragantino2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/06Red_Bull_Bragantino3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/06Red_Bull_Bragantino3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/06Red_Bull_Bragantino4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/06Red_Bull_Bragantino4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/07Palmeiras.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/07Palmeiras.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/07Palmeiras1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/07Palmeiras1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/07Palmeiras2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/07Palmeiras2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/07Palmeiras3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/07Palmeiras3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/07Palmeiras4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/07Palmeiras4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/08Goiás.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/08Goiás.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/08Goiás1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/08Goiás1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/08Goiás2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/08Goiás2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/08Goiás3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/08Goiás3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/08Goiás4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/08Goiás4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/09Fortaleza.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/09Fortaleza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/09Fortaleza1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/09Fortaleza1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/09Fortaleza2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/09Fortaleza2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/09Fortaleza3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/09Fortaleza3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/09Fortaleza4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/09Fortaleza4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/10Fluminense.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/10Fluminense.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/10Fluminense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/10Fluminense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/10Fluminense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/10Fluminense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/10Fluminense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/10Fluminense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/10Fluminense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/10Fluminense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/11Flamengo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/11Flamengo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/11Flamengo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/11Flamengo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/11Flamengo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/11Flamengo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/11Flamengo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/11Flamengo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/11Flamengo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/11Flamengo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Corinthians.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Corinthians.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Corinthians1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Corinthians1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Corinthians2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Corinthians2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Corinthians3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Corinthians3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Corinthians4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Corinthians4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Coritiba.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Coritiba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Coritiba1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Coritiba1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Coritiba2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Coritiba2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Coritiba3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Coritiba3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/12Coritiba4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/12Coritiba4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/13Ceará.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/13Ceará.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/13Ceará1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/13Ceará1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/13Ceará2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/13Ceará2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/13Ceará3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/13Ceará3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/13Ceará4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/13Ceará4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/14Botafogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/14Botafogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/14Botafogo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/14Botafogo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/14Botafogo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/14Botafogo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/14Botafogo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/14Botafogo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/14Botafogo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/14Botafogo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/15Bahia.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/15Bahia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/15Bahia1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/15Bahia1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/15Bahia2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/15Bahia2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/15Bahia3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/15Bahia3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/15Bahia4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/15Bahia4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/16Atlético_Paranaense.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/16Atlético_Paranaense.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/16Atlético_Paranaense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/16Atlético_Paranaense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/16Atlético_Paranaense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/16Atlético_Paranaense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/16Atlético_Paranaense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/16Atlético_Paranaense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/16Atlético_Paranaense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/16Atlético_Paranaense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/17Atlético_Mineiro.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/17Atlético_Mineiro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/17Atlético_Mineiro1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/17Atlético_Mineiro1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/17Atlético_Mineiro2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/17Atlético_Mineiro2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/17Atlético_Mineiro3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/17Atlético_Mineiro3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/17Atlético_Mineiro4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/17Atlético_Mineiro4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/18Alético_Goianiense.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/18Alético_Goianiense.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/18Alético_Goianiense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/18Alético_Goianiense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/18Alético_Goianiense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/18Alético_Goianiense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/18Alético_Goianiense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/18Alético_Goianiense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/18Alético_Goianiense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/18Alético_Goianiense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/19Vasco_da_Gama.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/19Vasco_da_Gama.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/19Vasco_da_Gama1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/19Vasco_da_Gama1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/19Vasco_da_Gama2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/19Vasco_da_Gama2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/19Vasco_da_Gama3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/19Vasco_da_Gama3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/19Vasco_da_Gama4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/19Vasco_da_Gama4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/00Grêmio.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/00Grêmio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/00Grêmio1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/00Grêmio1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/00Grêmio2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/00Grêmio2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/00Grêmio3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/00Grêmio3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/00Grêmio4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/00Grêmio4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/01Inter.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/01Inter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/01Inter1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/01Inter1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/01Inter2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/01Inter2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/01Inter3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/01Inter3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/01Inter4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/01Inter4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/02Santa_Cruz.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/02Santa_Cruz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/02Santa_Cruz1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/02Santa_Cruz1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/02Santa_Cruz2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/02Santa_Cruz2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/02Santa_Cruz3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/02Santa_Cruz3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/02Santa_Cruz4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/02Santa_Cruz4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/03Sport_Recife.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/03Sport_Recife.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/03Sport_Recife1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/03Sport_Recife1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/03Sport_Recife2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/03Sport_Recife2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/03Sport_Recife3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/03Sport_Recife3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/03Sport_Recife4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/03Sport_Recife4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/04São_Paulo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/04São_Paulo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/04São_Paulo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/04São_Paulo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/04São_Paulo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/04São_Paulo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/04São_Paulo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/04São_Paulo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/04São_Paulo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/04São_Paulo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/05Santos.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/05Santos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/05Santos1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/05Santos1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/05Santos2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/05Santos2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/05Santos3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/05Santos3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/05Santos4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/05Santos4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/06Red_Bull_Bragantino.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/06Red_Bull_Bragantino.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/06Red_Bull_Bragantino1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/06Red_Bull_Bragantino1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/06Red_Bull_Bragantino2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/06Red_Bull_Bragantino2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/06Red_Bull_Bragantino3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/06Red_Bull_Bragantino3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/06Red_Bull_Bragantino4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/06Red_Bull_Bragantino4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/07Palmeiras.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/07Palmeiras.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/07Palmeiras1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/07Palmeiras1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/07Palmeiras2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/07Palmeiras2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/07Palmeiras3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/07Palmeiras3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/07Palmeiras4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/07Palmeiras4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/08Goiás.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/08Goiás.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/08Goiás1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/08Goiás1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/08Goiás2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/08Goiás2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/08Goiás3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/08Goiás3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/08Goiás4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/08Goiás4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/09Fortaleza.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/09Fortaleza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/09Fortaleza1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/09Fortaleza1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/09Fortaleza2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/09Fortaleza2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/09Fortaleza3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/09Fortaleza3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/09Fortaleza4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/09Fortaleza4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/10Fluminense.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/10Fluminense.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/10Fluminense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/10Fluminense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/10Fluminense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/10Fluminense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/10Fluminense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/10Fluminense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/10Fluminense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/10Fluminense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/11Flamengo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/11Flamengo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/11Flamengo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/11Flamengo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/11Flamengo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/11Flamengo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/11Flamengo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/11Flamengo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/11Flamengo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/11Flamengo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Corinthians.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Corinthians.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Corinthians1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Corinthians1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Corinthians2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Corinthians2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Corinthians3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Corinthians3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Corinthians4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Corinthians4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Coritiba.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Coritiba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Coritiba1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Coritiba1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Coritiba2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Coritiba2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Coritiba3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Coritiba3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/12Coritiba4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/12Coritiba4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/13Ceará.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/13Ceará.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/13Ceará1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/13Ceará1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/13Ceará2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/13Ceará2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/13Ceará3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/13Ceará3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/13Ceará4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/13Ceará4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/14Botafogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/14Botafogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/14Botafogo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/14Botafogo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/14Botafogo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/14Botafogo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/14Botafogo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/14Botafogo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/14Botafogo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/14Botafogo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/15Bahia.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/15Bahia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/15Bahia1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/15Bahia1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/15Bahia2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/15Bahia2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/15Bahia3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/15Bahia3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/15Bahia4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/15Bahia4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/16Atlético_Paranaense.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/16Atlético_Paranaense.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/16Atlético_Paranaense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/16Atlético_Paranaense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/16Atlético_Paranaense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/16Atlético_Paranaense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/16Atlético_Paranaense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/16Atlético_Paranaense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/16Atlético_Paranaense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/16Atlético_Paranaense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/17Atlético_Mineiro.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/17Atlético_Mineiro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/17Atlético_Mineiro1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/17Atlético_Mineiro1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/17Atlético_Mineiro2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/17Atlético_Mineiro2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/17Atlético_Mineiro3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/17Atlético_Mineiro3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/17Atlético_Mineiro4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/17Atlético_Mineiro4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/18Alético_Goianiense.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/18Alético_Goianiense.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/18Alético_Goianiense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/18Alético_Goianiense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/18Alético_Goianiense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/18Alético_Goianiense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/18Alético_Goianiense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/18Alético_Goianiense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/18Alético_Goianiense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/18Alético_Goianiense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/19Vasco_da_Gama.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/19Vasco_da_Gama.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/19Vasco_da_Gama1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/19Vasco_da_Gama1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/19Vasco_da_Gama2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/19Vasco_da_Gama2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/19Vasco_da_Gama3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/19Vasco_da_Gama3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumb/19Vasco_da_Gama4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumb/19Vasco_da_Gama4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/00Grêmio1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/00Grêmio1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/00Grêmio2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/00Grêmio2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/00Grêmio3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/00Grêmio3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/00Grêmio4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/00Grêmio4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/01Inter1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/01Inter1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/01Inter2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/01Inter2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/01Inter3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/01Inter3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/01Inter4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/01Inter4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/02Santa_Cruz1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/02Santa_Cruz1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/02Santa_Cruz2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/02Santa_Cruz2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/02Santa_Cruz3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/02Santa_Cruz3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/02Santa_Cruz4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/02Santa_Cruz4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/03Sport_Recife1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/03Sport_Recife1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/03Sport_Recife2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/03Sport_Recife2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/03Sport_Recife3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/03Sport_Recife3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/03Sport_Recife4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/03Sport_Recife4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/04São_Paulo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/04São_Paulo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/04São_Paulo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/04São_Paulo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/04São_Paulo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/04São_Paulo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/04São_Paulo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/04São_Paulo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/05Santos1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/05Santos1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/05Santos2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/05Santos2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/05Santos3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/05Santos3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/05Santos4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/05Santos4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/06Red_Bull_Bragantino1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/06Red_Bull_Bragantino1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/06Red_Bull_Bragantino2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/06Red_Bull_Bragantino2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/06Red_Bull_Bragantino3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/06Red_Bull_Bragantino3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/06Red_Bull_Bragantino4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/06Red_Bull_Bragantino4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/07Palmeiras1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/07Palmeiras1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/07Palmeiras2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/07Palmeiras2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/07Palmeiras3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/07Palmeiras3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/07Palmeiras4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/07Palmeiras4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/08Goiás1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/08Goiás1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/08Goiás2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/08Goiás2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/08Goiás3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/08Goiás3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/08Goiás4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/08Goiás4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/09Fortaleza1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/09Fortaleza1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/09Fortaleza2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/09Fortaleza2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/09Fortaleza3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/09Fortaleza3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/09Fortaleza4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/09Fortaleza4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/10Fluminense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/10Fluminense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/10Fluminense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/10Fluminense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/10Fluminense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/10Fluminense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/10Fluminense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/10Fluminense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/11Flamengo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/11Flamengo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/11Flamengo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/11Flamengo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/11Flamengo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/11Flamengo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/11Flamengo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/11Flamengo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/12Coritiba1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/12Coritiba1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/12Coritiba2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/12Coritiba2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/12Coritiba3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/12Coritiba3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/12Coritiba4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/12Coritiba4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/13Corinthians1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/13Corinthians1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/13Corinthians2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/13Corinthians2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/13Corinthians3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/13Corinthians3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/13Corinthians4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/13Corinthians4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/14Ceara2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/14Ceara2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/14Ceara3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/14Ceara3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/14Ceara4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/14Ceara4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/14Ceará1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/14Ceará1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/15Botafogo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/15Botafogo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/15Botafogo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/15Botafogo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/15Botafogo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/15Botafogo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/15Botafogo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/15Botafogo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/16Bahia1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/16Bahia1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/16Bahia2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/16Bahia2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/16Bahia3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/16Bahia3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/16Bahia4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/16Bahia4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/17Atlético_Paranaense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/17Atlético_Paranaense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/17Atlético_Paranaense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/17Atlético_Paranaense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/17Atlético_Paranaense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/17Atlético_Paranaense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/17Atlético_Paranaense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/17Atlético_Paranaense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/18Atlético_Mineiro1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/18Atlético_Mineiro1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/18Atlético_Mineiro2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/18Atlético_Mineiro2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/18Atlético_Mineiro3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/18Atlético_Mineiro3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/18Atlético_Mineiro4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/18Atlético_Mineiro4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/19Atlético_Goianiense1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/19Atlético_Goianiense1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/19Atlético_Goianiense2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/19Atlético_Goianiense2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/19Atlético_Goianiense3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/19Atlético_Goianiense3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/19Atlético_Goianiense4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/19Atlético_Goianiense4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/20Vasco_da_Gama1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/20Vasco_da_Gama1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/20Vasco_da_Gama2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/20Vasco_da_Gama2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/20Vasco_da_Gama3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/20Vasco_da_Gama3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/produto/times/thumbz/20Vasco_da_Gama4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/times/thumbz/20Vasco_da_Gama4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/banner.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/testar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/components/Loader/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/components/Loader/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/components/Header/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/components/Header/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageCheckout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageCheckout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +590,7 @@
       <workItem from="1616458634224" duration="2077000" />
       <workItem from="1616463637576" duration="17410000" />
       <workItem from="1616630037834" duration="15663000" />
-      <workItem from="1616813164005" duration="28817000" />
+      <workItem from="1616813164005" duration="47459000" />
     </task>
     <servers />
   </component>

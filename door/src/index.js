@@ -76,11 +76,16 @@ styleEl.innerText = `
     top: 0;
     left: 0;
     background-color: white;
+    border-radius: 0;
   }
   .pg-imprima-ad iframe {
     width: 300px;
     height: 250px;
     position: unset;
+
+    border-radius: 26px;
+    // box-shadow: 5px 12px 20px rgb(36 37 38 / 13%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
   }`;
 
 window.onload = () => {

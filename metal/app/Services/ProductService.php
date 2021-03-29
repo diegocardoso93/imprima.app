@@ -32,10 +32,9 @@ class ProductService
     public function getAttributes($merchantId, $typeId)
     {
         return DB::table('merchants_types_attributes as mta')
-            ->select(['mta.id', 'type_attribute_id', 'type', 'value', 'price'])
-            ->join('types_attributes as ta', 'ta.id', '=', 'mta.type_attribute_id')
+            ->select(['mta.id', 'merchant_type_attribute_id', 'name', 'value', 'price'])
             ->where('mta.merchant_id', '=', $merchantId)
-            ->where('ta.type_id', '=', $typeId)
+            ->where('mta.type_id', '=', $typeId)
             ->get();
     }
 

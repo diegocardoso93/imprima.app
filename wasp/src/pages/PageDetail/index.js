@@ -165,7 +165,15 @@ export default function PageDetail() {
             <div className="stores">
               <div className="find">
                 <button onClick={() => setExpand(!expand)}>
-                  <span className={`${expand ? 'bottom' : 'top'}`}>»</span>
+                  <span className={`${expand ? 'bottom' : 'top'}`}>
+                    <svg
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+                    </svg>
+                  </span>
                 </button>
                 <input
                   ref={cepRef}
@@ -200,7 +208,13 @@ export default function PageDetail() {
                             <div className="small">a partir de</div>R$
                             {l.price}
                           </div>
-                          <div className="i3">{l.delivery}</div>
+                          <div
+                            className={`i3 ${
+                              (l.delivery === 'grátis' && 'green') || 'red'
+                            }`}
+                          >
+                            {l.delivery}
+                          </div>
                           <span className="i5" onClick={() => select(l)}>
                             <SvgMore size="small" />
                           </span>

@@ -7,6 +7,12 @@
 	align-items: center;
 	max-width: 600px;
 	margin: auto;
+	
+	.title {
+		div {
+			max-width: 70vw;
+		}
+	}
 }
 
 .close {

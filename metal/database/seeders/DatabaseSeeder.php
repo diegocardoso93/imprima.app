@@ -18,9 +18,7 @@ class DatabaseSeeder extends Seeder
             CategoriesSeeder::class,
             TypesSeeder::class,
             KindsSeeder::class,
-            TypesAttributesSeeder::class,
             MerchantsSeeder::class,
-            MerchantsTypesSeeder::class,
             MerchantsTypesAttributesSeeder::class,
             ProductsSeeder::class,
         ]);

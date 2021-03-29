@@ -15,8 +15,8 @@ import * as yup from 'yup';
 const schema = yup.object().shape({
   name: yup.string().required('Campo obrigatório'),
   address: yup.string().required('Campo obrigatório'),
-  city: yup.string().required('Campo obrigatório'),
   cellphone: yup.string().required('Campo obrigatório'),
+  note: yup.string(),
 });
 
 export default function PageCheckoutInfo() {
@@ -26,7 +26,7 @@ export default function PageCheckoutInfo() {
   const { attribute, merchant, product, quantity } = checkout;
 
   function buy(values) {
-    const { name, address, city, cellphone } = values;
+    const { name, cellphone, address, note } = values;
     setLoading(true);
     fetch(GET_CHECKOUT_PREFERENCE, {
       method: 'POST',
@@ -38,9 +38,9 @@ export default function PageCheckoutInfo() {
           merchant_id: merchant?.id,
 
           name,
-          address,
-          city,
           cellphone,
+          address,
+          note,
           origin: localStorage.getItem('origin'),
         },
         orderItem: {
@@ -115,14 +115,22 @@ export default function PageCheckoutInfo() {
               <ErrorMessage component="span" name="name" />
               <Field
                 name="address"
-                placeholder="Rua, bairro, número, complemento"
+                placeholder="Rua, bairro, número, complemento, cidade"
                 type="text"
               />
               <ErrorMessage component="span" name="address" />
-              <Field name="city" placeholder="Cidade" type="text" />
-              <ErrorMessage component="span" name="city" />
-              <Field name="cellphone" placeholder="Celular" type="text" />
+              <Field
+                name="cellphone"
+                placeholder="Celular com DDD"
+                type="text"
+              />
               <ErrorMessage component="span" name="cellphone" />
+              <Field
+                name="note"
+                placeholder="Observação, exemplo: fazer a estampa menor, etc"
+                type="text"
+              />
+              <ErrorMessage component="span" name="note" />
               {(loading && <Loader />) || <button type="submit">Pagar</button>}
             </Form>
           </Formik>

@@ -11,8 +11,8 @@ class ProductsSeeder extends Seeder
     static $types = [
         '1' => 'Camiseta',
         '2' => 'Caneca',
-        '3' => 'Quadro',
-        '4' => 'Caneca'
+        '3' => 'Almofada',
+        '4' => 'Quadro'
     ];
 
     /**

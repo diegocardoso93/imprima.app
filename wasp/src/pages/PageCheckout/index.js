@@ -19,10 +19,12 @@ export default function PageCheckout() {
   const [product, setProduct] = useState();
   const [merchant, setMerchant] = useState();
   const [attributes, setAttributes] = useState();
+  const [attributesOriginal, setAttributesOriginal] = useState();
+  const [subselect, setSubselect] = useState();
   const [attribute, selectAttribute] = useState();
   const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(0);
-  const [priceTotal, setPriceTotal] = useState(0);
+  const [priceTotal, setPriceTotal] = useState();
 
   useEffect(() => {
     setLoading(true);
@@ -35,7 +37,10 @@ export default function PageCheckout() {
       .then((res) => res.json())
       .then((res) => {
         setProduct(res.product);
-        setAttributes(res.attributes);
+        setAttributesOriginal(res.attributes);
+        let attrs = res.attributes.filter((a) => !a.price);
+        attrs = attrs?.length ? attrs : res.attributes;
+        setAttributes(attrs);
         setMerchant(res.merchant);
         setLoading(false);
       })
@@ -88,17 +93,22 @@ export default function PageCheckout() {
                 </div>
                 <div className="right-container">
                   <div className="attributes-container">
-                    {attributes && attributes[0].type}
+                    {attributes && attributes[0].name}
                     <div className="options">
                       {attributes?.map((a, i) => (
                         <div
                           key={i}
                           className={`button-check ${
-                            attribute?.id === a.id && 'selected'
+                            subselect === a.id && 'selected'
                           }`}
                           onClick={() => {
+                            setSubselect(a.id);
+                            if (a.price) {
+                              selectAttribute(a);
+                            } else {
+                              selectAttribute(null);
+                            }
                             updatePrice(quantity, a.price);
-                            selectAttribute(a);
                           }}
                         >
                           {a.value}
@@ -106,6 +116,40 @@ export default function PageCheckout() {
                       ))}
                     </div>
                   </div>
+
+                  {subselect &&
+                    attributesOriginal?.find(
+                      (a) => a.merchant_type_attribute_id === subselect
+                    )?.name && (
+                      <div className="attributes-container">
+                        {
+                          attributesOriginal?.find(
+                            (a) => a.merchant_type_attribute_id === subselect
+                          )?.name
+                        }
+                        <div className="options">
+                          {attributesOriginal
+                            .filter(
+                              (a) => a.merchant_type_attribute_id === subselect
+                            )
+                            ?.map((a, i) => (
+                              <div
+                                key={i}
+                                className={`button-check ${
+                                  attribute?.id === a.id && 'selected'
+                                }`}
+                                onClick={() => {
+                                  updatePrice(quantity, a.price);
+                                  selectAttribute(a);
+                                }}
+                              >
+                                {a.value}
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    )}
+
                   <div className="quantity-container">
                     <span>Quantidade</span>
                     <input
@@ -119,7 +163,9 @@ export default function PageCheckout() {
                   </div>
                   <div className="price-container">
                     <span>Preço final</span>
-                    <div>R${priceTotal}</div>
+                    <div>
+                      {(priceTotal && `R$${priceTotal}`) || 'selecione'}
+                    </div>
                   </div>
                 </div>
               </div>

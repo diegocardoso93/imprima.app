@@ -12,9 +12,9 @@
     <body>
         <img class="banner" src="{{ $kind->url }}" alt="" />
         <img class="tlogo t-{{ $type }}" src="{{ $logourl }}" alt="" />
-        <div class="tleft t-{{ $type }}">entrega até no mesmo dia*</div>
-        <div class="tright t-{{ $type }}">frete até grátis*</div>
-        <div class="tcenter t-{{ $type }}">conheça já!</div>
+        <div class="tleft t-{{ $type }}">entrega no mesmo dia*</div>
+        <div class="tright t-{{ $type }}">frete grátis*</div>
+        <div class="tcenter t-{{ $type }}">{{ $kind->category_id == 2 ? 'faça com seu peludinho!' : 'conheça já!' }}</div>
 
         <script>
             document.querySelector('body').onclick = function() {
