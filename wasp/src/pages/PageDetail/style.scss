@@ -22,6 +22,25 @@
 .page-detail {
   margin-bottom: 300px;
 
+  .btn-drop-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .btn-drop {
+      font-family: 'Montserrat';
+      border: 1px solid #ccc;
+      font-size: 14px;
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin: 10px;
+
+      .confirm {
+        color: green;
+      }
+    }
+  }
+
   .loader-container {
     width: 100%;
     display: flex;

@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/alo/static/css/main.79a381bd.chunk.css",
-    "main.js": "/alo/static/js/main.9d6aba7e.chunk.js",
-    "main.js.map": "/alo/static/js/main.9d6aba7e.chunk.js.map",
+    "main.css": "/alo/static/css/main.345058a8.chunk.css",
+    "main.js": "/alo/static/js/main.eafdaca7.chunk.js",
+    "main.js.map": "/alo/static/js/main.eafdaca7.chunk.js.map",
     "runtime-main.js": "/alo/static/js/runtime-main.d03d784a.js",
     "runtime-main.js.map": "/alo/static/js/runtime-main.d03d784a.js.map",
-    "static/js/2.88e401a8.chunk.js": "/alo/static/js/2.88e401a8.chunk.js",
-    "static/js/2.88e401a8.chunk.js.map": "/alo/static/js/2.88e401a8.chunk.js.map",
+    "static/css/2.2028365e.chunk.css": "/alo/static/css/2.2028365e.chunk.css",
+    "static/js/2.61a2e400.chunk.js": "/alo/static/js/2.61a2e400.chunk.js",
+    "static/js/2.61a2e400.chunk.js.map": "/alo/static/js/2.61a2e400.chunk.js.map",
     "index.html": "/alo/index.html",
-    "static/css/main.79a381bd.chunk.css.map": "/alo/static/css/main.79a381bd.chunk.css.map",
-    "static/js/2.88e401a8.chunk.js.LICENSE.txt": "/alo/static/js/2.88e401a8.chunk.js.LICENSE.txt"
+    "static/css/2.2028365e.chunk.css.map": "/alo/static/css/2.2028365e.chunk.css.map",
+    "static/css/main.345058a8.chunk.css.map": "/alo/static/css/main.345058a8.chunk.css.map",
+    "static/js/2.61a2e400.chunk.js.LICENSE.txt": "/alo/static/js/2.61a2e400.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d03d784a.js",
-    "static/js/2.88e401a8.chunk.js",
-    "static/css/main.79a381bd.chunk.css",
-    "static/js/main.9d6aba7e.chunk.js"
+    "static/css/2.2028365e.chunk.css",
+    "static/js/2.61a2e400.chunk.js",
+    "static/css/main.345058a8.chunk.css",
+    "static/js/main.eafdaca7.chunk.js"
   ]
 }

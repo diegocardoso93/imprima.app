@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import DropNCrop from '@synapsestudios/react-drop-n-crop';
 
-import './style.scss';
 import Loader from '../../components/Loader';
 import {
   GET_MERCHANT,
@@ -13,6 +13,8 @@ import Body from '../../components/Body';
 import { useHistory, useParams } from 'react-router';
 import SvgMore from '../../components/SvgMore';
 import SvgBack from '../../components/SvgBack';
+import './style.scss';
+import '@synapsestudios/react-drop-n-crop/lib/react-drop-n-crop.min.css';
 
 export default function PageDetail() {
   const { id } = useParams();
@@ -28,6 +30,14 @@ export default function PageDetail() {
   const [selected, setSelected] = useState();
   const [loadingImage, setLoadingImage] = useState(false);
   const history = useHistory();
+  const [drop, setDrop] = useState({
+    result: null,
+    filename: null,
+    filetype: null,
+    src: null,
+    error: null,
+  });
+  const [dropping, setDropping] = useState(false);
 
   function checkCEP(e) {
     if (e.key === 'Enter') {
@@ -86,6 +96,14 @@ export default function PageDetail() {
 
   function onSelectCategory(event) {
     const category = event.target.value;
+    console.log('category', category);
+    if (category === 'enviar') {
+      setDropping(true);
+      setSwap({ loading: false, show: false });
+      return;
+    }
+
+    setDropping(false);
     setLoadingImage(true);
     fetch(
       GET_CATEGORY_TYPE.replace('{categoryId}', category).replace(
@@ -106,6 +124,23 @@ export default function PageDetail() {
     setSelected(image);
   }
 
+  function onDrop(value) {
+    console.log('onDrop', value);
+    setDrop(value);
+  }
+
+  useEffect(() => {
+    if (dropping) {
+      document.querySelector('.dropzone-instructions--main').innerText =
+        'Para enviar a imagem, clique ou arraste aqui.';
+      const subinstructions = document.querySelectorAll(
+        '.dropzone-instructions--sub'
+      );
+      subinstructions[0].innerText = 'Arquivos aceitos: .jpeg, .jpg, .png';
+      subinstructions[1].innerText = 'Tamanho máximo: 10MB';
+    }
+  }, [dropping]);
+
   return (
     <>
       <Header stackclose={-2}>
@@ -124,7 +159,19 @@ export default function PageDetail() {
         )) || (
           <div className="page-detail">
             <div className={`item ${!expand && 'hidden'}`}>
-              <img src={selected?.url} alt={selected?.name} />
+              {(dropping && (
+                <>
+                  <DropNCrop
+                    onChange={onDrop}
+                    value={drop}
+                    maxFileSize={10485760}
+                  />
+                  <div className="btn-drop-container">
+                    <button className="btn-drop">✖ cancelar</button>
+                    <button className="btn-drop confirm">✔ enviar</button>
+                  </div>
+                </>
+              )) || <img src={selected?.url} alt={selected?.name} />}
 
               <div className="hcategory">
                 <div className="switch-container">
@@ -139,6 +186,7 @@ export default function PageDetail() {
                     ((swap.loading && <Loader />) || (
                       <select onChange={onSelectCategory}>
                         <option>selecione</option>
+                        <option value="enviar">enviar foto</option>
                         {categories?.map((c) => (
                           <option key={c.id} value={c.id}>
                             {c.name}
@@ -165,7 +213,7 @@ export default function PageDetail() {
             <div className="stores">
               <div className="find">
                 <button onClick={() => setExpand(!expand)}>
-                  <span className={`${expand ? 'bottom' : 'top'}`}>
+                  <span className={`${expand ? 'top' : 'bottom'}`}>
                     <svg
                       focusable="false"
                       xmlns="http://www.w3.org/2000/svg"
