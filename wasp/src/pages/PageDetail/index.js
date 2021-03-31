@@ -7,6 +7,7 @@ import {
   GET_CATEGORY,
   GET_CATEGORY_TYPE,
   GET_PRODUCT,
+  POST_IMAGE,
 } from '../../constants/endpoints';
 import Header from '../../components/Header';
 import Body from '../../components/Body';
@@ -38,6 +39,7 @@ export default function PageDetail() {
     error: null,
   });
   const [dropping, setDropping] = useState(false);
+  const [loadingSend, setLoadingSend] = useState(false);
 
   function checkCEP(e) {
     if (e.key === 'Enter') {
@@ -129,6 +131,25 @@ export default function PageDetail() {
     setDrop(value);
   }
 
+  function sendImage() {
+    const { filename, filetype, result } = drop;
+    console.log('image', { filename, filetype, result });
+    setLoadingSend(true);
+    fetch(POST_IMAGE, {
+      method: 'POST',
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename, filetype, result }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        // setImages(res);
+        console.log(res);
+        setLoadingSend(false);
+      })
+      .catch((e) => setLoadingSend(false));
+  }
+
   useEffect(() => {
     if (dropping) {
       document.querySelector('.dropzone-instructions--main').innerText =
@@ -165,10 +186,33 @@ export default function PageDetail() {
                     onChange={onDrop}
                     value={drop}
                     maxFileSize={10485760}
+                    cropperOptions={{
+                      guides: true,
+                      viewMode: 2,
+                      autoCropArea: 1,
+                      movable: false,
+                      rotatable: false,
+                      scalable: false,
+                      zoomable: false,
+                      dragMode: 'none',
+                    }}
                   />
                   <div className="btn-drop-container">
-                    <button className="btn-drop">✖ cancelar</button>
-                    <button className="btn-drop confirm">✔ enviar</button>
+                    <button
+                      className="btn-drop"
+                      onClick={() => {
+                        setDropping(false);
+                        toggleSwap();
+                      }}
+                    >
+                      ✖ cancelar
+                    </button>
+                    <button
+                      className="btn-drop confirm"
+                      onClick={() => sendImage()}
+                    >
+                      ✔ enviar
+                    </button>
                   </div>
                 </>
               )) || <img src={selected?.url} alt={selected?.name} />}

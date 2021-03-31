@@ -7,3 +7,4 @@ export const GET_CATEGORY = `${BASE_API}/category`;
 export const GET_CATEGORY_TYPE = `${BASE_API}/category/{categoryId}/type/{typeId}`;
 export const GET_ATTRIBUTES = `${BASE_API}/attributes/{productId}/{merchantId}`;
 export const GET_CHECKOUT_PREFERENCE = `${BASE_API}/checkout/preference`;
+export const POST_IMAGE = `${BASE_API}/image`;
