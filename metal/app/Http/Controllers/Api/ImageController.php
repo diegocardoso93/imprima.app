@@ -39,7 +39,7 @@ class ImageController extends Controller
         $arr = [];
 //        exec(, $arr, $t);
 
-        $command = escapeshellcmd('python ../mage/main.py -i ' . $fullfile . $extension .' -o ' . $fullfile . '_out.png -m u2netp -prep None -postp No');
+        $command = escapeshellcmd('python ../mage/main.py -i ' . $fullfile . $extension .' -o ' . $fullfile . '_out.png -m u2net -prep None -postp No');
         $output = shell_exec($command);
         dd($output);
 
