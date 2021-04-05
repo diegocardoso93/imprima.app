@@ -7,7 +7,8 @@ Create Date: 2021-04-03 22:35:26.019049
 """
 from alembic import op
 import sqlalchemy as sa
-from os import walk
+
+from app.crud import kind
 
 # revision identifiers, used by Alembic.
 revision = 'd93661cfa6cc'
@@ -17,7 +18,7 @@ depends_on = None
 
 
 def upgrade():
-    op.create_table(
+    table_kind = op.create_table(
         'kind',
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('name', sa.String(255)),
@@ -27,8 +28,7 @@ def upgrade():
         sa.PrimaryKeyConstraint("id")
     )
 
-    (_, _, filenames) = next(walk('app/static/img'))
-    print('filenames', filenames)
+    kind.import_from_files(table_kind)
 
 def downgrade():
     op.drop_table('kind')

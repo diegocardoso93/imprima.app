@@ -2,11 +2,11 @@
 
 cd door
 yarn build
-rm -rf ../metal/public/door.js
-mv -f dist/main.js ../metal/public/door.js
+rm -rf ../plata/backend/app/app/static/door.js
+mv -f dist/main.js ../plata/backend/app/app/static/door.js
 
 cd ../wasp
 npm run build
-rm -rf ../metal/public/alo
-mv -f build ../metal/public/alo
+rm -rf ../plata/backend/app/app/static/alo
+mv -f build ../plata/backend/app/app/static/alo
 #cp src/img/** ../metal/public/img

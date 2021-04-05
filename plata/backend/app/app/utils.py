@@ -104,3 +104,10 @@ def verify_password_reset_token(token: str) -> Optional[str]:
         return decoded_token["email"]
     except jwt.JWTError:
         return None
+
+
+def list_get_safe_item(l, pos):
+    try:
+        return l[pos]
+    except IndexError:
+        return None

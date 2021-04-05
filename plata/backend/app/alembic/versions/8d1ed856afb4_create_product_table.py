@@ -7,7 +7,7 @@ Create Date: 2021-04-03 22:36:18.141297
 """
 from alembic import op
 import sqlalchemy as sa
-
+from app.crud import product
 
 # revision identifiers, used by Alembic.
 revision = '8d1ed856afb4'
@@ -17,7 +17,7 @@ depends_on = None
 
 
 def upgrade():
-    op.create_table(
+    table_product = op.create_table(
         'product',
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('name', sa.String(255)),
@@ -28,7 +28,7 @@ def upgrade():
         sa.Column('kind_id', sa.Integer, sa.ForeignKey('kind.id')),
         sa.PrimaryKeyConstraint("id")
     )
-
+    product.import_from_files(table_product)
 
 def downgrade():
     op.drop_table('product')

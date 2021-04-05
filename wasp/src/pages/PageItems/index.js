@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { GET_KIND } from '../../constants/endpoints';
+import { GET_PRODUCTS_BY_KIND } from '../../constants/endpoints';
 import Header from '../../components/Header';
 import Body from '../../components/Body';
 import Loader from '../../components/Loader';
@@ -42,7 +42,12 @@ export default function PageItems() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(GET_KIND.replace('{id}', localStorage.getItem('kindId') || ''))
+    fetch(
+      GET_PRODUCTS_BY_KIND.replace(
+        '{kindId}',
+        localStorage.getItem('kindId') || ''
+      )
+    )
       .then((res) => res.json())
       .then((val) => {
         setItems(val);

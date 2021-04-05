@@ -7,6 +7,7 @@ Create Date: 2021-04-03 22:36:08.949183
 """
 from alembic import op
 import sqlalchemy as sa
+from app.crud import ttype
 
 
 # revision identifiers, used by Alembic.
@@ -17,7 +18,7 @@ depends_on = None
 
 
 def upgrade():
-    op.create_table(
+    table_type = op.create_table(
         'type',
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('name', sa.String(255)),
@@ -25,6 +26,8 @@ def upgrade():
         sa.Column('order', sa.Integer),
         sa.PrimaryKeyConstraint("id")
     )
+
+    ttype.seed(table_type)
 
 
 def downgrade():
