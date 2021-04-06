@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CepService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CepService.php" afterDir="false" />
-    </list>
+    <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,6 +223,7 @@
       <workItem from="1616813164005" duration="58494000" />
       <workItem from="1617367293086" duration="1699000" />
       <workItem from="1617382027113" duration="24343000" />
+      <workItem from="1617634188264" duration="638000" />
     </task>
     <servers />
   </component>

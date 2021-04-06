@@ -16,12 +16,12 @@ class InputImage(BaseModel):
 @router.post("")
 async def remove_bg(inputImage: InputImage):
     base_dir = "app/static/userspace/images/"
-    file = base_dir+uniqid()
-    file_in = file+".jpg"
-    file_out = file+".png"
+    file = uniqid()
+    file_in = base_dir+file+".jpg"
+    file_out = base_dir+file+".png"
     with open(file_in, "wb+") as f:
         f.write(base64.b64decode(inputImage.result.replace(
-            'data:image/jpeg;base64,', '').replace('data:image/png;base64,', '')))
+            "data:image/jpeg;base64,", "").replace("data:image/png;base64,", "")))
 
     process(
         input_path=file_in,
@@ -30,4 +30,8 @@ async def remove_bg(inputImage: InputImage):
         preprocessing_method_name="None",
         postprocessing_method_name="No"
     )
-    return True
+
+    return {
+        'image_in': "userspace/images/"+file+".jpg",
+        'image_out': "userspace/images/"+file+".png"
+    }

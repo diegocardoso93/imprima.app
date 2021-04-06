@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PageItems from './pages/PageItems';
 import PageDetail from './pages/PageDetail';
+import PageMerchant from './pages/PageMerchant';
 import PageCheckout from './pages/PageCheckout';
 import PageCheckoutInfo from './pages/PageCheckoutInfo';
 
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route path="/alo/produto/:id">
           <PageDetail />
+        </Route>
+        <Route path="/alo/merchant">
+          <PageMerchant />
         </Route>
         <Route path="/alo/checkout/:productId/:merchantId">
           <PageCheckout />
