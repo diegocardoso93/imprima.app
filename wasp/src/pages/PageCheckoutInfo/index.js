@@ -20,10 +20,11 @@ const schema = yup.object().shape({
 });
 
 export default function PageCheckoutInfo() {
-  const [checkout, _] = usePersist('checkout');
+  const [pcheckout] = usePersist('checkout');
+  const [pselected] = usePersist('selected');
   const history = useHistory();
   const [loading, setLoading] = useState();
-  const { attribute, merchant, product, quantity } = checkout;
+  const { attribute, merchant, quantity } = pcheckout;
 
   function buy(values) {
     const { name, cellphone, address, note } = values;
@@ -44,7 +45,7 @@ export default function PageCheckoutInfo() {
           origin: localStorage.getItem('origin'),
         },
         orderItem: {
-          product_id: product?.id,
+          selected: pselected,
           merchant_type_attribute_id: attribute?.id,
           name: getProductTitle(),
           description: getProductDetails(),
@@ -67,11 +68,11 @@ export default function PageCheckoutInfo() {
   }
 
   function getProductTitle() {
-    return `${quantity}x ${product?.name}`;
+    return `${quantity}x ${pselected?.name}`;
   }
 
   function getProductDetails() {
-    return `${attribute?.type} ${attribute?.value} - R$${
+    return `${attribute?.name} ${attribute?.value} - R$${
       quantity * attribute?.price
     }`;
   }

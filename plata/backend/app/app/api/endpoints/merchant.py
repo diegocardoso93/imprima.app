@@ -10,11 +10,11 @@ router = APIRouter()
 
 
 @router.get("/")
-def get_merchants_and_address(db: Session = Depends(deps.get_db), product_id: Optional[int] = None, cep: Optional[str] = None) -> Any:
+def get_merchants_and_address(db: Session = Depends(deps.get_db), type_id: Optional[int] = None, cep: Optional[str] = None) -> Any:
     """
     Retrieve merchants.
     """
-    if not product_id or not cep:
+    if not type_id or not cep:
         return {'merchants': [], 'address': []}
 
     address = crud.merchant.get_closest_address(db, cep)
@@ -24,7 +24,7 @@ def get_merchants_and_address(db: Session = Depends(deps.get_db), product_id: Op
 
     point = crud.merchant.get_osm(address)
     merchants = crud.merchant.get_merchants_by_cep(
-        db, product_id, point['lat'], point['lon']
+        db, type_id, point['lat'], point['lon']
     )
 
     return {'merchants': merchants, 'address': address}

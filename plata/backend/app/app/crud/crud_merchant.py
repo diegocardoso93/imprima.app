@@ -31,7 +31,7 @@ class CRUDMerchant(CRUDBase[Merchant, MerchantCreate, MerchantUpdate]):
 
         return {'lat': None, 'lon': None}
 
-    def get_merchants_by_cep(self, db: Session, product_id: int, lat: float, lon: float):
+    def get_merchants_by_cep(self, db: Session, type_id: int, lat: float, lon: float):
         return db.execute(
             """SELECT
                 m.id,
@@ -41,10 +41,9 @@ class CRUDMerchant(CRUDBase[Merchant, MerchantCreate, MerchantUpdate]):
                 m.city,
                 m.uf,
                 min(mta.price) price
-            FROM product p
-            INNER JOIN merchant_type_attribute mta ON mta.type_id = p.type_id
+            FROM merchant_type_attribute mta
             INNER JOIN merchant m ON mta.merchant_id = m.id
-            WHERE p.id = :productId
+            WHERE mta.type_id = :typeId
                 AND (point(:lon, :lat) <@> point(lon, lat)) < m.max_distance
                 AND m.status = :status
             GROUP BY 1
@@ -52,7 +51,7 @@ class CRUDMerchant(CRUDBase[Merchant, MerchantCreate, MerchantUpdate]):
             """, {
                 "lat": lat,
                 "lon": lon,
-                "productId": product_id,
+                "typeId": type_id,
                 "status": 1
             }
         ).fetchall()

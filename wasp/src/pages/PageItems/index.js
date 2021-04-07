@@ -66,7 +66,7 @@ export default function PageItems() {
             className="logo-link"
           >
             <div className="inner">
-              <img src="/img/logo_100.png" alt="" />
+              <img src="https://imprima.app/img/logo_100.png" alt="" />
             </div>
           </a>
 

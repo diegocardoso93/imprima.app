@@ -19,7 +19,7 @@ function App() {
         <Route path="/alo/merchant">
           <PageMerchant />
         </Route>
-        <Route path="/alo/checkout/:productId/:merchantId">
+        <Route path="/alo/checkout/:typeId/:merchantId">
           <PageCheckout />
         </Route>
         <Route path="/alo/checkout-info">

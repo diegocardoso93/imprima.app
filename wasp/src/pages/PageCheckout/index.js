@@ -11,12 +11,12 @@ import usePersist from '../../hooks/usePersist';
 import './style.scss';
 
 export default function PageCheckout() {
-  const { productId, merchantId } = useParams();
+  const { typeId, merchantId } = useParams();
   const history = useHistory();
   const [_, setCheckout] = usePersist('checkout');
 
   const [loading, setLoading] = useState(false);
-  const [product, setProduct] = useState();
+  const [pSelected, setpSelected] = usePersist('selected');
   const [merchant, setMerchant] = useState();
   const [attributes, setAttributes] = useState();
   const [attributesOriginal, setAttributesOriginal] = useState();
@@ -29,14 +29,14 @@ export default function PageCheckout() {
   useEffect(() => {
     setLoading(true);
     fetch(
-      GET_ATTRIBUTES.replace('{productId}', productId).replace(
+      GET_ATTRIBUTES.replace('{typeId}', typeId).replace(
         '{merchantId}',
         merchantId
-      )
+      ),
+      { mode: 'cors' }
     )
       .then((res) => res.json())
       .then((res) => {
-        setProduct(res.product);
         setAttributesOriginal(res.attributes);
         let attrs = res.attributes.filter((a) => !a.price);
         attrs = attrs?.length ? attrs : res.attributes;
@@ -55,12 +55,11 @@ export default function PageCheckout() {
 
     setCheckout({
       attribute,
-      product,
       merchant,
       quantity,
     });
 
-    history.push(`/alo/checkout-info${location.search}`);
+    history.push(`/alo/checkout-info`);
   }
 
   function updatePrice(q, p) {
@@ -86,10 +85,10 @@ export default function PageCheckout() {
         )) || (
           <>
             <div className="page-checkout">
-              <h5>{product?.name}</h5>
+              <h5>{pSelected?.name}</h5>
               <div className="first">
                 <div className="left-container">
-                  <img src={product?.url} alt={product?.name} />
+                  <img src={pSelected?.url} alt={pSelected?.name} />
                 </div>
                 <div className="right-container">
                   <div className="attributes-container">

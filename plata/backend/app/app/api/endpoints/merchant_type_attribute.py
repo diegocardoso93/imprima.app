@@ -10,17 +10,17 @@ router = APIRouter()
 
 
 @router.get("/")
-def read_merchant_type_attibute(product_id, merchant_id, db: Session = Depends(deps.get_db)) -> Any:
+def read_merchant_type_attibute(type_id, merchant_id, db: Session = Depends(deps.get_db)) -> Any:
     """
     Retrieves merchant_type_attribute.
     """
-    product = crud.product.get(db, product_id)
+    # product = crud.product.get(db, product_id)
     merchant = crud.merchant.get(db, merchant_id)
     attributes = crud.merchant_type_attribute.get_attributes(
-        db, merchant_id, product.type_id)
+        db, merchant_id, type_id)
 
     return {
-        'product': product,
+        # 'product': product,
         'attributes': attributes,
         'merchant': merchant
     }

@@ -17,6 +17,7 @@ import Loader from '../../components/Loader';
 
 import './style.scss';
 import '@synapsestudios/react-drop-n-crop/lib/react-drop-n-crop.min.css';
+import usePersist from '../../hooks/usePersist';
 
 let canvas;
 
@@ -42,31 +43,27 @@ export default function PageDetail() {
   const [showCanvas, setShowCanvas] = useState(false);
   const [imgProc, setImgProc] = useState({});
   const [photo, setPhoto] = useState();
+  const [, psetSelected] = usePersist('selected');
 
   const innerWidth = window.innerWidth > 505 ? 506 : window.innerWidth - 32;
 
   useEffect(() => {
-    canvas = new fabric.Canvas('my-fabric-canvas');
+    canvas = new fabric.Canvas('fabric-area');
+
+    setLoading(true);
+    fetch(GET_PRODUCT.replace('{id}', id))
+      .then((res) => res.json())
+      .then((res) => {
+        console.log('selected', res);
+        setLoading(false);
+        setSelected(res);
+      })
+      .catch((e) => setLoading(false));
 
     return () => {
       canvas.dispose();
     };
   }, []);
-
-  useEffect(() => {
-    setLoading(true);
-    fetch(GET_PRODUCT.replace('{id}', id))
-      .then((res) => res.json())
-      .then((res) => {
-        setLoading(false);
-        setSelected(res);
-      })
-      .catch((e) => setLoading(false));
-  }, []);
-
-  function select(l) {
-    history.push(`/alo/checkout/${selected.id}/${l.id}${location.search}`);
-  }
 
   function toggleSwap() {
     if (!swap.show) {
@@ -85,10 +82,15 @@ export default function PageDetail() {
 
   function onSelectCategory(event) {
     const category = event.target.value;
-    console.log('category', category);
+
+    setImages([]);
+    if (!category === 'selecione') {
+      return;
+    }
+
     if (category === 'enviar') {
       setDropping(true);
-      setSwap({ loading: false, show: false });
+      setSwap({ loading: false, show: true });
       return;
     }
 
@@ -167,12 +169,13 @@ export default function PageDetail() {
               setImgProc(res);
 
               fabric.Image.fromURL(
-                'https://imprima.app/img/default/2.png',
+                `https://imprima.app/img/default/${selected.type_id}.png`,
                 function (oImg) {
                   oImg.scaleToWidth(innerWidth);
                   // canvas.add(oImg);
                   canvas.setBackgroundImage(oImg);
-                }
+                },
+                { crossOrigin: 'Anonymous' }
               );
 
               fabric.Image.fromURL(
@@ -182,7 +185,8 @@ export default function PageDetail() {
                   setPhoto(oImg);
                   oImg.scaleToWidth(180);
                   canvas.add(oImg);
-                }
+                },
+                { crossOrigin: 'Anonymous' }
               );
             })
             .catch((e) => setLoadingSend(false));
@@ -208,12 +212,12 @@ export default function PageDetail() {
   function toggleBackground() {
     setTimeout(() => {
       let imgTarget;
-      const checked = document.querySelector('#fnd:checked');
+      const { checked } = document.querySelector('#fnd');
       console.log(checked);
       if (checked) {
-        imgTarget = imgProc.image_in;
-      } else {
         imgTarget = imgProc.image_out;
+      } else {
+        imgTarget = imgProc.image_in;
       }
       fabric.Image.fromURL('https://imprima.app/' + imgTarget, function (oImg) {
         canvas._objects.splice(
@@ -230,18 +234,33 @@ export default function PageDetail() {
     }, 300);
   }
 
+  function saveAndGo() {
+    psetSelected({
+      ...selected,
+      url: drop.filename ? canvas?.toDataURL() : selected?.url,
+      name: drop.filename
+        ? selected?.name.split(' ')[0] + ' personalizada'
+        : selected?.name,
+    });
+    history.push(`/alo/merchant`);
+  }
+
   useEffect(() => {
     if (dropping) {
-      document.querySelector('.dropzone-instructions--main').innerText =
-        'Para enviar a imagem, clique ou arraste aqui.';
-      const subinstructions = document.querySelectorAll(
-        '.dropzone-instructions--sub'
-      );
-      subinstructions[0].innerText = 'Arquivos aceitos: .jpeg, .jpg, .png';
-      subinstructions[1].innerText = 'Tamanho máximo: 10MB';
+      const dropzonei = document.querySelector('.dropzone-instructions--main');
+      if (dropzonei) {
+        dropzonei.innerText = 'Para enviar a imagem, clique ou arraste aqui.';
+        const subinstructions = document.querySelectorAll(
+          '.dropzone-instructions--sub'
+        );
+        subinstructions[0].innerText = 'Arquivos aceitos: .jpeg, .jpg, .png';
+        subinstructions[1].innerText = 'Tamanho máximo: 10MB';
+      }
     }
   }, [dropping]);
 
+  const height = (innerWidth / 506) * 440;
+  const canvasHeight = height > 300 ? height : 300;
   return (
     <>
       <Header stackclose={-2}>
@@ -249,40 +268,31 @@ export default function PageDetail() {
           <div onClick={() => history.goBack()}>
             <SvgBack />
           </div>
-          <div>{selected?.name}</div>
+          <div>
+            {dropping || drop.filename
+              ? selected?.name.split(' ')[0] + ' personalizada'
+              : selected?.name}
+          </div>
         </div>
       </Header>
       <Body>
         <div style={{ display: showCanvas ? 'block' : 'none' }}>
-          <canvas
-            id="my-fabric-canvas"
-            width={innerWidth}
-            height={(innerWidth / 506) * 440}
-          />
-          <div
-            style={{
-              fontSize: '13px',
-              marginLeft: '10px',
-              marginTop: '-23px',
-              marginBottom: '20px',
-              zIndex: 1,
-              position: 'relative',
-              userSelect: 'none',
-            }}
-          >
-            arraste para fora para remover
-          </div>
+          <canvas id="fabric-area" width={innerWidth} height={canvasHeight} />
+          <div className="text-info">arraste para fora para remover</div>
           <div
             style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
             }}
           >
             <button onClick={() => fabricAddText()}>adicionar texto</button>
-            <label htmlFor="fnd" onClick={() => toggleBackground()}>
-              <input id="fnd" name="fnd" type="checkbox" />
-              imagem com fundo
+            <label
+              className="fnd"
+              htmlFor="fnd"
+              onClick={() => toggleBackground()}
+            >
+              <input id="fnd" name="fnd" type="checkbox" defaultChecked />
+              imagem sem fundo
             </label>
           </div>
         </div>
@@ -299,15 +309,17 @@ export default function PageDetail() {
                     onChange={onDrop}
                     value={drop}
                     maxFileSize={10485760}
+                    canvasHeight={canvasHeight + 'px'}
                     cropperOptions={{
                       guides: true,
                       viewMode: 2,
                       autoCropArea: 1,
                       movable: false,
-                      rotatable: false,
-                      scalable: false,
                       zoomable: false,
                       dragMode: 'none',
+                      rotatable: false,
+                      scalable: false,
+                      checkOrientation: false,
                     }}
                   />
                   {(loadingSend && (
@@ -325,12 +337,14 @@ export default function PageDetail() {
                       >
                         ✖ cancelar
                       </button>
-                      <button
-                        className="btn-drop confirm"
-                        onClick={() => sendImage()}
-                      >
-                        ✔ enviar
-                      </button>
+                      {drop.filename && (
+                        <button
+                          className="btn-drop confirm"
+                          onClick={() => sendImage()}
+                        >
+                          ✔ enviar
+                        </button>
+                      )}
                     </div>
                   )}
                 </>
@@ -352,7 +366,7 @@ export default function PageDetail() {
                   ((swap.loading && <Loader />) || (
                     <select onChange={onSelectCategory}>
                       <option>selecione</option>
-                      <option value="enviar">enviar foto</option>
+                      <option value="enviar">Enviar foto</option>
                       {categories?.map((c) => (
                         <option key={c.id} value={c.id}>
                           {c.name}
@@ -366,7 +380,7 @@ export default function PageDetail() {
               {swap.show &&
                 ((loadingImage && <Loader />) ||
                   (images &&
-                    images.map((i) => (
+                    images?.map((i) => (
                       <img
                         key={i.id}
                         src={i.thumb_url}
@@ -374,9 +388,11 @@ export default function PageDetail() {
                       />
                     ))))}
             </div>
-            <button onClick={() => history.push(`/alo/merchant`)}>
-              Continuar
-            </button>
+            <div className="btn-next">
+              <button className="next" onClick={saveAndGo}>
+                Continuar
+              </button>
+            </div>
           </div>
         )}
       </Body>
