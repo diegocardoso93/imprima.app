@@ -96,7 +96,7 @@ export default function PageCheckoutInfo() {
           </div>
           <h5>Vendedor:</h5>
           <div className="seller">
-            {merchant?.name} - {merchant?.phone}
+            {merchant?.name}
             <br />
             {merchant?.address}, {merchant?.address_extra} -{' '}
             {merchant?.neighborhood}, {merchant?.city}, {merchant?.uf}

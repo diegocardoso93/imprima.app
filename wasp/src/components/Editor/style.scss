@@ -1,0 +1,12 @@
+.editor {
+  .palet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: -2px;
+  }
+}
