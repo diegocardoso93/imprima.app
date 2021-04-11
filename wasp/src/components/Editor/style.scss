@@ -1,12 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@700&family=VT323&family=Zilla+Slab+Highlight:wght@700&display=swap');
+
 .editor {
   .palet {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    margin-bottom: 1px;
   }
 
   .icon {
     width: 24px;
     height: 24px;
     margin-bottom: -2px;
+  }
+
+
+  .modal-options {
+    display: none;
+    width: 324px;
+    height: 300px;
+    background: cyan;
+    position: absolute;
+    // left: 50%;
+    // margin-left: -175px;
+    top: 120px;
+    z-index: 1;
+
+    .motitle {
+      .motext {
+        font-size: 14px;
+      }
+      .moclose {
+        font-size: 26px;
+        right: 0px;
+        position: absolute;
+        padding: 0 6px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .font-selector {
+    height: 30px;
+    z-index: 1;
+    position: absolute;
+    font-size: 13px;
   }
 }

@@ -28,11 +28,12 @@ class CRUDType(CRUDBase[Type, TypeCreate, TypeUpdate]):
                 'order': 30,
                 'created_at': datetime.now()
             },
-            {
-                'name': 'almofada',
-                'order': 40,
-                'created_at': datetime.now()
-            }
+            # {
+            #     'name': 'almofada',
+            #     'order': 40,
+            #     'created_at': datetime.now()
+            # }
         ])
+
 
 ttype = CRUDType(Type)

@@ -100,3 +100,14 @@ body {
     color: black;
     bottom: 8px;
 }
+.label-advertise {
+    position: absolute;
+    right: 7px;
+    top: 10px;
+    font-size: 10px;
+    color: white;
+    background: #fbc02d;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 500;
+}

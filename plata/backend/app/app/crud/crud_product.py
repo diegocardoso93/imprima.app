@@ -28,25 +28,27 @@ class CRUDProduct(CRUDBase[Product, ProductCreate, ProductUpdate]):
                     vName = m.group(2).replace('_', ' ')
                     ttype = m.group(3)
 
-                    conn = op.get_bind()
-                    res = conn.execute("select id from kind where name = '"+vName+"'")
-                    kind_id = res.scalar()
+                    if int(ttype) < 4:
+                        conn = op.get_bind()
+                        res = conn.execute(
+                            "select id from kind where name = '"+vName+"'")
+                        kind_id = res.scalar()
 
-                    res = conn.execute(
-                        "select 1 from product where name = '"+types[ttype] + ' ' + vName+"'")
-                    exists = res.scalar()
+                        res = conn.execute(
+                            "select 1 from product where name = '"+types[ttype] + ' ' + vName+"'")
+                        exists = res.scalar()
 
-                    if kind_id and not exists:
-                        op.bulk_insert(table_product, [
-                            {
-                                'kind_id': kind_id,
-                                'category_id': idx+1,
-                                'type_id': ttype,
-                                'name': types[ttype] + ' ' + vName,
-                                'url': 'https://imprima.app/img/produto/'+category+'/'+filename,
-                                'thumb_url': 'https://imprima.app/img/produto/'+category+'/thumb/'+filename
-                            }
-                        ])
+                        if kind_id and not exists:
+                            op.bulk_insert(table_product, [
+                                {
+                                    'kind_id': kind_id,
+                                    'category_id': idx+1,
+                                    'type_id': ttype,
+                                    'name': types[ttype] + ' ' + vName,
+                                    'url': 'https://imprima.app/img/produto/'+category+'/'+filename,
+                                    'thumb_url': 'https://imprima.app/img/produto/'+category+'/thumb/'+filename
+                                }
+                            ])
 
     def get_by_kind(self, db: Session, kind_id: int = 0):
         return db.query(self.model).filter(self.model.kind_id == kind_id).all()

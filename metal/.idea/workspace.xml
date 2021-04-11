@@ -22,7 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="" />
+    <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../assets/00animais.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/00animais.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00animais.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_00animais.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/css/banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/static/css/banner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/templates/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/templates/banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/components/Editor/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/components/Editor/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/components/Editor/style.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -224,6 +234,9 @@
       <workItem from="1617367293086" duration="1699000" />
       <workItem from="1617382027113" duration="24343000" />
       <workItem from="1617634188264" duration="638000" />
+      <workItem from="1617888876361" duration="33000" />
+      <workItem from="1618015437122" duration="1204000" />
+      <workItem from="1618085189673" duration="595000" />
     </task>
     <servers />
   </component>

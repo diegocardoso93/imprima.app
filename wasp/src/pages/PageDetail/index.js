@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 
 import {
@@ -26,6 +26,7 @@ export default function PageDetail() {
   const [selected, setSelected] = useState();
   const [loadingImage, setLoadingImage] = useState(false);
   const history = useHistory();
+  const customRef = useRef();
 
   const [custom, setCustom] = useState(false);
   const [, psetSelected] = usePersist('selected');
@@ -89,12 +90,10 @@ export default function PageDetail() {
   function saveAndGo() {
     psetSelected({
       ...selected,
-      // url: drop.filename ? canvas?.toDataURL() : selected?.url,
-      url: selected?.url,
-      name: selected?.name,
-      // name: drop.filename
-      //   ? selected?.name.split(' ')[0] + ' personalizada'
-      //   : selected?.name,
+      url: custom ? customRef.current?.toDataURL() : selected?.url,
+      name: custom
+        ? selected?.name.split(' ')[0] + ' personalizada'
+        : selected?.name,
     });
 
     // gravar imagem no backend!?
@@ -110,10 +109,9 @@ export default function PageDetail() {
             <SvgBack />
           </div>
           <div>
-            {/* {custom || drop.filename
+            {custom
               ? selected?.name.split(' ')[0] + ' personalizada'
-              : selected?.name} */}
-            {selected?.name}
+              : selected?.name}
           </div>
         </div>
       </Header>
@@ -125,9 +123,9 @@ export default function PageDetail() {
         )) || (
           <div className="page-detail">
             <div className="item">
-              {(custom && <Editor type_id={selected?.type_id} />) || (
-                <img src={selected?.url} alt={selected?.name} />
-              )}
+              {(custom && (
+                <Editor ref={customRef} type_id={selected?.type_id} />
+              )) || <img src={selected?.url} alt={selected?.name} />}
             </div>
             <div className="hcategory">
               <div className="switch-container">
