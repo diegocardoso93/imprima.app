@@ -13,3 +13,15 @@ export const fonts = [
   'Quicksand',
   'VT323',
 ];
+
+export const repo = [
+  '00Brasil.png',
+  '01EUA.png',
+  '02Reino_Unido.png',
+  '03Alemanha.png',
+  '04Canadá.png',
+
+  '50Gatinho.png',
+  '51Cãozinho.png',
+  '52Cães_Desconfiados.png',
+];

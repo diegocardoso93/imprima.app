@@ -7,7 +7,7 @@ import 'fabric-history';
 import FontSelector from './FontSelector';
 import { Pallet } from './Pallet';
 import { ImageDrop } from './ImageDrop';
-import { defaultDrop } from './consts';
+import { defaultDrop, repo } from './consts';
 import './style.scss';
 import Modal from '../Modal';
 
@@ -59,11 +59,24 @@ export const Editor = forwardRef(({ type_id, xcanvas, setXCanvas }, ref) => {
       function (oImg) {
         oImg.scaleToWidth(70);
         oImg.type = 'emoji';
-        console.log(oImg);
         canvas.add(oImg);
       },
       { crossOrigin: 'Anonymous' }
     );
+    setModal({});
+  }
+
+  function addRepo(identifier) {
+    fabric.Image.fromURL(
+      `https://imprima.app/img/repo/${identifier}`,
+      function (oImg) {
+        oImg.scaleToWidth(70);
+        oImg.type = 'repo';
+        canvas.add(oImg);
+      },
+      { crossOrigin: 'Anonymous' }
+    );
+    setModal({});
   }
 
   const height = (innerWidth / 506) * 440;
@@ -115,6 +128,22 @@ export const Editor = forwardRef(({ type_id, xcanvas, setXCanvas }, ref) => {
               onClick={() => addEmoji(i + 111)}
             />
           ))}
+      </Modal>
+
+      <Modal
+        title={modal.title}
+        open={modal.open === 'repo'}
+        innerWidth={innerWidth}
+        onClose={() => setModal({})}
+      >
+        {repo.map((r, i) => (
+          <img
+            className="repo"
+            key={i}
+            src={`https://imprima.app/img/repo/${r}`}
+            onClick={() => addRepo(r)}
+          />
+        ))}
       </Modal>
 
       {dropping && (

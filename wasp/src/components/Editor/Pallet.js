@@ -28,6 +28,7 @@ export function Pallet({
   const [textSelected, setTextSelected] = useState();
   const [photoSelected, setPhotoSelected] = useState();
   const [emojiSelected, setEmojiSelected] = useState();
+  const [repoSelected, setRepoSelected] = useState();
 
   function onSelection(event) {
     const selected = event.selected[0];
@@ -41,6 +42,9 @@ export function Pallet({
       case 'emoji':
         setEmojiSelected(true);
         break;
+      case 'repo':
+        setRepoSelected(true);
+        break;
     }
   }
 
@@ -52,6 +56,7 @@ export function Pallet({
         setTextSelected(false);
         setPhotoSelected(false);
         setEmojiSelected(false);
+        setRepoSelected(false);
       });
     }
   }, [canvas]);
@@ -123,9 +128,8 @@ export function Pallet({
     setModal({ open: 'emoji', title: 'Escolha o emoji para adicionar' });
   }
 
-  function fabricOpenSearch() {
-    alert('fabricOpenSearch');
-    // showDialog;
+  function fabricOpenRepo() {
+    setModal({ open: 'repo', title: 'Escolha o modelo para adicionar' });
   }
 
   function fabricMoveBack() {
@@ -141,7 +145,7 @@ export function Pallet({
       <button onClick={() => startAddImage()}>
         <IconAddImage />
       </button>
-      <button onClick={() => fabricOpenSearch()}>
+      <button onClick={() => fabricOpenRepo()}>
         <IconSearch />
       </button>
       <button onClick={() => fabricAddText()}>
@@ -155,7 +159,7 @@ export function Pallet({
           <IconBackground />
         </button>
       )}
-      {(textSelected || photoSelected || emojiSelected) && (
+      {(textSelected || photoSelected || emojiSelected || repoSelected) && (
         <>
           <button onClick={() => fabricRemoveItem()}>
             <IconRemove />
