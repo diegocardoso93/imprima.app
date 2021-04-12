@@ -5,3 +5,11 @@ export const defaultDrop = {
   src: null,
   error: null,
 };
+
+export const fonts = [
+  'Arial Black',
+  'Pacifico',
+  'Zilla Slab Highlight',
+  'Quicksand',
+  'VT323',
+];

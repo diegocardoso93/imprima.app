@@ -1,15 +1,37 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import FontFaceObserver from 'fontfaceobserver';
+import { fonts } from './consts';
 
-export default function FontSelector({ canvas, visible }) {
-  var fonts = [
-    'Arial Black',
-    'Pacifico',
-    'Zilla Slab Highlight',
-    'Quicksand',
-    'VT323',
-  ];
+export default function FontSelector({
+  canvas,
+  visible,
+  width,
+  setFontSelectorVisible,
+}) {
+  const selectRef = useRef();
+  const colorRef = useRef();
+
+  function onSelection(event) {
+    const selected = event.selected[0];
+    if (selected.type === 'text') {
+      setFontSelectorVisible(true);
+      setTimeout(() => {
+        selectRef.current.value = selected.get('fontFamily');
+        colorRef.current.value = selected.get('fill');
+      }, 100);
+    } else {
+      setFontSelectorVisible(false);
+    }
+  }
+
+  useEffect(() => {
+    if (canvas) {
+      canvas.on('selection:created', onSelection);
+      canvas.on('selection:updated', onSelection);
+      canvas.on('selection:cleared', () => setFontSelectorVisible(false));
+    }
+  }, [canvas]);
 
   function loadAndUse(font) {
     var myfont = new FontFaceObserver(font);
@@ -21,11 +43,11 @@ export default function FontSelector({ canvas, visible }) {
       })
       .catch(function (e) {
         console.log(e);
-        alert('font loading failed ' + font);
+        alert('erro ao carregar a fonte ' + font);
       });
   }
 
-  function onChange(event) {
+  function onFontChange(event) {
     if (event.target.value !== 'Arial Black') {
       loadAndUse(event.target.value);
     } else {
@@ -34,20 +56,33 @@ export default function FontSelector({ canvas, visible }) {
     }
   }
 
+  function onColorChange(event) {
+    canvas.getActiveObject().set('fill', event.target.value);
+    canvas.requestRenderAll();
+  }
+
   if (!visible) {
     return <></>;
   }
 
   return (
-    <div className="font-selector">
-      <label>Fonte de letra: </label>
-      <select onChange={onChange}>
+    <div className="font-selector" style={{ width: width + 'px' }}>
+      <label>Estilo da letra: </label>
+      <select ref={selectRef} onChange={onFontChange}>
         {fonts.map((f) => (
           <option key={f} value={f}>
             {f}
           </option>
         ))}
       </select>
+      <input
+        ref={colorRef}
+        className="input-color"
+        type="color"
+        name="color"
+        value="#000000"
+        onChange={onColorChange}
+      />
     </div>
   );
 }
@@ -55,4 +90,6 @@ export default function FontSelector({ canvas, visible }) {
 FontSelector.propTypes = {
   canvas: PropTypes.any,
   visible: PropTypes.bool,
+  width: PropTypes.number,
+  setFontSelectorVisible: PropTypes.func,
 };

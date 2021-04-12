@@ -70,6 +70,7 @@ export function ImageDrop({
                   res.obj = oImg;
                   res.active = res.image_out;
                   oImg.scaleToWidth(180);
+                  oImg.type = 'photo';
                   canvas.add(oImg);
                   setImgProcs([...imgProcs, res]);
                   setLoadingImg(false);

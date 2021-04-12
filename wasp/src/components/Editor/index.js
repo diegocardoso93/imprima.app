@@ -2,22 +2,25 @@ import React, { forwardRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { fabric } from 'fabric';
+import 'fabric-history';
+
 import FontSelector from './FontSelector';
 import { Pallet } from './Pallet';
 import { ImageDrop } from './ImageDrop';
 import { defaultDrop } from './consts';
 import './style.scss';
+import Modal from '../Modal';
 
 let canvas;
 
-export const Editor = forwardRef(({ type_id }, ref) => {
+export const Editor = forwardRef(({ type_id, xcanvas, setXCanvas }, ref) => {
   const [drop, setDrop] = useState(defaultDrop);
   const [showCanvas, setShowCanvas] = useState(true);
   const [imgProcs, setImgProcs] = useState([]);
   const [dropping, setDropping] = useState();
-  const [xcanvas, setXCanvas] = useState();
   const [fontSelectorVisible, setFontSelectorVisible] = useState(false);
   const [loadingImg, setLoadingImg] = useState(false);
+  const [modal, setModal] = useState({});
 
   const innerWidth = window.innerWidth > 505 ? 506 : window.innerWidth - 32;
 
@@ -35,7 +38,6 @@ export const Editor = forwardRef(({ type_id }, ref) => {
   }, []);
 
   function onDrop(value) {
-    console.log('onDrop', value);
     setDrop(value);
   }
 
@@ -51,20 +53,38 @@ export const Editor = forwardRef(({ type_id }, ref) => {
     );
   }
 
+  function addEmoji(identifier) {
+    fabric.Image.fromURL(
+      `https://imprima.app/img/emoji/${identifier}.png`,
+      function (oImg) {
+        oImg.scaleToWidth(70);
+        oImg.type = 'emoji';
+        console.log(oImg);
+        canvas.add(oImg);
+      },
+      { crossOrigin: 'Anonymous' }
+    );
+  }
+
   const height = (innerWidth / 506) * 440;
-  const canvasHeight = height > 300 ? height : 250;
+  const canvasHeight = height;
 
   return (
     <div className="editor">
       <div style={{ display: showCanvas ? 'flex' : 'none' }}>
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', width: innerWidth + 16 + 'px' }}>
           <canvas
             ref={ref}
             id="fabric-area"
-            width={innerWidth}
+            width={innerWidth - 26}
             height={canvasHeight}
           />
-          <FontSelector canvas={xcanvas} visible={fontSelectorVisible} />
+          <FontSelector
+            canvas={xcanvas}
+            visible={fontSelectorVisible}
+            width={innerWidth - 26}
+            setFontSelectorVisible={setFontSelectorVisible}
+          />
           <Pallet
             canvas={xcanvas}
             imgProcs={imgProcs}
@@ -74,18 +94,28 @@ export const Editor = forwardRef(({ type_id }, ref) => {
             setImgProcs={setImgProcs}
             loadingImg={loadingImg}
             setLoadingImg={setLoadingImg}
-            setFontSelectorVisible={setFontSelectorVisible}
+            setModal={setModal}
           />
         </div>
       </div>
 
-      <div className="modal-options">
-        <div className="motitle">
-          <span className="motext">Fonte de letra</span>
-          <span className="moclose">×</span>
-        </div>
-        <div>body</div>
-      </div>
+      <Modal
+        title={modal.title}
+        open={modal.open === 'emoji'}
+        innerWidth={innerWidth}
+        onClose={() => setModal({})}
+      >
+        {Array(323)
+          .fill()
+          .map((v, i) => (
+            <img
+              className="emoji"
+              key={i}
+              src={`https://imprima.app/img/emoji/${i + 111}.png`}
+              onClick={() => addEmoji(i + 111)}
+            />
+          ))}
+      </Modal>
 
       {dropping && (
         <ImageDrop
@@ -109,6 +139,8 @@ export const Editor = forwardRef(({ type_id }, ref) => {
 
 Editor.propTypes = {
   type_id: PropTypes.number,
+  xcanvas: PropTypes.any,
+  setXCanvas: PropTypes.func,
 };
 
 export default Editor;

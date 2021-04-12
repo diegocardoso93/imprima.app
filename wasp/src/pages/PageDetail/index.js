@@ -27,6 +27,7 @@ export default function PageDetail() {
   const [loadingImage, setLoadingImage] = useState(false);
   const history = useHistory();
   const customRef = useRef();
+  const [xcanvas, setXCanvas] = useState();
 
   const [custom, setCustom] = useState(false);
   const [, psetSelected] = usePersist('selected');
@@ -88,9 +89,14 @@ export default function PageDetail() {
   }
 
   function saveAndGo() {
+    xcanvas?.discardActiveObject();
+    xcanvas?.renderAll();
+
     psetSelected({
       ...selected,
-      url: custom ? customRef.current?.toDataURL() : selected?.url,
+      url: custom
+        ? customRef.current?.toDataURL({ multiplier: 3 })
+        : selected?.url,
       name: custom
         ? selected?.name.split(' ')[0] + ' personalizada'
         : selected?.name,
@@ -124,7 +130,12 @@ export default function PageDetail() {
           <div className="page-detail">
             <div className="item">
               {(custom && (
-                <Editor ref={customRef} type_id={selected?.type_id} />
+                <Editor
+                  ref={customRef}
+                  type_id={selected?.type_id}
+                  xcanvas={xcanvas}
+                  setXCanvas={setXCanvas}
+                />
               )) || <img src={selected?.url} alt={selected?.name} />}
             </div>
             <div className="hcategory">
