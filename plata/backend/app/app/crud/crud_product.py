@@ -45,7 +45,8 @@ class CRUDProduct(CRUDBase[Product, ProductCreate, ProductUpdate]):
                                     'category_id': idx+1,
                                     'type_id': ttype,
                                     'name': types[ttype] + ' ' + vName,
-                                    'url': 'https://imprima.app/img/produto/'+category+'/'+filename,
+                                    # 'url': 'https://imprima.app/img/produto/'+category+'/'+filename,
+                                    'url': 'https://imprima.app/img/repo/' + re.sub(r'\d+.png', '.png', filename),
                                     'thumb_url': 'https://imprima.app/img/produto/'+category+'/thumb/'+filename
                                 }
                             ])

@@ -58,7 +58,7 @@ export default function PageMerchant() {
           <div onClick={() => history.goBack()}>
             <SvgBack />
           </div>
-          <div>Selecionar fornecedor</div>
+          <div>Selecione fornecedor</div>
         </div>
       </Header>
       <Body>

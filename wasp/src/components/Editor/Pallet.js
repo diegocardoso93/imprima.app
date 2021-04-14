@@ -12,6 +12,8 @@ import {
   IconRemove,
   IconChevronDown,
   IconChevronUp,
+  IconNote,
+  IconEdit,
 } from './icons';
 
 export function Pallet({

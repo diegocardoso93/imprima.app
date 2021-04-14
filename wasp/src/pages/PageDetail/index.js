@@ -94,12 +94,8 @@ export default function PageDetail() {
 
     psetSelected({
       ...selected,
-      url: custom
-        ? customRef.current?.toDataURL({ multiplier: 3 })
-        : selected?.url,
-      name: custom
-        ? selected?.name.split(' ')[0] + ' personalizada'
-        : selected?.name,
+      url: customRef.current?.toDataURL({ multiplier: 3 }),
+      name: selected?.name.split(' ')[0] + ' personalizada',
     });
 
     // gravar imagem no backend!?
@@ -114,11 +110,7 @@ export default function PageDetail() {
           <div onClick={() => history.goBack()}>
             <SvgBack />
           </div>
-          <div>
-            {custom
-              ? selected?.name.split(' ')[0] + ' personalizada'
-              : selected?.name}
-          </div>
+          <div>{selected?.name.split(' ')[0] + ' personalizada'}</div>
         </div>
       </Header>
       <Body>
@@ -129,22 +121,19 @@ export default function PageDetail() {
         )) || (
           <div className="page-detail">
             <div className="item">
-              {(custom && (
+              {selected?.type_id && (
                 <Editor
                   ref={customRef}
                   type_id={selected?.type_id}
                   xcanvas={xcanvas}
                   setXCanvas={setXCanvas}
+                  startImage={selected?.url}
                 />
-              )) || <img src={selected?.url} alt={selected?.name} />}
+              )}
             </div>
-            <div className="hcategory">
+            {/* <div className="hcategory">
               <div className="switch-container">
                 trocar estampa:
-                {/* <label className="switch">
-                  <input type="checkbox" onChange={toggleSwap} />
-                  <span className="slider round"></span>
-                </label> */}
               </div>
               <div className="category-container">
                 {swap.show &&
@@ -160,7 +149,7 @@ export default function PageDetail() {
                     </select>
                   ))}
               </div>
-            </div>
+            </div> */}
             <div className="image-list">
               {swap.show &&
                 ((loadingImage && <Loader />) ||

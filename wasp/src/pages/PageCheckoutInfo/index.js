@@ -24,7 +24,8 @@ export default function PageCheckoutInfo() {
   const [pselected] = usePersist('selected');
   const history = useHistory();
   const [loading, setLoading] = useState();
-  const { attribute, merchant, quantity } = pcheckout;
+  const { cart, merchant } = pcheckout;
+  const [detailVisible, setDetailVisible] = useState(false);
 
   function buy(values) {
     const { name, cellphone, address, note } = values;
@@ -68,13 +69,21 @@ export default function PageCheckoutInfo() {
   }
 
   function getProductTitle() {
-    return `${quantity}x ${pselected?.name}`;
+    return `${pselected?.name}`;
   }
 
   function getProductDetails() {
-    return `${attribute?.name} ${attribute?.value} - R$${
-      quantity * attribute?.price
-    }`;
+    return (
+      <div>
+        {cart.map((c, k) => (
+          <div style={{ fontSize: '12px' }} key={k}>
+            {c.quantity + 'x ' + c.detail + ' R$' + c.price}
+          </div>
+        ))}
+        Total: R$
+        {cart.reduce((a, c) => a + c.price * c.quantity, 0)}
+      </div>
+    );
   }
 
   return (
@@ -90,9 +99,22 @@ export default function PageCheckoutInfo() {
       <Body>
         <div className="page-checkout-info">
           <div className="product-details">
-            {getProductTitle()}
-            <br />
-            {getProductDetails()}
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}
+            >
+              {getProductTitle()}
+              <div
+                className="link-detail"
+                onClick={() => setDetailVisible(!detailVisible)}
+              >
+                {detailVisible ? 'esconder' : 'ver'} detalhes
+              </div>
+            </div>
+            {(detailVisible && getProductDetails()) || ''}
           </div>
           <h5>Vendedor:</h5>
           <div className="seller">
@@ -128,7 +150,7 @@ export default function PageCheckoutInfo() {
               <ErrorMessage component="span" name="cellphone" />
               <Field
                 name="note"
-                placeholder="Observação, exemplo: fazer a estampa menor, etc"
+                placeholder="Informações adicionais"
                 type="text"
               />
               <ErrorMessage component="span" name="note" />

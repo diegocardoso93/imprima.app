@@ -82,6 +82,10 @@
         border-radius: 4px;
         cursor: pointer;
 
+        > div {
+          margin: -3px -2px;
+        }
+
         .bottom {
           display: block;
           margin-top: 6px;

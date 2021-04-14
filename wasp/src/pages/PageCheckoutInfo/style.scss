@@ -3,6 +3,13 @@
 
   .product-details {
     font-size: 14px;
+
+    .link-detail {
+      background: rgb(250, 250, 250);
+      color: #444444;
+      padding: 4px 8px;
+      cursor: pointer;
+    }
   }
 
   h5 {
@@ -40,5 +47,6 @@
       margin-top: 20px;
       cursor: pointer;
     }
+
 	}
 }
