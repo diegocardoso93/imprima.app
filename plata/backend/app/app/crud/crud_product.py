@@ -19,7 +19,7 @@ types = {
 
 class CRUDProduct(CRUDBase[Product, ProductCreate, ProductUpdate]):
     def import_from_files(self, table_product):
-        for idx, category in enumerate(['bandeiras', 'animais_doceis']):
+        for idx, category in enumerate(['bandeiras', 'animais_doceis', 'frases']):
             (_, _, filenames) = next(walk('app/static/img/produto/'+category))
             for filename in filenames:
                 m = re.search(r'(\d+)([^\d+].*)(\d+)', filename)
@@ -46,7 +46,7 @@ class CRUDProduct(CRUDBase[Product, ProductCreate, ProductUpdate]):
                                     'type_id': ttype,
                                     'name': types[ttype] + ' ' + vName,
                                     # 'url': 'https://imprima.app/img/produto/'+category+'/'+filename,
-                                    'url': 'https://imprima.app/img/repo/' + re.sub(r'\d+.png', '.png', filename),
+                                    'url': 'https://imprima.app/img/repo/'+category+'/' + re.sub(r'\d+.png', '.png', filename),
                                     'thumb_url': 'https://imprima.app/img/produto/'+category+'/thumb/'+filename
                                 }
                             ])

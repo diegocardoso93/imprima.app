@@ -50,4 +50,4 @@ def create_preference(input: InputCreatePreference, db: Session = Depends(deps.g
     }
 
 
-# https://imprima.app/checkout/payment/success?collection_id=1235928207&collection_status=approved&payment_id=1235928207&status=approved&external_reference=null&payment_type=credit_card&merchant_order_id=2566194208&preference_id=35226241-7594e1db-be22-4fad-ba2c-9286d0f8bd72&site_id=MLB&processing_mode=aggregator&merchant_account_id=null
+# https://imprima.app/payment/success?collection_id=1235928207&collection_status=approved&payment_id=1235928207&status=approved&external_reference=null&payment_type=credit_card&merchant_order_id=2566194208&preference_id=35226241-7594e1db-be22-4fad-ba2c-9286d0f8bd72&site_id=MLB&processing_mode=aggregator&merchant_account_id=null

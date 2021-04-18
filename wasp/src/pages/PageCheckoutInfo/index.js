@@ -15,7 +15,10 @@ import * as yup from 'yup';
 const schema = yup.object().shape({
   name: yup.string().required('Campo obrigatório'),
   address: yup.string().required('Campo obrigatório'),
-  cellphone: yup.string().required('Campo obrigatório'),
+  cellphone: yup
+    .string()
+    .required('Campo obrigatório')
+    .min(10, 'Informe o número com DDD'),
   note: yup.string(),
 });
 

@@ -30,7 +30,7 @@ class CheckoutService:
         items = []
         total = 0
         for order_item in order_items:
-            tmerchant_type_attribute = crud.merchant_type_attribute.get_by_id(
+            tmerchant_type_attribute = crud.merchant_type_attribute.get(
                 db, order_item.id)
             item = {
                 "title": order.product_name + ' ' + order_item.detail,
@@ -45,9 +45,9 @@ class CheckoutService:
             "items": items,
             "auto_return": "approved",
             "back_urls": {
-                "success": "https://imprima.app/checkout/payment/success",
-                "pending": "https://imprima.app/checkout/payment/pending",
-                "failure": "https://imprima.app/checkout/payment/fail"
+                "success": "https://imprima.app/payment/success",
+                "pending": "https://imprima.app/payment/pending",
+                "failure": "https://imprima.app/payment/fail"
             }
         }
 
@@ -70,5 +70,5 @@ class CheckoutService:
         db_order.status = status
         db.commit()
 
-        merchant = crud.merchant.get_by_id(db, db_order.merchant_id)
+        merchant = crud.merchant.get(db, db_order.merchant_id)
         return (db_order, merchant)

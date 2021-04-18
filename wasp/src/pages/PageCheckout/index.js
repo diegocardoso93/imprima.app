@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 import Loader from '../../components/Loader';
 import Header from '../../components/Header';
@@ -50,7 +51,9 @@ export default function PageCheckout() {
 
   function next() {
     if (!cart.length) {
-      alert('Escolha acima.');
+      toast.info('🛒 Coloque o produto no carrinho.', {
+        position: toast.POSITION.TOP_CENTER,
+      });
       return;
     }
 
@@ -74,7 +77,9 @@ export default function PageCheckout() {
       t2.value
     }`;
     if (cart.find((c) => c.detail === detail)) {
-      alert('Já adicionado.');
+      toast.info('🛒 Produto já adicionado no carrinho.', {
+        position: toast.POSITION.TOP_CENTER,
+      });
     } else {
       setCart([
         ...cart,

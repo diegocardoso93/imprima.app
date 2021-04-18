@@ -23,39 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/alembic/versions/5199d73df58e_create_order_item_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/alembic/versions/5199d73df58e_create_order_item_table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/alembic/versions/65c0fbcae3ad_create_partner_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/alembic/versions/65c0fbcae3ad_create_partner_table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/alembic/versions/e7f817a3d85a_create_order_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/alembic/versions/e7f817a3d85a_create_order_table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/api/api_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/api/api_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/crud/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/crud/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/api/endpoints/checkout.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/api/endpoints/checkout.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_merchant.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_merchant.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_merchant_type_attribute.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_merchant_type_attribute.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/models/type.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/models/type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/schemas/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/static/css/main.042323d8.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/static/css/main.042323d8.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/static/js/main.6fa022a4.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/static/js/main.6fa022a4.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageCheckout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageCheckout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageCheckout/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageCheckout/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageCheckoutInfo/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageMerchant/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageMerchant/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/service/checkout_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/service/checkout_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +234,7 @@
       <workItem from="1618015437122" duration="1204000" />
       <workItem from="1618085189673" duration="595000" />
       <workItem from="1618442408887" duration="5337000" />
-      <workItem from="1618532400214" duration="11636000" />
+      <workItem from="1618532400214" duration="12917000" />
     </task>
     <servers />
   </component>

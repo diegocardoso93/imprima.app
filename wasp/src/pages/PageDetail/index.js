@@ -57,7 +57,9 @@ export default function PageDetail() {
           <div onClick={() => history.goBack()}>
             <SvgBack />
           </div>
-          <div>{selected?.name.split(' ')[0] + ' personalizada'}</div>
+          <div>
+            {selected ? selected?.name.split(' ')[0] + ' personalizada' : ''}
+          </div>
         </div>
       </Header>
       <Body>
@@ -79,8 +81,22 @@ export default function PageDetail() {
               )}
             </div>
             <div className="instructions">
-              Você pode modificar a estampa como quiser, utilizando a barra de
-              ferramentas ao lado.
+              <IconInfo />
+              <span>Arraste a imagem para reposicionar.</span>
+            </div>
+            <div className="instructions">
+              <IconInfo />
+              <span>
+                Você pode modificar a estampa como quiser, ou enviar a sua
+                imagem, experimente a barra de ferramentas ao lado.
+              </span>
+            </div>
+            <div className="instructions">
+              <IconInfo />
+              <span>
+                Ao adicionar texto, clicar fora da caixa e resselecionar para
+                mover.
+              </span>
             </div>
             <div className="btn-next">
               <button className="next" onClick={saveAndGo}>
@@ -93,3 +109,12 @@ export default function PageDetail() {
     </>
   );
 }
+
+const IconInfo = () => (
+  <svg className="icon-info" viewBox="0 0 24 24">
+    <path
+      fill="currentColor"
+      d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+    ></path>
+  </svg>
+);

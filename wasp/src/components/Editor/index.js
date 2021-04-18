@@ -7,7 +7,7 @@ import 'fabric-history';
 import FontSelector from './FontSelector';
 import { Pallet } from './Pallet';
 import { ImageDrop } from './ImageDrop';
-import { defaultDrop, repo } from './consts';
+import { categories, defaultDrop, repo } from './consts';
 import './style.scss';
 import Modal from '../Modal';
 
@@ -22,6 +22,7 @@ export const Editor = forwardRef(
     const [fontSelectorVisible, setFontSelectorVisible] = useState(false);
     const [loadingImg, setLoadingImg] = useState(false);
     const [modal, setModal] = useState({});
+    const [category, setCategory] = useState('Frases');
 
     const innerWidth = window.innerWidth > 505 ? 506 : window.innerWidth - 32;
 
@@ -78,6 +79,11 @@ export const Editor = forwardRef(
         { crossOrigin: 'Anonymous' }
       );
       setModal({});
+    }
+
+    function onSelectCategory(event) {
+      console.log('onSelectCategory', event);
+      setCategory(event.target.value);
     }
 
     useEffect(() => {
@@ -141,12 +147,18 @@ export const Editor = forwardRef(
           {Array(323)
             .fill()
             .map((v, i) => (
-              <img
+              <div
+                style={{ backgroundPosition: -i * 42 + 'px' }}
                 className="emoji"
                 key={i}
-                src={`https://imprima.app/img/emoji/${i + 111}.png`}
                 onClick={() => addEmoji(i + 111)}
               />
+              // <img
+              //   className="emoji"
+              //   key={i}
+              //   src={`https://imprima.app/img/emoji/${i + 111}.png`}
+              //   onClick={() => addEmoji(i + 111)}
+              // />
             ))}
         </Modal>
 
@@ -155,8 +167,20 @@ export const Editor = forwardRef(
           open={modal.open === 'repo'}
           innerWidth={innerWidth}
           onClose={() => setModal({})}
+          header={
+            <div style={{ marginLeft: '10px', fontSize: '13px' }}>
+              categoria:{' '}
+              <select onChange={onSelectCategory} defaultValue={category}>
+                {categories.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+            </div>
+          }
         >
-          {repo.map((r, i) => (
+          {repo[Object.keys(repo).find((c) => c === category)].map((r, i) => (
             <img
               className="repo"
               key={i}

@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-export default function Modal({ children, title, onClose, open, innerWidth }) {
+export default function Modal({
+  header,
+  children,
+  title,
+  onClose,
+  open,
+  innerWidth,
+}) {
   if (!open) {
     return <></>;
   }
@@ -18,6 +25,7 @@ export default function Modal({ children, title, onClose, open, innerWidth }) {
             ×
           </span>
         </div>
+        {header}
         <div className="modal-container">{children}</div>
       </div>
     </div>
@@ -25,6 +33,7 @@ export default function Modal({ children, title, onClose, open, innerWidth }) {
 }
 
 Modal.propTypes = {
+  header: PropTypes.any,
   children: PropTypes.any,
   title: PropTypes.string,
   onClose: PropTypes.func,

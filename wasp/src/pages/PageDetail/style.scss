@@ -74,6 +74,11 @@ button {
     font-size: 12px;
     margin-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    span {
+      flex: 100%;
+    }
   }
 
   .btn-next {
@@ -88,5 +93,12 @@ button {
       border-radius: 7px;
       cursor: pointer;
     }
+  }
+
+  .icon-info {
+    width: 20px;
+    height: 20px;
+    flex: 20px;
+    margin-right: 3px;
   }
 }
