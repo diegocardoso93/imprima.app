@@ -47,5 +47,8 @@ class CRUDMerchantTypeAttribute(CRUDBase[MerchantTypeAttribute, MerchantTypeAttr
     def get_attributes(self, db, merchant_id, type_id):
         return db.query(self.model).filter(self.model.merchant_id == merchant_id).filter(self.model.type_id == type_id).all()
 
+    def get_by_id(self, db: Session, merchant_type_attribute_id: int = 0):
+        return db.query(self.model).get(merchant_type_attribute_id)
+
 
 merchant_type_attribute = CRUDMerchantTypeAttribute(MerchantTypeAttribute)

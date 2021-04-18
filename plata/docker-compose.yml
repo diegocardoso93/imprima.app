@@ -1,6 +1,5 @@
 version: "3.3"
 services:
-
   db:
     image: postgres:12
     volumes:
@@ -9,13 +8,15 @@ services:
       - .env
     environment:
       - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - "5434:5432"
     deploy:
       placement:
         constraints:
           - node.labels.${STACK_NAME?Variable not set}.app-db-data == true
 
   backend:
-    image: '${DOCKER_IMAGE_BACKEND?Variable not set}:${TAG-latest}'
+    image: "${DOCKER_IMAGE_BACKEND?Variable not set}:${TAG-latest}"
     depends_on:
       - db
     env_file:

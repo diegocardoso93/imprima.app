@@ -44,14 +44,12 @@ export default function PageCheckoutInfo() {
           address,
           note,
           origin: localStorage.getItem('origin'),
+
+          product_name: pselected.name,
+          image: pselected.url,
+          type_id: pselected.type_id,
         },
-        orderItem: {
-          selected: pselected,
-          merchant_type_attribute_id: attribute?.id,
-          name: getProductTitle(),
-          description: getProductDetails(),
-          quantity: quantity,
-        },
+        order_items: cart, // { detail: "Masculina Tamanho P", id, price, quantity }
       }),
     })
       .then((res) => res.json())
@@ -102,7 +100,6 @@ export default function PageCheckoutInfo() {
             <div
               style={{
                 display: 'flex',
-                justifyContent: 'space-between',
                 alignItems: 'center',
               }}
             >

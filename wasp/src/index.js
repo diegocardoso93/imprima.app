@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const urlParams = new URLSearchParams(window.location.search);
-localStorage.setItem('kindId', urlParams.get('kindId') || '2');
+localStorage.setItem('kindId', urlParams.get('kindId') || '1');
 localStorage.setItem('imprimaId', urlParams.get('imprimaId') || '');
 localStorage.setItem('origin', urlParams.get('origin') || '');
 

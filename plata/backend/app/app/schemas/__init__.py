@@ -8,3 +8,6 @@ from .type import Type
 from .category import Category
 from .merchant import Merchant
 from .merchant_type_attribute import MerchantTypeAttribute
+from .order import Order
+from .order_item import OrderItem
+from .partner import Partner

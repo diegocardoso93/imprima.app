@@ -56,5 +56,8 @@ class CRUDMerchant(CRUDBase[Merchant, MerchantCreate, MerchantUpdate]):
             }
         ).fetchall()
 
+    def get_by_id(self, db: Session, id):
+        return db.query(self.model).get(id)
+
 
 merchant = CRUDMerchant(Merchant)

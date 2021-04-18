@@ -34,6 +34,9 @@ def upgrade():
         sa.Column('lat', sa.Float),
         sa.Column('lon', sa.Float),
         sa.Column('status', sa.Integer, server_default=sa.schema.DefaultClause('1')),
+        sa.Column('created_at', sa.DateTime,
+                  server_default=sa.func.current_timestamp()),
+        sa.Column('updated_at', sa.DateTime),
         sa.PrimaryKeyConstraint("id")
     )
 

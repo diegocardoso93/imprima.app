@@ -20,7 +20,6 @@
 }
 
 button {
-  border: 1px solid #ccc;
   font-size: 14px;
   border-radius: 4px;
   cursor: pointer;
@@ -38,7 +37,6 @@ button {
 
     .btn-drop {
       font-family: 'Montserrat';
-      border: 1px solid #ccc;
       font-size: 14px;
       border-radius: 4px;
       padding: 8px 10px;
@@ -58,51 +56,6 @@ button {
     justify-content: center;
   }
 
-  .hcategory {
-    padding: 11px 0;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-
-    select {
-      margin-left: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 100%;
-      padding: 5px;
-    }
-
-    .category-container {
-      width: calc(100% - 178px);
-      @media (max-width: 540px) {  
-        width: calc(100% - 122px);
-      }
-    }
-  }
-
-  .image-list {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    user-select: none;
-
-    img {
-      width: calc(24% - 10px);
-      margin: 5px;
-      cursor: pointer;
-      -webkit-user-drag: none;
-    }
-  }
-
-  .switch-container {
-    display: flex;
-    width: 112px;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-  }
-
   img {
     max-width: 100%;
   }
@@ -115,6 +68,12 @@ button {
       overflow: hidden;
     }
     transition: max-height 0.5s ease-out;
+  }
+
+  .instructions {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .btn-next {
@@ -130,60 +89,4 @@ button {
       cursor: pointer;
     }
   }
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 42px;
-  height: 24px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(18px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }

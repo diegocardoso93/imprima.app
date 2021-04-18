@@ -70,13 +70,17 @@ export default function PageCheckout() {
   function addCart() {
     const t1 = attributesOriginal?.find((a) => a.id === subselect);
     const t2 = attributesOriginal?.find((a) => a.id === attribute.id);
-    if (cart.find((c) => c.detail === `${t1.value} ${t2.name} ${t2.value}`)) {
+    let detail = `${t1.value === t2.value ? '' : t1.value + ' '}${t2.name} ${
+      t2.value
+    }`;
+    if (cart.find((c) => c.detail === detail)) {
       alert('Já adicionado.');
     } else {
       setCart([
         ...cart,
         {
-          detail: `${t1.value} ${t2.name} ${t2.value}`,
+          id: t2.id,
+          detail,
           price,
           quantity,
         },
@@ -190,7 +194,10 @@ export default function PageCheckout() {
                         </div>
                       </div>
                       <div>
-                        <button onClick={() => addCart()}>
+                        <button
+                          className="button-cart-add"
+                          onClick={() => addCart()}
+                        >
                           <AddCartIcon />
                         </button>
                       </div>
@@ -213,7 +220,7 @@ export default function PageCheckout() {
                         {cart.map((l, k) => (
                           <div key={k} className="item">
                             <div className="i1">{l.detail}</div>
-                            <div className="i2">R${l.price * l.quantity}</div>
+                            <div className="i2">R${l.price}</div>
                             <div className="i3">
                               <input
                                 type="button"

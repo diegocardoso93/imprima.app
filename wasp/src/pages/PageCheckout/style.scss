@@ -65,15 +65,18 @@
 
       .price-container {
         display: flex;
-        justify-content: space-around;
         margin-top: 10px;
 
         span {
           margin-bottom: 6px;
         }
-        div {
+        > div {
           font-size: 18px;
+          text-align: center;
         }
+      }
+      .button-cart-add {
+        margin-left: 16px;
       }
 		}
 
@@ -112,6 +115,7 @@
       max-height: 200px;
       overflow-y: auto;
       overflow-x: hidden;
+      padding-bottom: 16px;
     }
 
     .item {
@@ -173,7 +177,6 @@
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      padding-top: 6px;
     }
   }
 }

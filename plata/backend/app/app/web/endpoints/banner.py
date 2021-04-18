@@ -14,4 +14,3 @@ async def banner(request: Request, response_class=HTMLResponse):
         'type': 2,
         'imprimaId': 123
     })
-

@@ -21,13 +21,12 @@ def upgrade():
         'order_item',
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('name', sa.String(255)),
-        sa.Column('description', sa.String(255)),
         sa.Column('quantity', sa.Integer),
         sa.Column('price', sa.Numeric(8, 2)),
-        sa.Column('created_at', sa.DateTime, server_default=sa.func.current_timestamp()),
+        sa.Column('created_at', sa.DateTime,
+                  server_default=sa.func.current_timestamp()),
         sa.Column('updated_at', sa.DateTime),
         sa.Column('order_id', sa.Integer, sa.ForeignKey('order.id')),
-        sa.Column('product_id', sa.Integer, sa.ForeignKey('product.id')),
         sa.PrimaryKeyConstraint("id")
     )
 

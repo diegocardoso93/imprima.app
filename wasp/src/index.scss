@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   margin: 0;
   position: fixed;
@@ -9,10 +13,8 @@ body {
   z-index: 999999999;
   top: 0;
   left: 0;
-  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Montserrat', sans-serif;
 }
 
 input {
@@ -32,11 +34,15 @@ input {
   padding: 12px 14px;
   border-radius: 4px;
   font-size: 13px;
-  border: 1px solid #ccc;
+  border: 0px;
+  box-shadow: 0 4px 9px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-select {
-  font-family: 'Montserrat', sans-serif;
+button {
+  font-weight: bold;
+  box-shadow: 0 4px 9px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: #ededed;
+  border: 0;
 }
 
 ::-webkit-scrollbar {
