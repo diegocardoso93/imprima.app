@@ -23,11 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a702246-c6f7-4e4a-82b7-c22b3200ca12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../assets/3frases.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/3frases.cdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_3frases.cdr" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/Cópia_de_segurança_de_3frases.cdr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/api/endpoints/checkout.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/api/endpoints/checkout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_merchant.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_merchant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_merchant_type_attribute.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/crud/crud_merchant_type_attribute.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/service/checkout_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/service/checkout_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/static/js/main.8c70751a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plata/backend/app/app/static/alo/static/js/main.8c70751a.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/components/Editor/consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/components/Editor/consts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/components/Editor/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wasp/src/pages/PageDetail/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +239,7 @@
       <workItem from="1618015437122" duration="1204000" />
       <workItem from="1618085189673" duration="595000" />
       <workItem from="1618442408887" duration="5337000" />
-      <workItem from="1618532400214" duration="12917000" />
+      <workItem from="1618532400214" duration="13511000" />
     </task>
     <servers />
   </component>

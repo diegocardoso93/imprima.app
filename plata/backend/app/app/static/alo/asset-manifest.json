@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/alo/static/css/main.377c0d5e.chunk.css",
-    "main.js": "/alo/static/js/main.8c70751a.chunk.js",
-    "main.js.map": "/alo/static/js/main.8c70751a.chunk.js.map",
+    "main.js": "/alo/static/js/main.9ba63751.chunk.js",
+    "main.js.map": "/alo/static/js/main.9ba63751.chunk.js.map",
     "runtime-main.js": "/alo/static/js/runtime-main.a49af4c3.js",
     "runtime-main.js.map": "/alo/static/js/runtime-main.a49af4c3.js.map",
     "static/css/2.1a40a44d.chunk.css": "/alo/static/css/2.1a40a44d.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.1a40a44d.chunk.css",
     "static/js/2.7ee123d9.chunk.js",
     "static/css/main.377c0d5e.chunk.css",
-    "static/js/main.8c70751a.chunk.js"
+    "static/js/main.9ba63751.chunk.js"
   ]
 }

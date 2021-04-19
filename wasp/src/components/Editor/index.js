@@ -153,12 +153,6 @@ export const Editor = forwardRef(
                 key={i}
                 onClick={() => addEmoji(i + 111)}
               />
-              // <img
-              //   className="emoji"
-              //   key={i}
-              //   src={`https://imprima.app/img/emoji/${i + 111}.png`}
-              //   onClick={() => addEmoji(i + 111)}
-              // />
             ))}
         </Modal>
 

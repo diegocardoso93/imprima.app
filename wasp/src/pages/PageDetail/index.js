@@ -94,7 +94,7 @@ export default function PageDetail() {
             <div className="instructions">
               <IconInfo />
               <span>
-                Ao adicionar texto, clicar fora da caixa e resselecionar para
+                Ao adicionar texto, clique fora da caixa e resselecione para
                 mover.
               </span>
             </div>
