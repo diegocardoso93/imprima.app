@@ -62,7 +62,7 @@ export default function PageCheckout() {
       cart,
     });
 
-    history.push(`/alo/checkout-info`);
+    history.push(`/criador/pedido-info`);
   }
 
   function updatePrice(q, p) {

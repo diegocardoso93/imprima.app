@@ -9,3 +9,4 @@ from .merchant_type_attribute import MerchantTypeAttribute
 from .order import Order
 from .order_item import OrderItem
 from .partner import Partner
+from .creation_cep import CreationCep

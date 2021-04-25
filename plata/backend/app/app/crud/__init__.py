@@ -8,6 +8,7 @@ from .crud_merchant import merchant
 from .crud_merchant_type_attribute import merchant_type_attribute
 from .crud_order import order
 from .crud_order_item import order_item
+from .crud_creation_cep import creation_cep
 
 # For a new basic set of CRUD operations you could just do
 

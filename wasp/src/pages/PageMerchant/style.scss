@@ -20,7 +20,6 @@
 }
 
 .page-merchant {
-  margin-bottom: 300px;
 
   .loader-container {
     width: 100%;
@@ -40,6 +39,11 @@
 
   .stores {
     background: white;
+
+    p {
+      margin-top: 2px;
+      font-size: 14px;
+    }
 
     .title {
       font-size: 22px;
@@ -105,21 +109,21 @@
 
         .b { font-weight: bold; }
         .i1 {
-          width: 50%;
+          width: 100%;
         }
-        .i2 {
-          width: 20%;
-          text-align: center;
-          padding: 0 10px;
-          .small {
-            font-size: 12px;
-            white-space: nowrap;
-          }
-        }
-        .i3 {
-          width: 20%;
-          text-align: center;
-        }
+        // .i2 {
+        //   width: 20%;
+        //   text-align: center;
+        //   padding: 0 10px;
+        //   .small {
+        //     font-size: 12px;
+        //     white-space: nowrap;
+        //   }
+        // }
+        // .i3 {
+        //   width: 20%;
+        //   text-align: center;
+        // }
         .i5 {
           width: 10%;
           text-align: center;

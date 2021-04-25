@@ -10,19 +10,19 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/alo/" exact>
+        <Route path="/criador/" exact>
           <PageItems />
         </Route>
-        <Route path="/alo/produto/:id">
+        <Route path="/criador/produto/:id">
           <PageDetail />
         </Route>
-        <Route path="/alo/merchant">
+        <Route path="/criador/fornecedor">
           <PageMerchant />
         </Route>
-        <Route path="/alo/checkout/:typeId/:merchantId">
+        <Route path="/criador/pedido/:typeId/:merchantId">
           <PageCheckout />
         </Route>
-        <Route path="/alo/checkout-info">
+        <Route path="/criador/pedido-info">
           <PageCheckoutInfo />
         </Route>
       </Switch>

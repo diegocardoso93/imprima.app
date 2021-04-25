@@ -16,6 +16,7 @@ export default function PageMerchant() {
   const cepRef = useRef();
   const history = useHistory();
   const [pselected] = usePersist('selected');
+  const [imgurl, setImgurl] = useState();
 
   function checkCEP(e) {
     if (e.key === 'Enter') {
@@ -25,8 +26,8 @@ export default function PageMerchant() {
 
   useEffect(() => {
     const address = JSON.parse(localStorage.getItem('address'));
-    if (address?.zip) {
-      cepRef.current.value = address.zip;
+    if (address?.cep) {
+      cepRef.current.value = address.cep;
       findMerchant();
     }
   }, []);
@@ -36,19 +37,32 @@ export default function PageMerchant() {
     const cep = cepRef.current.value;
     fetch(
       GET_MERCHANT.replace('{id}', pselected.type_id).replace('{cep}', cep),
-      { mode: 'cors' }
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          image: pselected.url,
+        }),
+      }
     )
       .then((res) => res.json())
       .then((res) => {
+        console.log(res);
         setLoadingMerchants(false);
         setMerchants(res.merchants);
         localStorage.setItem('address', JSON.stringify(res.address || '{}'));
+        setImgurl(res.url);
       })
-      .catch((e) => setLoadingMerchants(false));
+      .catch((e) => {
+        alert('erro');
+        setLoadingMerchants(false);
+      });
   }
 
   function select(l) {
-    history.push(`/alo/checkout/${pselected.type_id}/${l.id}`);
+    history.push(`/criador/pedido/${pselected.type_id}/${l.id}`);
   }
 
   return (
@@ -64,6 +78,7 @@ export default function PageMerchant() {
       <Body>
         <div className="page-merchant">
           <div className="stores">
+            <p>Agora, vamos buscar quem fabrica em sua região.</p>
             <div className="find">
               <input
                 ref={cepRef}
@@ -80,8 +95,6 @@ export default function PageMerchant() {
                   <>
                     <div className="item">
                       <div className="i1 b">Fornecedor</div>
-                      <div className="i2 b">Preço</div>
-                      <div className="i3 b">Frete</div>
                       <span className="i5">&nbsp;</span>
                     </div>
                     {merchants.map((l) => (
@@ -93,18 +106,15 @@ export default function PageMerchant() {
                             {l.city} - {l.uf}
                           </span>
                         </div>
-                        <div className="i2">
-                          <div className="small">a partir de</div>R$
-                          {l.price}
-                        </div>
-                        <div
-                          className={`i3 ${
-                            (l.delivery === 'grátis' && 'green') || 'red'
-                          }`}
+                        <span
+                          className="i5"
+                          onClick={() =>
+                            window.open(
+                              `https://api.whatsapp.com/send?phone=${l.phone}&text=Olá,%20gostaria%20de%20saber%20o%20valor%20e%20se%20possui%20estoque%20${imgurl}`,
+                              '_blank'
+                            )
+                          }
                         >
-                          {l.delivery}
-                        </div>
-                        <span className="i5" onClick={() => select(l)}>
                           <SvgMore size="small" />
                         </span>
                       </div>

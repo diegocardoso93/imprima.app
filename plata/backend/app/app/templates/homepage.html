@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHEC8JRJV1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QHEC8JRJV1');
+        </script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/alo/favicon.ico"/>
 
         <title>imprima.app</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -16,7 +27,7 @@
 
         <style>
             body {
-                font-family: 'Nunito', sans-serif;
+                font-family: 'Montserrat', sans-serif;
             }
 
             .logo {
@@ -43,6 +54,28 @@
                 }
             }
 
+            .container1 {
+                display: flex;
+                justify-content: center;
+            }
+
+            button {
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                padding: 11px 22px;
+                font-family: 'Montserrat';
+                background: black;
+                color: white;
+                font-weight: bold;
+                box-shadow: 0 4px 9px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+            }
+
+            .outlined {
+                background: #e2e8f0;
+                color: black;
+            }
+
         </style>
     </head>
     <body class="antialiased">
@@ -50,8 +83,10 @@
             <div class="logo">
                 <img src="/img/logo-imprima.png" alt="" class="logo-img" />
             </div>
-            <h2 style="padding: 20px;text-align: center;">Chegou o marketplace de impressão de personalizados! 🙂</h2>
-
+            <h4 style="padding: 20px;text-align: center;">Crie do seu jeito, depois peça para alguem de pertinho materializar! 🙂</h2>
+            <div class="container1">
+                <a href="/criador"><button>Explorar</button></a>
+            </div>
         </div>
     </body>
 </html>

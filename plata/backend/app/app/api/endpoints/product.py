@@ -21,9 +21,10 @@ def all_products(
     """
     if kind_id:
         products = crud.product.get_by_kind(db, kind_id)
-
-    if category_id and type_id:
+    elif category_id and type_id:
         products = crud.product.get_by_category_and_type(db, category_id, type_id)
+    else:
+        products = products = crud.product.get_by_kind(db, None)
 
     return products
 

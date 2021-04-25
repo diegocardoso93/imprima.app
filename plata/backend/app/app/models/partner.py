@@ -6,6 +6,7 @@ from app.db.base_class import Base
 
 class Partner(Base):
     id = Column(Integer, primary_key=True, index=True)
+    email = Column(String)
     name = Column(String)
     description = Column(String)
     site_name = Column(String)

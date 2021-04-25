@@ -8,11 +8,14 @@ import Loader from '../../components/Loader';
 import './style.scss';
 import { useHistory } from 'react-router';
 import SvgMore from '../../components/SvgMore';
+import usePersist from '../../hooks/usePersist';
 
 export default function PageItems() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  const [privacy, setPrivacy] = usePersist('privacy');
+  const [accept, setAccept] = useState(true);
 
   useEffect(() => {
     let x = 0;
@@ -37,7 +40,7 @@ export default function PageItems() {
   };
 
   function select(item) {
-    history.push(`/alo/produto/${item.id}${location.search}`);
+    history.push(`/criador/produto/${item.id}${location.search}`);
   }
 
   useEffect(() => {
@@ -59,18 +62,13 @@ export default function PageItems() {
     <>
       <Header stackclose={-1}>
         <div className="logo">
-          <a
-            href="https://imprima.app"
-            target="_blank"
-            rel="noreferrer"
-            className="logo-link"
-          >
+          <a href="https://imprima.app" rel="noreferrer" className="logo-link">
             <div className="inner">
               <img src="https://imprima.app/img/logo_100.png" alt="" />
             </div>
           </a>
 
-          <h1>Comprar personalizado</h1>
+          <h1>Criar personalizado</h1>
         </div>
       </Header>
 
@@ -101,6 +99,27 @@ export default function PageItems() {
           </div>
         )}
       </Body>
+
+      {!privacy && accept && (
+        <div className="privacy">
+          <h1>Nos importamos com sua privacidade</h1>
+          <p>
+            Ao continuar você concorda em compartilhar informações pessoais para
+            que possamos aprimorar a experiência.
+          </p>
+          <div className="bottomside">
+            <button
+              className="accept"
+              onClick={() => {
+                setPrivacy(true);
+                setAccept(false);
+              }}
+            >
+              Concordar
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

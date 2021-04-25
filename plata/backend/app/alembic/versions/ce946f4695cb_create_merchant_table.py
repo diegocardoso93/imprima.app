@@ -20,6 +20,7 @@ def upgrade():
     table_merchant = op.create_table(
         'merchant',
         sa.Column('id', sa.Integer, primary_key=True),
+        sa.Column('email', sa.String(255)),
         sa.Column('name', sa.String(255)),
         sa.Column('description', sa.Text),
         sa.Column('phone', sa.String(255)),
@@ -31,7 +32,8 @@ def upgrade():
         sa.Column('address_extra', sa.String(255)),
         sa.Column('lat', sa.Float),
         sa.Column('lon', sa.Float),
-        sa.Column('max_distance', sa.Integer, server_default=sa.schema.DefaultClause('20')),
+        sa.Column('max_distance', sa.Integer,
+                  server_default=sa.schema.DefaultClause('20')),
         sa.Column('delivery', sa.Boolean),
         sa.Column('status', sa.Integer, server_default=sa.schema.DefaultClause('1')),
         sa.PrimaryKeyConstraint("id")
@@ -41,8 +43,9 @@ def upgrade():
 
     op.bulk_insert(table_merchant, [
         {
+            'email': 'diegocardoso.93@hotmail.com',
             'name': 'UzaPrint',
-            'phone': '48996415657',
+            'phone': '5548996415657',
             'lat': -28.4812066,
             'lon': -49.0064517,
             'zip': '88701105',
@@ -56,8 +59,9 @@ def upgrade():
             'created_at': datetime.now()
         },
         {
+            'email': 'diego.grimera@gmail.com',
             'name': 'HDA Personalizações',
-            'phone': '48991119511',
+            'phone': '5548991119511',
             'lat': -28.4734123,
             'lon': -49.0130107,
             'zip': '88704400',
@@ -66,6 +70,38 @@ def upgrade():
             'neighborhood': 'Humaitá',
             'address': 'R. Roberto Zumblick, 822',
             'address_extra': 'Sala 02',
+            'max_distance': 30,
+            'delivery': False,
+            'created_at': datetime.now()
+        },
+        {
+            'email': 'marka@email.com',
+            'name': 'Marka Produtos Personalizados',
+            'phone': '5548991119511',
+            'lat': -29.113707,
+            'lon': -51.093622,
+            'zip': '95060145',
+            'city': 'Caxias do Sul',
+            'uf': 'RS',
+            'neighborhood': 'Ana Rech',
+            'address': 'Av. Rio Branco',
+            'address_extra': '',
+            'max_distance': 30,
+            'delivery': False,
+            'created_at': datetime.now()
+        },
+        {
+            'email': '',
+            'name': 'Exclusive Personalizados',
+            'phone': '5551995093837',
+            'lat': -29.7212371,
+            'lon': -52.4328594,
+            'zip': '96810124',
+            'city': 'Santa Cruz do Sul',
+            'uf': 'RS',
+            'neighborhood': 'Centro',
+            'address': 'Rua Venâncio Aires, 1102',
+            'address_extra': '',
             'max_distance': 30,
             'delivery': False,
             'created_at': datetime.now()

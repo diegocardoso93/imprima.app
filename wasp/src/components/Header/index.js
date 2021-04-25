@@ -11,9 +11,9 @@ export default function Header({ children, stackclose }) {
   return (
     <div className="header">
       {children}
-      <div className="close" onClick={dispose}>
+      {/* <div className="close" onClick={dispose}>
         ×
-      </div>
+      </div> */}
     </div>
   );
 }

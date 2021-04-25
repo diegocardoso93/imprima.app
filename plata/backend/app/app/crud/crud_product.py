@@ -13,12 +13,24 @@ types = {
     '1': 'Camiseta',
     '2': 'Caneca',
     '3': 'Almofada',
-    '4': 'Quadro'
+    # '4': 'Quadro'
 }
 
 
 class CRUDProduct(CRUDBase[Product, ProductCreate, ProductUpdate]):
     def import_from_files(self, table_product):
+        for idx, ttype in enumerate(types):
+            op.bulk_insert(table_product, [
+                {
+                    'kind_id': None,
+                    'category_id': None,
+                    'type_id': ttype,
+                    'name': types[ttype],
+                    'url': '',
+                    'thumb_url': 'https://imprima.app/img/default/'+str(idx+1)+'.png'
+                }
+            ])
+
         for idx, category in enumerate(['bandeiras', 'animais_doceis', 'frases']):
             (_, _, filenames) = next(walk('app/static/img/produto/'+category))
             for filename in filenames:

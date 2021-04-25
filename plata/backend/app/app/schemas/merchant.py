@@ -4,6 +4,7 @@ from pydantic import BaseModel
 
 
 class MerchantBase(BaseModel):
+    email: Optional[str] = None
     name: Optional[str] = None
     description: Optional[str] = None
     phone: Optional[str] = None

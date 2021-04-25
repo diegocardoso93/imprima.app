@@ -6,5 +6,5 @@ export const GET_MERCHANT = `${BASE_API}/merchant/?type_id={id}&cep={cep}`;
 export const GET_CATEGORY = `${BASE_API}/category`;
 export const GET_CATEGORY_TYPE = `${BASE_API}/product/?category_id={categoryId}&type_id={typeId}`;
 export const GET_ATTRIBUTES = `${BASE_API}/merchant_type_attribute/?type_id={typeId}&merchant_id={merchantId}`;
-export const GET_CHECKOUT_PREFERENCE = `${BASE_API}/checkout/preference`;
+export const CREATE_ORDER = `${BASE_API}/order/create`;
 export const POST_IMAGE = `${BASE_API}/image`;

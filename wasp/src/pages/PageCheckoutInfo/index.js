@@ -1,39 +1,49 @@
 import React, { useState } from 'react';
-
+import { toast } from 'react-toastify';
 import Header from '../../components/Header';
 import Body from '../../components/Body';
 import { useHistory } from 'react-router';
 import SvgBack from '../../components/SvgBack';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import InputMask from 'react-input-mask';
+import { cpf } from 'cpf-cnpj-validator';
 
 import './style.scss';
-import { GET_CHECKOUT_PREFERENCE } from '../../constants/endpoints';
+import { CREATE_ORDER } from '../../constants/endpoints';
 import Loader from '../../components/Loader';
 import usePersist from '../../hooks/usePersist';
 import * as yup from 'yup';
 
 const schema = yup.object().shape({
-  name: yup.string().required('Campo obrigatório'),
-  address: yup.string().required('Campo obrigatório'),
-  cellphone: yup
-    .string()
-    .required('Campo obrigatório')
-    .min(10, 'Informe o número com DDD'),
+  name: yup.string().required('Nome é obrigatório'),
+  street: yup.string().required('Campo obrigatório'),
+  neighborhood: yup.string().required('Campo obrigatório'),
   note: yup.string(),
 });
 
 export default function PageCheckoutInfo() {
   const [pcheckout] = usePersist('checkout');
   const [pselected] = usePersist('selected');
+  const [paddress] = usePersist('address');
   const history = useHistory();
   const [loading, setLoading] = useState();
   const { cart, merchant } = pcheckout;
   const [detailVisible, setDetailVisible] = useState(false);
 
   function buy(values) {
-    const { name, cellphone, address, note } = values;
+    const {
+      name,
+      cellphone,
+      cpf,
+      street,
+      number,
+      neighborhood,
+      complement,
+      note,
+    } = values;
+
     setLoading(true);
-    fetch(GET_CHECKOUT_PREFERENCE, {
+    fetch(CREATE_ORDER, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -43,8 +53,15 @@ export default function PageCheckoutInfo() {
           merchant_id: merchant?.id,
 
           name,
+          cpf,
           cellphone,
-          address,
+          street,
+          number,
+          neighborhood,
+          complement,
+          zip: paddress.cep,
+          city: paddress.localidade,
+          uf: paddress.uf,
           note,
           origin: localStorage.getItem('origin'),
 
@@ -125,37 +142,120 @@ export default function PageCheckoutInfo() {
           </div>
 
           <Formik
-            initialValues={{ name: '', address: '', city: '', cellphone: '' }}
+            initialValues={{
+              name: '',
+              cpf: '',
+              street: paddress.logradouro,
+              neighborhood: paddress.bairro,
+              cellphone: '',
+            }}
             onSubmit={async (values) => {
               await new Promise((resolve) => setTimeout(resolve, 500));
+              console.log('values', values);
+              values.cpf = values.cpf.replace(/[^0-9\.]+/g, '');
+              if (!cpf.isValid(values.cpf)) {
+                toast.error('CPF inválido.', {
+                  position: toast.POSITION.TOP_CENTER,
+                });
+                return;
+              }
+              values.cellphone = values.cellphone.replace(/[^0-9\.]+/g, '');
+              if (values.cellphone.length < 10) {
+                toast.error('Informe o celular com DDD.', {
+                  position: toast.POSITION.TOP_CENTER,
+                });
+                return;
+              }
               buy(values);
             }}
             validationSchema={schema}
           >
-            <Form className="buyer">
-              <div>Complete seus dados</div>
-              <Field name="name" placeholder="Nome completo" type="text" />
-              <ErrorMessage component="span" name="name" />
-              <Field
-                name="address"
-                placeholder="Rua, bairro, número, complemento, cidade"
-                type="text"
-              />
-              <ErrorMessage component="span" name="address" />
-              <Field
-                name="cellphone"
-                placeholder="Celular com DDD"
-                type="text"
-              />
-              <ErrorMessage component="span" name="cellphone" />
-              <Field
-                name="note"
-                placeholder="Informações adicionais"
-                type="text"
-              />
-              <ErrorMessage component="span" name="note" />
-              {(loading && <Loader />) || <button type="submit">Pagar</button>}
-            </Form>
+            {({ setFieldValue }) => (
+              <Form className="buyer">
+                <div>Complete seus dados</div>
+                <div style={{ display: 'flex', width: '100%' }}>
+                  <Field
+                    name="name"
+                    placeholder="Nome completo"
+                    type="text"
+                    style={{ width: '50%' }}
+                  />
+                  <Field
+                    component={InputMask}
+                    mask="999.999.999-99"
+                    name="cpf"
+                    placeholder="CPF"
+                    type="text"
+                    style={{ width: '50%' }}
+                    onChange={(e) => {
+                      setFieldValue('cpf', e.target.value || '');
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: 'flex',
+                    width: '100%',
+                  }}
+                >
+                  <ErrorMessage component="span" name="name" />
+                </div>
+                <div style={{ display: 'flex', width: '100%' }}>
+                  <Field
+                    name="street"
+                    placeholder="Rua"
+                    type="text"
+                    style={{ width: '70%' }}
+                  />
+                  <Field
+                    name="number"
+                    placeholder="Número"
+                    type="text"
+                    style={{ width: '30%' }}
+                  />
+                </div>
+                <div style={{ display: 'flex', width: '100%' }}>
+                  <ErrorMessage component="span" name="street" />
+                </div>
+                <div style={{ display: 'flex', width: '100%' }}>
+                  <Field
+                    name="neighborhood"
+                    placeholder="Bairro"
+                    type="text"
+                    style={{ width: '50%' }}
+                  />
+                  <Field
+                    name="complement"
+                    placeholder="Complemento"
+                    type="text"
+                    style={{ width: '50%' }}
+                  />
+                </div>
+                <div style={{ display: 'flex', width: '100%' }}>
+                  <ErrorMessage component="span" name="neighborhood" />
+                </div>
+                <Field
+                  component={InputMask}
+                  mask="(99) 999999999"
+                  name="cellphone"
+                  placeholder="Celular com DDD"
+                  onChange={(e) => {
+                    setFieldValue('cellphone', e.target.value || '');
+                  }}
+                  type="text"
+                />
+                <ErrorMessage component="span" name="cellphone" />
+                <Field
+                  name="note"
+                  placeholder="Informações adicionais"
+                  type="text"
+                />
+                <ErrorMessage component="span" name="note" />
+                {(loading && <Loader />) || (
+                  <button type="submit">Pagar</button>
+                )}
+              </Form>
+            )}
           </Formik>
         </div>
       </Body>

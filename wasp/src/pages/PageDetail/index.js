@@ -47,7 +47,7 @@ export default function PageDetail() {
 
     // gravar imagem no backend!?
 
-    history.push(`/alo/merchant`);
+    history.push(`/criador/fornecedor`);
   }
 
   return (

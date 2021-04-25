@@ -11,23 +11,26 @@ from app.schemas.order import OrderCreate, OrderUpdate
 
 
 class CRUDOrder(CRUDBase[Order, OrderCreate, OrderUpdate]):
-    def create_order(self, db: Session, preference_id, order, total):
+    def create_order(self, db: Session, invoice_id, order, total):
         db_order = Order(
             product_image=order.image,
             product_name=order.product_name,
             name=order.name,
-            address=order.address,
+            street=order.street,
+            number=order.number,
+            neighborhood=order.neighborhood,
+            complement=order.complement,
+            zip=order.zip,
+            city=order.city,
+            uf=order.uf,
             cellphone=order.cellphone,
             note=order.note,
             total=total,
             status="created",
-            preference_id=preference_id,
+            invoice_id=invoice_id,
             created_at=datetime.now(),
             merchant_id=order.merchant_id,
             type_id=order.type_id,
-            partner_id=None
-            # partner_id=1  # partner_id por parâmetro ou distância
-            # partner_id=order.partner_id,
         )
 
         db.add(db_order)
@@ -35,8 +38,8 @@ class CRUDOrder(CRUDBase[Order, OrderCreate, OrderUpdate]):
         db.refresh(db_order)
         return db_order
 
-    def get_by_preference_id(self, db: Session, preference_id):
-        return db.query(self.model).filter(self.model.preference_id == preference_id).first()
+    def get_by_invoice_id(self, db: Session, invoice_id):
+        return db.query(self.model).filter(self.model.invoice_id == invoice_id).first()
 
 
 order = CRUDOrder(Order)

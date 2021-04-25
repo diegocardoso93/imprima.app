@@ -4,9 +4,9 @@ from pydantic import BaseModel
 
 
 class PartnerBase(BaseModel):
+    email: Optional[str] = None
     name: Optional[str] = None
     description: Optional[str] = None
-    name: Optional[str] = None
     site_name: Optional[str] = None
     site_url: Optional[str] = None
     site_category: Optional[str] = None

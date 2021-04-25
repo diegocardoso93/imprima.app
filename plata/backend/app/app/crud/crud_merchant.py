@@ -20,14 +20,29 @@ class CRUDMerchant(CRUDBase[Merchant, MerchantCreate, MerchantUpdate]):
         ) as foo
         ORDER BY abs(cast(:cep as integer) - zip::int) LIMIT 1""", {'cep': cep}).fetchone()
 
+    def get_address(self, cep: str):
+        res = requests.get(f"https://viacep.com.br/ws/{cep}/json")
+        if res.status_code == 200:
+            return json.loads(res.content.decode('utf-8'))
+        return None
+
     def get_osm(self, address: Merchant):
         print('address', address)
         res = requests.get(
-            f"https://nominatim.openstreetmap.org/search.php?city={address.neighborhood}&county={address.city}&state={address.uf}&country=Brazil&polygon_geojson=1&countrycodes=br&format=jsonv2"
+            f"https://nominatim.openstreetmap.org/search.php?street={address['logradouro']}&city={address['bairro']}&county={address['localidade']}&state={address['uf']}&country=Brazil&countrycodes=br&format=jsonv2"
         )
-        if res.status_code == 200:
-            obj = json.loads(res.content.decode('utf-8'))[0]
+        content = json.loads(res.content.decode('utf-8'))
+        if res.status_code == 200 and len(content):
+            obj = content[0]
             return {'lat': obj['lat'], 'lon': obj['lon']}
+        else:
+            res = requests.get(
+                f"https://nominatim.openstreetmap.org/search.php?street=&city={address['bairro']}&county={address['localidade']}&state={address['uf']}&country=Brazil&countrycodes=br&format=jsonv2"
+            )
+            content = json.loads(res.content.decode('utf-8'))
+            if res.status_code == 200 and len(content):
+                obj = content[0]
+                return {'lat': obj['lat'], 'lon': obj['lon']}
 
         return {'lat': None, 'lon': None}
 
@@ -40,7 +55,8 @@ class CRUDMerchant(CRUDBase[Merchant, MerchantCreate, MerchantUpdate]):
                 (case m.delivery when true then 'grátis' else 'retirar' end) delivery,
                 m.city,
                 m.uf,
-                min(mta.price) price
+                min(mta.price) price,
+                m.phone
             FROM merchant_type_attribute mta
             INNER JOIN merchant m ON mta.merchant_id = m.id
             WHERE mta.type_id = :typeId

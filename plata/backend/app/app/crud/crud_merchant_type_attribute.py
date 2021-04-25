@@ -31,6 +31,7 @@ class CRUDMerchantTypeAttribute(CRUDBase[MerchantTypeAttribute, MerchantTypeAttr
                 'price': 24.00, 'merchant_type_attribute_id': 2},
             {'name': 'Tamanho', 'value': 'G', 'merchant_id': 1, 'type_id': 1,
                 'price': 26.00, 'merchant_type_attribute_id': 2},
+
             {'name': 'Tipo', 'value': 'Masculina',
                 'merchant_id': 2, 'type_id': 1, 'price': None},
             {'name': 'Tamanho', 'value': 'P', 'merchant_id': 2, 'type_id': 1,
@@ -41,6 +42,36 @@ class CRUDMerchantTypeAttribute(CRUDBase[MerchantTypeAttribute, MerchantTypeAttr
                 'merchant_id': 2, 'type_id': 2, 'price': 30.00},
             {'name': 'Material', 'value': 'Polímero',
                 'merchant_id': 2, 'type_id': 2, 'price': 20.00},
+
+            {'name': 'Tipo', 'value': 'Masculina',
+                'merchant_id': 3, 'type_id': 1, 'price': None},
+            {'name': 'Tipo', 'value': 'Feminina',
+                'merchant_id': 3, 'type_id': 1, 'price': None},
+            {'name': 'Tamanho', 'value': 'P', 'merchant_id': 3, 'type_id': 1,
+                'price': 19.00, 'merchant_type_attribute_id': 15},
+            {'name': 'Tamanho', 'value': 'M', 'merchant_id': 3, 'type_id': 1,
+                'price': 25.00, 'merchant_type_attribute_id': 15},
+            {'name': 'Tamanho', 'value': 'G', 'merchant_id': 3, 'type_id': 1,
+                'price': 28.00, 'merchant_type_attribute_id': 15},
+            {'name': 'Tamanho', 'value': 'GG', 'merchant_id': 3, 'type_id': 1,
+                'price': 32.00, 'merchant_type_attribute_id': 15},
+            {'name': 'Tamanho', 'value': 'P', 'merchant_id': 3, 'type_id': 1,
+                'price': 18.00, 'merchant_type_attribute_id': 16},
+            {'name': 'Tamanho', 'value': 'M', 'merchant_id': 3, 'type_id': 1,
+                'price': 24.00, 'merchant_type_attribute_id': 16},
+            {'name': 'Tamanho', 'value': 'G', 'merchant_id': 3, 'type_id': 1,
+                'price': 26.00, 'merchant_type_attribute_id': 16},
+            {'name': 'Material', 'value': 'Cerâmica',
+                'merchant_id': 3, 'type_id': 2, 'price': 30.00},
+            {'name': 'Material', 'value': 'Polímero',
+                'merchant_id': 3, 'type_id': 2, 'price': 20.00},
+            {'name': 'Tamanho', 'value': '40x40cm',
+                'merchant_id': 3, 'type_id': 3, 'price': 60.00},
+
+
+            {'name': '', 'value': '', 'merchant_id': 4, 'type_id': 1, 'price': 0.00},
+            {'name': '', 'value': '', 'merchant_id': 4, 'type_id': 2, 'price': 0.00},
+            {'name': '', 'value': '', 'merchant_id': 4, 'type_id': 3, 'price': 0.00},
         ]:
             op.bulk_insert(table_merchant_type_attribute, [x])
 
