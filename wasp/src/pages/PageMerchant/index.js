@@ -103,7 +103,7 @@ export default function PageMerchant() {
                           {l.name}
                           <br />
                           <span className="small">
-                            {l.city} - {l.uf}
+                            {l.city} - {l.uf} ({l.distance.replace('.', ',')})
                           </span>
                         </div>
                         <span

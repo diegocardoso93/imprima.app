@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/alo/static/css/main.3541d07a.chunk.css",
-    "main.js": "/alo/static/js/main.7d1d17e4.chunk.js",
-    "main.js.map": "/alo/static/js/main.7d1d17e4.chunk.js.map",
+    "main.css": "/alo/static/css/main.1c38a04b.chunk.css",
+    "main.js": "/alo/static/js/main.b435708d.chunk.js",
+    "main.js.map": "/alo/static/js/main.b435708d.chunk.js.map",
     "runtime-main.js": "/alo/static/js/runtime-main.a49af4c3.js",
     "runtime-main.js.map": "/alo/static/js/runtime-main.a49af4c3.js.map",
     "static/css/2.1a40a44d.chunk.css": "/alo/static/css/2.1a40a44d.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.cbd4bbd1.chunk.js.map": "/alo/static/js/2.cbd4bbd1.chunk.js.map",
     "index.html": "/alo/index.html",
     "static/css/2.1a40a44d.chunk.css.map": "/alo/static/css/2.1a40a44d.chunk.css.map",
-    "static/css/main.3541d07a.chunk.css.map": "/alo/static/css/main.3541d07a.chunk.css.map",
+    "static/css/main.1c38a04b.chunk.css.map": "/alo/static/css/main.1c38a04b.chunk.css.map",
     "static/js/2.cbd4bbd1.chunk.js.LICENSE.txt": "/alo/static/js/2.cbd4bbd1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a49af4c3.js",
     "static/css/2.1a40a44d.chunk.css",
     "static/js/2.cbd4bbd1.chunk.js",
-    "static/css/main.3541d07a.chunk.css",
-    "static/js/main.7d1d17e4.chunk.js"
+    "static/css/main.1c38a04b.chunk.css",
+    "static/js/main.b435708d.chunk.js"
   ]
 }

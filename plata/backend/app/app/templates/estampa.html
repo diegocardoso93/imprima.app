@@ -16,9 +16,12 @@
 
         <title>imprima.app - estampa</title>
 
+        <meta property="og:site_name" content="Imprima.app">
         <meta property="og:title" content="Imprima.app - estampa" />
-        <meta property="og:type" content="image/png" />
-        <meta property="og:image" content="{{ url }}" />
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="{{ url | replace('.png', 't.png') }}" />
+        <meta property="og:image:type" content="image/png">
+
         <style>
             body {
                 margin: 0;
@@ -26,9 +29,21 @@
             img {
                 max-width: 100%;
             }
+            .logo-link {
+                text-decoration: none;
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+            }
         </style>
     </head>
     <body>
+        <a href="https://imprima.app" rel="noreferrer" class="logo-link">
+            Criado com &nbsp;
+            <img src="https://imprima.app/img/logo_100.png" alt="" />
+        </a>
         <img src="{{ url }}" alt="" />
     </body>
 </html>

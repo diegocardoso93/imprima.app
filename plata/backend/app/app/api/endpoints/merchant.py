@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 import base64
 from uniqid import uniqid
+from PIL import Image
 
 from typing import Any, Optional
 from app import crud, schemas
@@ -45,6 +46,10 @@ def get_merchants_and_address(
     with open(file_in, "wb+") as f:
         f.write(base64.b64decode(input.image.replace(
             "data:image/jpeg;base64,", "").replace("data:image/png;base64,", "")))
+
+    image = Image.open(file_in)
+    image.thumbnail((300, 300))
+    image.save(base_dir+file+'t.png')
 
     url = "https://imprima.app/estampa/"+file
     crud.creation_cep.create(db, cep=cep, url=file, type_id=type_id)

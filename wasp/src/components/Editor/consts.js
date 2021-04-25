@@ -43,10 +43,10 @@ export const repo = {
     'frases/10Desistir_jamais.png',
   ],
 
-  'Datas Comemorativas': [
-    'datas_comemorativas/00Melhor_mae_do_mundo.png',
-    'datas_comemorativas/01Obrigado_mae.png',
-    'datas_comemorativas/02Feliz_dia_das_maes.png',
+  'Datas Especiais': [
+    'datas_especiais/00Melhor_mae_do_mundo.png',
+    'datas_especiais/01Obrigado_mae.png',
+    'datas_especiais/02Feliz_dia_das_maes.png',
   ],
 };
 
@@ -54,5 +54,5 @@ export const categories = [
   'Bandeiras',
   'Animais Dóceis',
   'Frases',
-  'Datas Comemorativas',
+  'Datas Especiais',
 ];
