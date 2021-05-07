@@ -1,0 +1,103 @@
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 10px;
+
+  > div:first-child {
+    background: #ededed;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    font-weight: bold;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+}
+
+button {
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 8px;
+  font-family: 'Montserrat';
+}
+
+.page-detail {
+
+  .btn-drop-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .btn-drop {
+      font-family: 'Montserrat';
+      font-size: 14px;
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin: 10px;
+      cursor: pointer;
+
+      .confirm {
+        color: green;
+      }
+    }
+  }
+
+  .loader-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .item {
+    max-height: 630px;
+
+    &.hidden {
+      max-height: 0;
+      overflow: hidden;
+    }
+    transition: max-height 0.5s ease-out;
+  }
+
+  .instructions {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    span {
+      flex: 100%;
+    }
+  }
+
+  .btn-next {
+    width: 100%;
+    .next {
+      margin: 0;
+      width: 100%;
+      padding: 10px;
+      background: black;
+      color: white;
+      border: 0;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+  }
+
+  .icon-info {
+    width: 20px;
+    height: 20px;
+    flex: 20px;
+    margin-right: 3px;
+  }
+}

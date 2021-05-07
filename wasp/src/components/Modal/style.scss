@@ -1,0 +1,58 @@
+.modal {
+
+  .modal-overlay {
+    background-color: rgba(10,10,10,0.6);
+    margin-left: -16px;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    max-height: 616px;
+    z-index: 1;
+  }
+
+  .modal-options {
+    height: 386px;
+    background: #f2f2f2;
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+
+    .motitle {
+      height: 35px;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+
+      .motext {
+        font-size: 14px;
+      }
+      .moclose {
+        font-size: 26px;
+        right: 0px;
+        position: absolute;
+        padding: 0 6px;
+        cursor: pointer;
+      }
+    }
+
+    .modal-container {
+      overflow-y: auto;
+      height: 321px;
+      padding: 0 6px 10px 6px;
+
+      .emoji {
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        background: url('https://imprima.app/img/emoji/00emoticons-min.png');
+        float: left;
+      }
+
+      .repo {
+        width: 120px;
+        cursor: pointer;  
+      }
+    }
+  }
+
+}

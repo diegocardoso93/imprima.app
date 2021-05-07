@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHEC8JRJV1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-QHEC8JRJV1');
+        </script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>imprima.app - estampa</title>
+
+        <meta property="og:site_name" content="Imprima.app">
+        <meta property="og:title" content="Imprima.app - estampa" />
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="{{ url | replace('.png', 't.png') }}" />
+        <meta property="og:image:type" content="image/png">
+
+        <style>
+            body {
+                margin: 0;
+            }
+            img {
+                max-width: 100%;
+            }
+            .logo-link {
+                text-decoration: none;
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://imprima.app" rel="noreferrer" class="logo-link">
+            Criado com &nbsp;
+            <img src="https://imprima.app/img/logo_100.png" alt="" />
+        </a>
+        <img src="{{ url }}" alt="" />
+    </body>
+</html>
+

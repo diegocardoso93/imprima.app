@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+
+  backend:
+    ports:
+      - "8000:80"
+    volumes:
+      - ./backend/app:/app
+    environment:
+      - SERVER_HOST=http://${DOMAIN?Variable not set}
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+      args:
+        INSTALL_DEV: ${INSTALL_DEV-true}
+    # command: bash -c "while true; do sleep 1; done"  # Infinite loop to keep container live doing nothing
+    command: /start-reload.sh
