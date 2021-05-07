@@ -45,8 +45,6 @@ export default function PageDetail() {
       name: selected?.name.split(' ')[0] + ' personalizada',
     });
 
-    // gravar imagem no backend!?
-
     history.push(`/criador/fornecedor`);
   }
 

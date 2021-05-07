@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.sql import text
 import requests
 import json
+import re
 
 from app.crud.base import CRUDBase
 from app.models.merchant import Merchant
@@ -21,7 +22,8 @@ class CRUDMerchant(CRUDBase[Merchant, MerchantCreate, MerchantUpdate]):
         ORDER BY abs(cast(:cep as integer) - zip::int) LIMIT 1""", {'cep': cep}).fetchone()
 
     def get_address(self, cep: str):
-        res = requests.get(f"https://viacep.com.br/ws/{cep}/json")
+        cepp = ''.join(re.findall('\d+', cep))
+        res = requests.get(f"https://viacep.com.br/ws/{cepp}/json")
         if res.status_code == 200:
             return json.loads(res.content.decode('utf-8'))
         return None
